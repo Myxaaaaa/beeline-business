@@ -29,7 +29,7 @@ const modalContentMap = {
   office: officeCommunications,
 };
 
-export const Footer = ({styleLine, styleNav, styleMadeLine, mad_line}) => {
+export const Footer = ({ styleLine, styleNav, styleMadeLine, mad_line }) => {
   const [activeDropdowns, setActiveDropdowns] = useState([]);
   const isMobile = useMediaQuery({ maxWidth: 576 });
 
@@ -128,13 +128,28 @@ export const Footer = ({styleLine, styleNav, styleMadeLine, mad_line}) => {
             </div>
           </Link>
           <div className={styles.messengers}>
-            <Link to="#" title="Instagram" aria-label="Instagram">
+            <Link
+              to="https://www.instagram.com/beeline_kyrgyzstan/?hl=ru"
+              target="_blank"
+              title="Instagram"
+              aria-label="Instagram"
+            >
               <Instagram />
             </Link>
-            <Link to="#" title="Facebook" aria-label="Facebook">
+            <Link
+              to="https://www.facebook.com/beeline.kg/?fref=ts&_rdc=1&_rdr"
+              target="_blank"
+              title="Facebook"
+              aria-label="Facebook"
+            >
               <Facebook />
             </Link>
-            <Link to="#" title="Whatsapp" aria-label="Whatsapp">
+            <Link
+              to="https://api.whatsapp.com/send/?phone=996777006611&text&type=phone_number&app_absent=0"
+              target="_blank"
+              title="Whatsapp"
+              aria-label="Whatsapp"
+            >
               <Whatsapp />
             </Link>
           </div>
