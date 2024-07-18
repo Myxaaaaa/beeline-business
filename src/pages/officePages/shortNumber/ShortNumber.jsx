@@ -26,7 +26,7 @@ import {
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import cloud from '../../../shared/assets/icons/shortNumberCard/cloud.svg';
-import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg'
+import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
 import { useLoaderData } from 'react-router-dom';
 
 
@@ -46,13 +46,13 @@ export const ShortNumber = () => {
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
-
   const miniCard = data?.res[0]?.mini_card;
 
   const icons = [tv, fire, flip, camera, car];
 
   const solutionTextData = miniCard?.map((item, index) => ({
-    img: icons[index], 
+    id: index, // add unique id here
+    img: icons[index],
     imgCard: cloud,
     text: item.title,
   }));
@@ -61,10 +61,13 @@ export const ShortNumber = () => {
     handleNextSlide(currentSlide, setCurrentSlide);
   };
 
-  const advantagesData = data?.res[0]?.advantages?.map(item => ({
-    img: item.emoji, alt: car, text: item.title
+  const advantagesData = data?.res[0]?.advantages?.map((item, index) => ({
+    id: index, // add unique id here
+    img: item.emoji,
+    alt: car,
+    text: item.title,
   }));
-  
+
   const relatedServicesData = [
     {
       title: 'Центр мониторинга и реагирования (SKY SOC)',
@@ -82,6 +85,7 @@ export const ShortNumber = () => {
       img: relatedImg,
     },
   ];
+
   const bannerData = data?.banner[0];
   return (
     <section className={style.shortNumberSection}>
@@ -109,7 +113,7 @@ export const ShortNumber = () => {
             style={{ transform: `translateX(-${currentSlide * 13}%)` }}
           >
             {solutionTextData?.map(card => (
-              <ShortNumberCard text={card.text} img={card.imgCard} stylesNumCard={style.customNumCard} />
+              <ShortNumberCard key={card.id} text={card.text} img={card.imgCard} stylesNumCard={style.customNumCard} />
             ))}
           </div>
           <NextButton handleClick={handleNextSlideClick} />
@@ -118,14 +122,14 @@ export const ShortNumber = () => {
 
       <div className={style.shortNumberAdaptive}>
         {solutionTextData?.map(item => (
-          <ShortNumberAdaptive img={item.img} alt={item.alt} text={item.text} />
+          <ShortNumberAdaptive key={item.id} img={item.img} alt={item.alt} text={item.text} />
         ))}
       </div>
       <section className={style.advantages}>
         <h2 className={style.advantages__title}>{data?.res[0]?.advantages_text}</h2>
         <div className={style.advantages__blocks}>
           {advantagesData?.map(item => (
-            <NecessaryCard img={item.img} alt={item.alt} text={item.text} />
+            <NecessaryCard key={item.id} img={item.img} alt={item.alt} text={item.text} />
           ))}
         </div>
       </section>

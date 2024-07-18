@@ -11,6 +11,7 @@ export const SocialNetwork = ({ ottRef }) => {
     <section className={style.socialNetwork} ref={ottRef}>
       {data?.resData?.slice(0, 1).map(item => (
         <SocialCard
+          key={item.id}
           title={item.title} 
           text="Хит продаж"
           subtitle={
