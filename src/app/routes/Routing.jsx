@@ -54,10 +54,10 @@ export const router = createBrowserRouter([
     errorElement: <ServiceUnavailable />,
 
     children: [
-      // {
-      //   path: '*',
-      //   element: <NotFound />,
-      // },
+      {
+        path: '*',
+        element: <NotFound />,
+      },
       {
         path: '/',
         element: <HomePage />,
@@ -285,28 +285,32 @@ export const router = createBrowserRouter([
         },
       },
       {
-        path: '/mobile-modem',
+        path: '/mobile-modem/:id',
         element: <Modem />,
         loader: async () => {
-          const [modem, mobileVpn] = await Promise.all([
+          const [internetM2MRes, modem, mobileVpn] = await Promise.all([
+            Api.getInternetm2mList(),
             Api.getm2mModem(),
             Api.getm2mMobileVpn(),
           ]);
           return {
+            internetM2M: internetM2MRes.data,
             modem: modem.data,
             mobileVpn: mobileVpn.data,
           };
         },
       },
       {
-        path: '/mobile-vpn',
+        path: '/mobile-vpn/:id',
         element: <Vpn />,
         loader: async () => {
-          const [mobileVpn, modem] = await Promise.all([
+          const [internetM2MRes, mobileVpn, modem] = await Promise.all([
+            Api.getInternetm2mList(),
             Api.getm2mMobileVpn(),
             Api.getm2mModem(),
           ]);
           return {
+            internetM2M: internetM2MRes.data,
             mobileVpn: mobileVpn.data,
             modem: modem.data,
           };

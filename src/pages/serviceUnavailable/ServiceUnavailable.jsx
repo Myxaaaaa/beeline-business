@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 
 const ServiceUnavailable = () => {
   return (
-    <section className={styles.head}>
-      <img className={styles.img} src={img} alt="" />
-      <div className={styles.head_container}>
-        <div className={styles.head_block}>
+    <section className={styles.head_service}>
+      <div className={styles.img_header} >
+        <img className={styles.img} src={img} alt="" />
+      </div>
+      <div className={styles.service_container}>
+        <div className={styles.service_block}>
           <h1 className={styles.head_title}>УПССС...
                 Внутренняя ошибка сервера</h1>
           <p className={styles.head_text}>
@@ -25,8 +27,8 @@ const ServiceUnavailable = () => {
         <img className={styles.head_img} src={notFound_img} alt="head" />
 
       </div>
-      <footer className={styles.footer_service} >
-        <Footer styleMadeLine={styles.made_line} styleLine={styles.line} styleNav={styles.navigation} mad_line={styles.mad_lines} />
+      <footer className={styles.footer_service} > 
+        <Footer footer={styles.footer_block} mad_line={styles.mad_lines}  styleMadeLine={styles.made_line} styleNav={styles.navigation} styleLine={styles.line} /> 
       </footer>
     </section>
   );
@@ -34,3 +36,5 @@ const ServiceUnavailable = () => {
 };
 
 export default ServiceUnavailable;
+
+// styleMadeLine={styles.made_line} styleLine={styles.line} styleNav={styles.navigation} mad_line={styles.mad_lines} 

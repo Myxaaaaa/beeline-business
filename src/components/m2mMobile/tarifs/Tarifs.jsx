@@ -5,9 +5,9 @@ export const Tarifs = () => {
   const { internetM2M } = useLoaderData();
   const getLink = card => {
     if (card.title.toLowerCase().includes('vpn')) {
-      return `/mobile-vpn`;
+      return `/mobile-vpn/${card.id}`;
     } else if (card.title.toLowerCase().includes('модем')) {
-      return `/mobile-modem`;
+      return `/mobile-modem/${card.id}`;
     } else {
       return `/mobile-default/${card.id}`;
     }

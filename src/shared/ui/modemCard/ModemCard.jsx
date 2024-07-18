@@ -16,9 +16,9 @@ export const ModemCard = ({
 }) => {
   const getLink = () => {
     if (item.title.toLowerCase().includes('vpn')) {
-      return `/mobile-vpn`;
+      return `/mobile-vpn/${item.id}`;
     } else if (item.title.toLowerCase().includes('модем')) {
-      return `/mobile-modem`;
+      return `/mobile-modem/${item.id}`;
     } else {
       return `/mobile-default/${item.id}`;
     }
