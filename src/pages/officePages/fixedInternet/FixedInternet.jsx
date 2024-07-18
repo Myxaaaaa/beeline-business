@@ -84,6 +84,8 @@ export const FixedInternet = () => {
                 plug="Подключить"
                 detailStyles={style.detailStyles}
                 plugStyles={style.customBtn}
+                btn={style.btn}
+                stylesText={style.stylesText}
             />
             <Description
                 title={data?.res[0]?.question_title}

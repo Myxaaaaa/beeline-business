@@ -1,10 +1,4 @@
 import style from './BigData.module.scss';
-import mini from '../../../shared/assets/images/bigData/mini.svg';
-import small from '../../../shared/assets/images/bigData/small.svg';
-import smallSecond from '../../../shared/assets/images/bigData/smallSecond.svg';
-import wifi from '../../../shared/assets/images/bigData/wifi.svg';
-import receiver from '../../../shared/assets/images/bigData/receiver.svg';
-import instagram from '../../../shared/assets/images/bigData/instagram.svg';
 import { HeadCard } from '../../../shared/ui/headCard/HeadCard';
 import { MobileCard } from '../../../shared/ui/mobileCard/MobileCard';
 import { StatusNumber } from '../../../shared/ui/statusNumber/StatusNumber';
@@ -22,7 +16,6 @@ export const BigData = () => {
     },
   ];
 
-  
   const servicesBannerData = Array.isArray(data.servicesBanner) ? data.servicesBanner : [];
 
   const specificLinks = [
@@ -48,11 +41,7 @@ export const BigData = () => {
   return (
     <section className={style.bigData}>
       <Breadcrumbs crumbs={breadcrumbs} />
-      <HeadCard
-        // title={bannerData.title}
-        // text={bannerData.description}
-        data={data}
-      />
+      <HeadCard data={data.banner} />
       <section className={style.bigDataInfo}>
         <h4>
           Услуги BIG DATA включают в себя сбор, хранение, обработку и анализ больших объемов данных
