@@ -1,0 +1,21 @@
+.container {
+    width: 1006px;
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .packagesCard {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+        margin: 33px 0px;
+        display: flex;
+        gap: 16px;
+
+    }
+
+}

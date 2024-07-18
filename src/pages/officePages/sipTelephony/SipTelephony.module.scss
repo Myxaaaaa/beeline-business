@@ -1,0 +1,81 @@
+.sipTelephony {
+    padding: 0 52px;
+}
+
+.sipTelephony__detail {
+    display: none;
+}
+
+.banner__title {
+    white-space: nowrap;
+}
+
+.banner__section {
+    height: 416px;
+    position: relative;
+}
+
+.banner__left {
+    position: static;
+}
+
+.sipTelephony .banner__bottom {
+    bottom: 0;
+}
+
+.shortNumber > h2, .necessaryCard > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.necessaryCard {
+    margin-top: 100px;
+}
+
+.shortNumber__cards {
+    margin-top: 32px;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.8s ease;
+}
+
+.shortNumber__next {
+    display: none;
+}
+
+.necessary__cards {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 576px) { 
+    .sipTelephony {
+        padding: 0 16px;
+    }
+
+    .shortNumber {
+        display: none;
+    }
+
+    .necessaryCard {
+        margin-top: 40px;
+    }
+
+    .shortNumberAdaptive {
+        width: 100%;
+        margin-top: 40px;
+        padding: 16px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        background-color: #232325;
+        border-radius: 12px;
+    }
+
+    .relatedServices__section {
+        display: none;
+    }
+}

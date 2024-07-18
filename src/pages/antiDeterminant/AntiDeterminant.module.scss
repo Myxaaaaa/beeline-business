@@ -1,0 +1,13 @@
+.antiDeterminant {
+    padding-left: 52px;
+}
+
+.detailStyles {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .antiDeterminant {
+        padding: 0 16px;
+    }
+}

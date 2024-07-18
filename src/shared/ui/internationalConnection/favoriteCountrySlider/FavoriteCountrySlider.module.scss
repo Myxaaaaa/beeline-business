@@ -1,0 +1,138 @@
+.cards__card {
+  width: 322px;
+  height: 355px;
+  border-radius: 12px;
+  background: #232325;
+}
+
+.cards__card .card__top {
+  padding: 17px 24px;
+  border-radius: 12px 12px 0px 0px;
+  color: #121212;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 132%;
+  background: #fee147;
+}
+
+.card__information {
+  padding: 32px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.information__text {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.information__text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 144%;
+}
+
+.information__text b {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+}
+
+.information__text span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+  text-decoration-line: underline;
+}
+
+.information__text small {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.card__connection {
+  border-top: 1px solid #39393b;
+  padding-top: 32px;
+}
+
+.connection__bt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 54px;
+}
+
+.connection__bt p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+.connection__bt span {
+  color: #e8e8e8;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+  text-decoration-line: underline;
+}
+
+.connection__bt b {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.connection__bt button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffd400;
+  color: #121212;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 144%;
+  border: none;
+  cursor: pointer;
+}
+
+.connection__bt button:hover {
+  color: #fff;
+  transition: color 0.2s ease;
+  background-color: #39393b;
+  transition: background-color 0.2s ease;
+}
+
+@media (max-width: 576px) {
+    .cards__card {
+      width: 287px;
+      height: 361px;
+      position: relative;
+    }
+
+    .card__information {
+      padding: 30px 20px 0;
+    }
+
+    .card__connection {
+      border-top: none;
+    }
+
+    .card__connection p {
+      display: none;
+    }
+
+    .card__connection a {
+      padding: 0 10px;
+      width: 100%;
+    }
+
+    .card__connection button {
+      width: 93%;
+      height: 49px;
+      position: absolute;
+      bottom: 14px;
+    }
+}

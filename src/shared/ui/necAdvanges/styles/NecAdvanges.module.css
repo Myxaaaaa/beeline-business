@@ -1,0 +1,67 @@
+.necessary_block {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    gap: 20px;
+}
+
+.necessary_title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42.24px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.necessary_card_title {
+    color: #E8E8E8;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.4px;
+    padding-left: 16px;
+    padding-top: 25px;
+}
+
+.cardStyles {
+    display: flex;
+    align-items: center;
+    width: 492px;
+    height: 100px;
+    border-radius: 10px;
+    opacity: 0px;
+    background-color: #232325;
+    margin-top: 20px;
+    padding-left: 24px;
+    gap: 16px;
+}
+
+.car_img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 576px) {
+    .necessary_block {
+        display: block;
+    }
+
+    .cardStyles {
+        width: 100%;
+    }
+
+    .necessary_card_title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.04px;
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .necessary_title {
+        font-family: Fira Sans;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.68px;
+        text-align: center;
+    }
+}

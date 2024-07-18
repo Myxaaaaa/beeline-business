@@ -1,0 +1,150 @@
+.fixedInternet {
+    padding: 0 48px;
+}
+
+.detailStyles {
+    width: 184px;
+    height: 57px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-1---Primary-dark, #121212);
+    color: var(--Color-button_text-grey, var(---Neutral-150-Text, #E8E8E8));
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.customTitle {
+    white-space: nowrap;
+}
+
+/* 3 component */
+.connectServices {
+    margin-top: 100px;
+}
+
+.connectServices__title {
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.connectServices__blocks {
+    margin-top: 32px;
+    display: flex;
+    gap: 20px;
+}
+
+/* 4 component */
+.fixAdvantages {
+    margin-top: 100px;
+}
+
+.fixAdvantages__title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.fixAdvantages__blocks {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.customNumCard {
+    width: 200px !important;
+    height: 168px !important;
+}
+
+.usefulArticles__section {
+    margin-top: 100px;
+}
+
+@media (max-width: 576px) {
+    .fixedInternet {
+        padding: 0 16px;
+    }
+
+    .customBtn {
+        margin-left: 0;
+    }
+
+    .customNumCard {
+        /* width: 100% !important;
+        height: auto !important; */
+        display: none;
+    }
+
+    /* 4 component */
+    .connectServices {
+        margin-top: 40px;
+    }
+
+    .connectServices__title {
+        display: none;
+    }
+
+    .connectServices__blocks {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+        border-radius: 12px;
+        background: var(---Neutral-400, #232325);
+    }
+
+    .connectServices__blocks {
+        display: none;
+    }
+
+    .shortNumberAdaptive {
+        width: 100%;
+        margin-top: 40px;
+        padding: 16px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        background-color: #232325;
+        border-radius: 12px;
+    }
+
+    /* 4 component */
+    .fixAdvantages {
+        margin-top: 40px;
+    }
+
+    .fixAdvantages__title {
+        color: var(--Color-Neutral-7---White, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .fixAdvantages__blocks {
+        margin-top: 20px;
+        gap: 16px;
+    }
+
+    .usefulArticles__section {
+        margin-top: 50px;
+    }
+
+    .relatedServices__section {
+        display: none;
+    }
+}

@@ -1,0 +1,231 @@
+.roamingForBusiness {
+    padding-left: 48px;
+}
+
+.roamingForBusiness__title {
+    margin-top: 10px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.roamingForBusiness__countries {
+    width: 1006px;
+    margin-top: 42px;
+    position: relative;
+}
+
+.roamingForBusiness__countriesSelect {
+    height: 56px;
+    padding: 0px 16px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    user-select: none;
+    cursor: pointer;
+}
+
+.roamingForBusiness__countriesOption {
+    color: var(--Color-Neutral-5---Light-gray, #CACACA);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.roamingForBusiness__countriesName {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-3---Dark-gray, #39393B);
+    user-select: none;
+    position: absolute;
+    z-index: 10;
+}
+
+.roamingForBusiness__countriesName_count {
+    width: 100%;
+    padding: 6px 0px 6px 20px;
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.roamingForBusiness__countriesName_count:hover {
+    background: var(--Color-Neutral-3---Dark-gray, #272727);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+/* country */
+
+.roamingForBusiness__countriesName {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.visible {
+    opacity: 1;
+    transition: 1s;
+    transition: transform 0.3s ease;
+
+}
+
+.question__click_img {
+    transition: transform 0.3s ease;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+
+/*  scroll */
+.roamingForBusiness__countriesName {
+    max-height: 286px;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.roamingForBusiness__countriesName::-webkit-scrollbar {
+    width: 8px;
+}
+
+.roamingForBusiness__countriesName::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+
+.roamingForBusiness__hidden {
+    width: 1050px;
+    margin-top: 36px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.roamingForBusiness__slider {
+    display: flex;
+    gap: 20px;
+    transition: 1s;
+}
+
+
+@media (max-width: 576px) {
+    .roamingForBusiness {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .roamingForBusiness__title {
+        margin-top: 30px;
+        color: var(---Neutral-100, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .roamingForBusiness__countries {
+        width: 100%;
+        margin: 40px 0px 30px;
+    }
+
+    .roamingForBusiness__countriesSelect {
+        height: 74px;
+        padding: 0px 24px 0px 24px;
+    }
+
+    .roamingForBusiness__countriesOption {
+        color: var(--Color-Neutral-6---Light-gray2, var(---Neutral-150-Text, #E8E8E8));
+        font-family: "Fira Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 144%;
+    }
+
+    .roamingForBusiness__countriesName {
+        width: 100%;
+        max-height: 360px;
+        margin-top: 8px;
+        margin-right: 20px;
+        padding: 20px 20px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .roamingForBusiness__countriesName_count {
+        width: 100%;
+        color: var(---Neutral-100, #FFF);
+        font-family: "Fira Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .roamingForBusiness__hidden {
+        width: 104.5%;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    .roamingForBusiness__slider {
+        display: flex;
+        gap: 10px;
+        transition: 1s;
+    }
+    .roamingForBusiness__hidden::-webkit-scrollbar {
+        height: 11px;
+    }
+
+    .roamingForBusiness__hidden::-webkit-scrollbar-track {
+        margin-top: 20px;
+        background: #f1f1f1;
+        border-radius: 24px;
+        background: var(---Neutral-400, #232325);
+    }
+
+    .roamingForBusiness__hidden::-webkit-scrollbar-thumb {
+        border-radius: 24px;
+        background: var(---Neutral-300, #909090);
+    }
+
+    .roamingForBusiness__hidden::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

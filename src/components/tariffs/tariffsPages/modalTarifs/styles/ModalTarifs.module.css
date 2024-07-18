@@ -1,0 +1,160 @@
+.modal_back {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal_block {
+    display: flex;
+    flex-direction: column;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    border-radius: 12px;
+}
+
+.modal {
+    width: 482px;
+    padding: 48px 32px 28px;
+    position: relative;
+}
+
+.modal_close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.modal_title {
+    margin-bottom: 32px;
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.modal__choice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+
+
+.modal__choice_label {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.modal__choice_radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal__choice_radio:checked {
+    background-color: var(--Color-Neutral-6---Light-gray2, #ffea00);
+}
+
+
+.modal__corporate {
+    width: 482px;
+    margin-top: -16px;
+    padding: 16px 32px;
+    border-radius: 0px 0px 12px 12px;
+    background: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    display: none;
+    transition: 0.5s;
+}
+
+.modal__corporate_active {
+    display: block;
+    transition: 0.5s;
+
+}
+
+.modal__corporate_text {
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+    .modal {
+        width: 330px;
+        height: 210px;
+        padding: 32px 20px;
+        position: relative;
+    }
+
+    .modal_close {
+        right: 10px;
+        top: 10px;
+    }
+
+    .modal_title {
+        margin-bottom: 24px;
+        color: var(---Neutral-150-Text, #E8E8E8);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .modal__choice_radio {
+        width: 20px;
+        height: 20px;
+    }
+
+    .modal__choice_label {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%;
+    }
+
+    .modal__corporate {
+        width: 330px;
+        padding: 10px 20px;
+        margin-top: 0;
+    }
+
+    .modal__corporate_text {
+        color: var(---Neutral-500, #121212);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+    }
+}

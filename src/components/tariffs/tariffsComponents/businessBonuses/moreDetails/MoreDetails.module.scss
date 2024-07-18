@@ -1,0 +1,124 @@
+.moreDetails {
+    margin-top: 100px;
+}
+
+.moreDetails__title {
+    color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.moreDetails__items {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.moreDetails__item {
+    width: 48%;
+}
+
+.moreData__item_wrap{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.moreDetails__item_num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(---Neutral-300, #909090);
+    color: var(--Color-Neutral-5---Light-gray, #CACACA);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.moreDetails__item_title {
+    color: var(--Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.moreDetails__item_text {
+    margin-top: 20px;
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+.secondWrap {
+    margin-top: -11px;
+}
+.second__text {
+    margin-top: 0px;
+}
+.secondNum {
+    width: 48px;
+    height: 40px;
+}
+@media (max-width: 576px) {
+    .moreDetails {
+        margin-top: 50px;
+    }
+
+    .moreDetails__title {
+        text-align: center;
+        color: var(---Neutral-100, #FFF);
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .moreDetails__items {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .moreDetails__item {
+        width: 100%;
+    }
+
+    .moreDetails__item_title {
+        color: var(--Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .moreDetails__item_text {
+        margin-top: 5px;
+        color: var(--Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+    .secondWrap {
+        margin-top: 0;
+    }
+    .secondNum {
+        width: 60px;
+        height: 40px;
+    }
+}

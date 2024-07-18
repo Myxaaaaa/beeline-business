@@ -1,0 +1,40 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  padding-top: 100px;
+}
+
+.popular h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.popular__cards {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .popular {
+    padding: 0;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .popular h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .popular__cards {
+    overflow-x: scroll;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+}

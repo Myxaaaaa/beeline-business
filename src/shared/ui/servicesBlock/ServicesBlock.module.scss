@@ -1,0 +1,226 @@
+.roumingServices__block {
+    width: 322px;
+    border-radius: 12px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+}
+
+.roumingServices__block_wrapp {
+    padding: 17px 24px;
+    border-radius: 12px 12px 0px 0px;
+    background: var(--Color-Icon-Gradient---Light, linear-gradient(337deg, #FBB033 -16.72%, #FDC73D 18.34%, #FFE248 40.79%));
+}
+
+.roumingServices__wrapp_title {
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.roumingServices__block_info {
+    padding: 32px 24px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.roumingServices__block_infoFrame {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.roumingServices__infoFrame_text strong {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.roumingServices__infoFrame_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.roumingServices__infoFrame_textTd {
+    display: flex;
+    align-items: flex-end;
+}
+
+.roumingServices__infoFrame_textTd span {
+    margin-right: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+
+}
+
+.roumingServices__infoFrame_textTdSub {
+    margin-bottom: 3px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+
+}
+
+.roumingServices__block_price {
+    margin-top: 70px;
+    padding: 32px 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #39393B;
+}
+
+.roumingServices__price_num {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.roumingServices__price_num span {
+    margin-left: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.roumingServices__infoFrame_sms {
+    color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.roumingServices__price_btn {
+    width: 122px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--Redesign-yellow, #FFD400);
+    border: none;
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    cursor: pointer;
+}
+
+.roumingServices__price_btn:hover {
+    color: #FFF;
+    transition: color 0.2s ease;
+    background-color: #39393B;
+    transition: background-color 0.2s ease;
+}
+
+.countries {
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    .roumingServices__block {
+        width: 287px;
+    }
+
+    .roumingServices__block_wrapp {
+        padding: 15px 20px;
+    }
+
+    .roumingServices__wrapp_title {
+        color: var(---Neutral-500, #121212);
+        font-family: "Fira Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .roumingServices__block_info {
+        padding: 30px 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .roumingServices__block_infoFrame {
+        gap: 10px;
+    }
+
+    .roumingServices__infoFrame_text span {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .roumingServices__infoFrame_text {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .roumingServices__block_price {
+        margin-top: 23px;
+        padding: 10px 10px 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid #39393B;
+        flex-direction: column;
+    }
+
+    .roumingServices__price_btn {
+        width: 267px;
+        height: 49px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(---Neutral-500, #121212);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 144%;
+    }
+}

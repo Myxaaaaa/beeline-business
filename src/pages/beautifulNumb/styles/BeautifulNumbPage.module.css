@@ -1,0 +1,9 @@
+.beautifulNumb {
+    padding-left: 48px;
+}
+
+@media(max-width: 576px) {
+    .beautifulNumb {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,453 @@
+.forBusinessCard {
+    padding-bottom: 24px;
+    border-radius: 12px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+}
+
+.forBusinessCard__title {
+    width: 322px;
+    height: 60px;
+    padding-left: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 12px 12px 0px 0px;
+    background: var(--Color-Icon-Gradient---Light, linear-gradient(337deg, #FBB033 -16.72%, #FDC73D 18.34%, #FFE248 40.79%));
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.forBusinessCard__block {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.forBusinessCard__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.forBusinessCard__infoFrame {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.forBusinessCard__infoFrame_text strong {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.forBusinessCard__infoFrame_currency {
+    margin-right: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.forBusinessCard__infoFrame_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.forBusinessCard__infoCountry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.forBusinessCard__infoCountry_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+    cursor: pointer;
+}
+
+.forBusinessCard__infoCountry_text span {
+    margin-left: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.forBusinessCard__calls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.forBusinessCard__calls_title {
+    margin-bottom: 2px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.forBusinessCard__calls_text strong {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.forBusinessCard__calls_textSpan {
+    margin-right: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.forBusinessCard__calls_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.forBusinessCard__message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.forBusinessCard__message_title {
+    margin-bottom: 2px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.forBusinessCard__message_text span {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.forBusinessCard__message_span {
+    margin-right: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.forBusinessCard__message_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.forBusinessCard__lack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.forBusinessCard__lack_title {
+    margin-bottom: 2px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+}
+
+.forBusinessCard__lack_text span {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.forBusinessCard__lack_span {
+    margin-right: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.forBusinessCard__lack_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.forBusinessCard__btn {
+    width: 80%;
+    margin-top: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--Color-Accent-1---Blue, #0094FF);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.forBusinessCard__btn:hover {
+    color: #FFE248;
+    transition: color 0.2s ease;
+}
+
+
+
+@media (max-width: 576px) {
+    .forBusinessCard {
+        padding-bottom: 14px;
+    }
+
+    .forBusinessCard__title {
+        width: 287px;
+        height: 54px;
+        padding-left: 20px;
+        color: var(---Neutral-500, #121212);
+        font-family: "Fira Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .forBusinessCard__block {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .forBusinessCard__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .forBusinessCard__infoFrame {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .forBusinessCard__infoFrame_text span {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+    }
+
+    .forBusinessCard__infoFrame_currency {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400 !important;
+        line-height: 132%;
+        text-decoration-line: underline;
+    }
+
+    .forBusinessCard__infoFrame_text {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .forBusinessCard__infoCountry {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .forBusinessCard__infoCountry_text {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+    }
+
+    .forBusinessCard__infoCountry_text span {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+        text-decoration-line: underline;
+    }
+
+    .forBusinessCard__calls {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .forBusinessCard__calls_title {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .forBusinessCard__calls_text span {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .forBusinessCard__calls_text {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .forBusinessCard__message {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .forBusinessCard__message_title {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .forBusinessCard__message_text span {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .forBusinessCard__lack {
+        display: none;
+        /* display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; */
+    }
+
+    .forBusinessCard__lack_title {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 420;
+        line-height: 130%;
+    }
+
+    .forBusinessCard__lack_text span {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .forBusinessCard__lack_text {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .forBusinessCard__btn {
+        padding: 15px 0px;
+    }
+}

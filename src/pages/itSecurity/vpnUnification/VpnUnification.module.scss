@@ -1,0 +1,75 @@
+.softwareSales {
+    padding: 0 46px;
+}
+
+.softwareSales__detail {
+    display: none;
+}
+
+.softwareSales__section {
+    height: 416px;
+}
+
+.softwareSales__left {
+    position: static;
+}
+
+.softwareSales__bottom {
+    bottom: 0;
+}
+
+.softwareSales .softwareSales__title {
+    white-space: wrap;
+}
+
+.shortNumber__next {
+    display: none;
+}
+
+.necessaryCard > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.necessaryCard {
+    margin-top: 100px;
+}
+
+.necessary__cards {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.titleStyles {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .softwareSales {
+        padding: 0 16px;
+    }
+
+    .softwareSales__section {
+        height: 100%;
+    }
+
+    .necessaryCard {
+        margin-top: 50px;
+    }
+
+    .necessaryCard>h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .necessary__cards {
+        padding-top: 20px;
+    }
+
+    .relatedServices__section {
+        display: none;
+    }
+}

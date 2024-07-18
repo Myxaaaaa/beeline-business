@@ -1,0 +1,76 @@
+.home {
+  padding-left: 48px;
+  position: relative;
+}
+
+.connection__two,
+.connection__one,
+.connection__adaptivity {
+  height: 64px;
+  position: fixed;
+  z-index: 1;
+  right: 46px;
+  bottom: 28px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+.connection__two *,
+.connection__one * {
+  transition: all 0.1s linear;
+}
+
+.connection__two:hover *,
+.connection__one:hover * {
+  border: 2px solid #39393b;
+  border-radius: 32px;
+  fill: #121212;
+}
+
+.connection__two:hover path,
+.connection__one:hover path {
+  stroke: #e8e8e8;
+}
+
+.connection__one {
+  bottom: 105px;
+}
+
+.connection__adaptivity {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (max-width: 576px) {
+  .home {
+    padding: 0 16px;
+  }
+
+  .home .statusNumber__btn {
+    margin-top: 10px;
+  }
+
+  .connection__adaptivity,
+  .connection__two {
+    right: 18px;
+    bottom: 20px;
+  }
+
+  .connection__one {
+    display: none;
+  }
+
+  .connection__adaptivity {
+    display: block;
+    bottom: 95px;
+  }
+
+  .connection__adaptivity2 {
+    bottom: 150px;
+  }
+}

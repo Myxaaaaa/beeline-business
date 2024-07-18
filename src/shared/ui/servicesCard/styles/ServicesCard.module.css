@@ -1,0 +1,99 @@
+.services__slider_block {
+    display: flex;
+    align-items: center;
+    width: 493px;
+    height: 220px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #303030;
+    padding-left: 24px;
+    margin-top: 32px;
+}
+.services_card_icons {
+    width: 262px;
+    height: 172px;
+    top: 24px;
+    left: 24px;
+    padding: 0px 0px 30px 0px;
+    gap: 46px;
+    opacity: 0px;
+}
+.services_card_title {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: left;
+    color: #E8E8E8;
+}
+.services_card_text {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: left;
+    color: #909090;
+    padding-top: 16px;
+}
+.btn {
+    display: none;
+}
+@media (max-width: 576px) {
+    .services__slider_block {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 343px;
+        padding: 20px 10px 14px 10px;
+        gap: 10px;
+        border-radius: 6px 0px 0px 0px;
+        opacity: 0px;
+        background: var(---Neutral-450, #212121);
+    }
+    .services_card_title {
+        font-family: Fira Sans;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 19.8px;
+        height: 40px;
+        padding-left: 24px;
+    }
+    .services_card_text {
+        width: 100%;
+        height: 30px;
+        font-family: Fira Sans;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.84px;
+        text-align: center;
+        padding-top: 140px;
+    }
+    .img {
+        position: absolute;
+        width: 100%;
+        height:180px;
+        gap: 10px;
+        opacity: 0px;
+        bottom: 120px;
+        right: 14px;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        height: 45px;
+        top: 74px;
+        padding: 12px 32px 12px 32px;
+        gap: 8px;
+        border-radius: 6px ;
+        border: none;
+        opacity: 0px;
+        border: 1px solid #39393B;
+        cursor: pointer;
+        color: #E8E8E8;
+        margin-top: 100px;
+        background: transparent;
+    }
+    .btn:hover {
+        background-color: #FFD400;
+    }
+}

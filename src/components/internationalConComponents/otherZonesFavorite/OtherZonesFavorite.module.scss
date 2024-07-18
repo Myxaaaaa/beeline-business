@@ -1,0 +1,51 @@
+.otherZones {
+  margin-top: 100px;
+  color: #fff;
+}
+
+.cards__container {
+  display: flex;
+  gap: 20px;
+}
+
+.otherZones h2 {
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+@media (max-width: 576px) {
+  .otherZones {
+    margin-top: 50px;
+  }
+
+  .otherZones h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .otherZones__cards {
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+
+  .otherZones__cards::-webkit-scrollbar {
+    height: 11px;
+  }
+
+  .otherZones__cards::-webkit-scrollbar-thumb {
+    border-radius: 24px;
+    background: var(---Neutral-300, #909090);
+  }
+
+  .otherZones__cards::-webkit-scrollbar-track {
+    border-radius: 24px;
+    background: var(---Neutral-400, #232325);
+  }
+
+  .cards__container {
+    width: 255%;
+  }
+}

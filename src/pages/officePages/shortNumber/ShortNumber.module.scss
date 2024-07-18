@@ -1,0 +1,181 @@
+.shortNumberSection {
+    padding: 0 48px;
+}
+.detailStyles {
+    width: 184px;
+    height: 57px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-1---Primary-dark, #121212);
+    color: var(--Color-button_text-grey, var(---Neutral-150-Text, #E8E8E8));
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+}
+/* third component */
+
+.serviceSolution {
+    margin-top: 83px;
+}
+
+.serviceSolution__title {
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.serviceSolution__hidden {
+    width: 1058px;
+    margin-top: 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.serviceSolution__slider {
+    display: flex;
+    gap: 20px;
+    transition: 0.5s;
+}
+
+
+/* 4 component */
+.advantages {
+    margin-top: 100px;
+}
+
+.advantages__title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.advantages__blocks {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.usefulArticles__section {
+    margin-top: 100px;
+}
+
+.shortNumber {
+    margin-top: 100px;
+}
+
+.shortNumber>h2,
+.necessaryCard>h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.shortNumber__container {
+    width: 1053px;
+    padding-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shortNumber__cards {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.8s ease;
+}
+.customNumCard {
+    width: 226px;
+    height: 168px;
+    padding: 15px 33px;
+}
+
+@media (max-width: 576px) {
+    .shortNumberSection {
+        padding: 0 16px;
+    }
+
+    /* third component */
+    .serviceSolution {
+        margin-top: 40px;
+    }
+
+    .serviceSolution__title {
+        display: none;
+    }
+
+    .serviceSolution__hidden {
+        width: 100%;
+    }
+
+    .serviceSolution__slider {
+        flex-direction: column;
+        gap: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 16px;
+        border-radius: 12px;
+        background: var(---Neutral-400, #232325);
+    }
+
+    /* 4 component */
+
+    .advantages {
+        margin-top: 40px;
+    }
+
+    .advantages__title {
+        color: var(--Color-Neutral-7---White, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .advantages__blocks {
+        margin-top: 20px;
+        gap: 16px;
+    }
+
+    .usefulArticles__section {
+        margin-top: 50px;
+    }
+
+    .shortNumber {
+        display: none;
+    }
+
+    .shortNumberAdaptive {
+        width: 100%;
+        margin-top: 40px;
+        padding: 16px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        background-color: #232325;
+        border-radius: 12px;
+    }
+
+    .shortNumber>h2 {
+        text-align: center;
+    }
+    .relatedServices__section {
+        display: none;
+    }
+}

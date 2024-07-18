@@ -1,0 +1,235 @@
+.countriesModal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    scrollbar-gutter: stable;
+
+}
+
+.modalContent {
+    width: 839px;
+    position: relative;
+    padding-bottom: 23px;
+    border-radius: 12px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.06);
+}
+
+.modalContent__title {
+    margin: 32px auto;
+    margin-bottom: 24px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.modalContent__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.countriesFlag {
+    box-shadow: inset 0 -10px 10px rgba(23, 23, 23, 0.3);
+
+}
+
+.country__blocks {
+    width: 95%;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    overflow-y: scroll;
+
+}
+
+.country__frame {
+    height: 366px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+.country__blocks::-webkit-scrollbar {
+    width: 11px;
+}
+
+.country__blocks::-webkit-scrollbar-track {
+    border-radius: 24px;
+    background: var(--Color-Neutral-3---Dark-gray, #39393B);
+}
+
+.country__blocks::-webkit-scrollbar-thumb {
+    width: 11px;
+    height: 184px;
+    border-radius: 24px;
+    background: var(--Color-Neutral-4---Mid-gray, #909090);
+}
+
+.country__block {
+    width: 220px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 16px;
+}
+
+
+.country__block_title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.modalContent__price {
+    width: 100%;
+    height: 103px;
+    position: absolute;
+    padding: 23px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    border-radius: 0px 0px 12px 12px;
+
+}
+
+.modalContent__price_num {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.modalContent__price_num span {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.modalContent__price_btn {
+    width: 194px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--Redesign-yellow, #FFD400);
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    border: none;
+    cursor: pointer;
+}
+
+.modalContent__price_btn:hover {
+    color: #FFF;
+    transition: color 0.2s ease;
+    background-color: #39393B;
+    transition: background-color 0.2s ease;
+}
+
+/* box */
+
+.modalContent__box {
+    width: 100%;
+    height: 64px;
+    position: absolute;
+    bottom: -8px;
+    border-radius: 0px 0px 12px 12px;
+    background: linear-gradient(0deg, #232325 50%, rgba(35, 35, 37, 0.00) 100%);
+}
+
+
+@media (max-width: 576px) {
+    .modalContent {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .country__blocks {
+        height: 390px;
+    }
+
+    .country__frame {
+        height: auto;
+    }
+    .country__block {
+        width: 99%;
+    }
+    .modalContent__price {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        padding: 10px 10px 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+        background: var(--Color-Neutral-2---Secondary-dark, #232325);
+        border-radius: 0px 0px 12px 12px;
+        flex-direction: column;
+    }
+
+    .modalContent__price_btn {
+        width: 100%;
+        color: var(---Neutral-450, #212121);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .modalContent__price_num {
+        color: var(---Neutral-100, #FFF);
+        font-family: "Fira Sans";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .modalContent__price_num span {
+        color: var(---Neutral-100, #FFF);
+        font-family: "Fira Sans";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+        text-decoration-line: underline;
+    }
+}

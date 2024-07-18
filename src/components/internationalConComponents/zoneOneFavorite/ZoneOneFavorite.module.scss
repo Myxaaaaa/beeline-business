@@ -1,0 +1,205 @@
+.zoneOne {
+  color: #fff;
+}
+
+.zoneOne h2 {
+  margin: 10px 0 42px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.zoneOne__cards {
+  display: flex;
+  gap: 32px;
+}
+
+.cards__connection {
+  width: 500px;
+  height: 233px;
+  border-radius: 12px;
+  background: #232325;
+}
+
+.cards__countries {
+  height: 68px;
+  border-radius: 8px;
+  background: #232325;
+}
+
+.connection__texts {
+  margin: 32px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.connection__texts p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 144%;
+}
+
+.texts__calls,
+.texts__countries {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.texts__calls p,
+.texts__countries p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 144%;
+}
+
+.texts__calls b {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+}
+
+.texts__calls span,
+.texts__countries span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+  text-decoration-line: underline;
+  color: #fff;
+}
+
+.countries__line {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.connection__btn {
+  margin-top: 42px;
+  padding: 32px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #39393b;
+}
+
+.connection__btn p {
+  color: #e8e8e8;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+.connection__btn b {
+  color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.connection__btn span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+  text-decoration-line: underline;
+  color: #fff;
+}
+
+.connection__btn button {
+  height: 41px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffd400;
+  color: #121212;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 144%;
+  border: none;
+  cursor: pointer;
+}
+
+.connection__btn button:hover {
+  color: #FFF;
+  transition: color 0.2s ease;
+  background-color: #39393B;
+  transition: background-color 0.2s ease;
+}
+
+.countries__challenges {
+  width: 474px;
+  height: 68px;
+  font-size: 16px;
+  padding: 22px 24px;
+  border-radius: 8px;
+  background: #232325;
+  color: #e8e8e8;
+  background-image: url('../../../../../shared/assets/icons/internationalConComponentsIcons/arrowDown.svg');
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .zoneOne {
+    padding-right: 16px;
+    height: 100%;
+  }
+
+  .zoneOne h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 30px auto 40px;
+  }
+
+  .zoneOne__cards {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .cards__connection {
+    width: 100%;
+  }
+
+  .connection__texts {
+    margin: 20px 20px 0;
+  }
+
+  .connection__texts b {
+    font-size: 16px;
+  }
+
+  .connection__texts span {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .connection__btn {
+    margin-top: 36px;
+    gap: 10px;
+    flex-direction: column;
+    padding: 10px 10px 0;
+  }
+
+  .connection__btn p {
+    font-size: 16px;
+  }
+
+  .connection__btn b {
+    font-size: 32px;
+  }
+
+  .connection__btn button {
+    width: 100%;
+    height: 45px;
+  }
+
+  .countries__challenges {
+    width: 100%;
+  }
+}

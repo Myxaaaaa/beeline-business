@@ -1,0 +1,114 @@
+.relatedServices {
+    margin-top: 100px;
+}
+
+.relatedServices__title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.relatedServices__hidden {
+    width: 1053px;
+    margin-top: 32px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.relatedServices__slider {
+    width: 1510px;
+    display: flex;
+    gap: 16px;
+    transition: 1s;
+}
+
+.relatedServicesAdaptive {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .relatedServices {
+        display: none;
+    }
+
+    .relatedServices__title {
+        text-align: center;
+        color:#FFF;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .relatedServicesAdaptive {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .relatedServicesAdaptive__cards {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cards__card {
+        padding: 15px;
+        width: 100%;
+        height: 176px;
+        display: flex;
+        gap: 10px;
+        border-radius: 12px;
+        background: #232325;
+        background-image: url('../../../assets/images/allVisual/popularCardCircle.png');
+        background-repeat: no-repeat;
+        background-position: center left -25px;
+    }
+
+    .cards__card img {
+        height: 140px;
+    }
+
+    .card__info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card__info button {
+        background-color: rgba(0, 0, 0, 0);
+        color:#FFD400;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 144%;
+        text-decoration-line: underline;
+        border: none;
+    }
+
+    .info__text {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        height: 120px;
+        overflow: hidden;
+    }
+
+    .info__text h4 {
+        color: #E8E8E8;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .info__text p {
+        height: 64px;
+        overflow: hidden;
+        color:#909090;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 132%;
+    }
+}

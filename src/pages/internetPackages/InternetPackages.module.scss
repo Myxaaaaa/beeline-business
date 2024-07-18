@@ -1,0 +1,39 @@
+.internetPackages {
+    padding: 0 52px;
+    color: #fff;
+}
+
+.internet__heading {
+    padding-top: 0;
+}
+
+.internetPackages .internet__navigate {
+    width: 120px;
+}
+
+.internetPackages .internet__img {
+    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+    .internetPackages {
+        padding: 0 16px;
+    }
+
+    .internetPackages .internet__navigate {
+        width: 50%;
+    }
+
+    .internetPackages .internet__heading {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .internetPackages .internet__img {
+        margin-top: 20px;
+    }
+
+    .internetPackages .dropInfo__section {
+        display: none;
+    }
+}

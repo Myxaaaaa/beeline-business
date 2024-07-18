@@ -1,0 +1,88 @@
+.fixedMobileCon {
+    padding: 0 52px;
+}
+
+.fixedMobileCon__detail {
+    display: none;
+}
+
+.shortNumber__container {
+    padding-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shortNumber > h2, .necessaryCard > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.necessaryCard {
+    margin-top: 100px;
+}
+
+.shortNumber__cards {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.8s ease;
+}
+
+.necessary__cards {
+    width: 1053px;
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.statusNumber__section {
+    margin: 100px 0 0 0;
+}
+
+@media (max-width: 576px) { 
+    .fixedMobileCon {
+        padding: 0 16px;
+    }
+
+    .shortNumber {
+        display: none;
+    }
+
+    .shortNumber > h2 {
+        text-align: center;
+    }
+
+    .necessaryCard {
+        margin-top: 40px;
+    }
+
+    .necessary__cards {
+        width: 100%;
+    }
+    
+    .shortNumberAdaptive {
+        width: 100%;
+        margin-top: 40px;
+        padding: 16px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        background-color: #232325;
+        border-radius: 12px;
+    }
+    
+    .statusNumber__section {
+        margin-top: 40px;
+    }
+
+    .fixedMobileCon .statusNumber__btn {
+        margin-top: 20px;
+    }
+
+    .relatedServices__section {
+        display: none;
+    }
+}

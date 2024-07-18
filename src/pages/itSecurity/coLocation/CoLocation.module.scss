@@ -1,0 +1,192 @@
+.coLocation {
+    padding: 0 48px;
+}
+
+.info {
+    margin-top: 100px;
+}
+
+.info__title {
+    margin-bottom: 10px;
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.info__subtitle {
+    color: #B6B6B6;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+
+.shortNum {
+    width: 1040px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.shortNum_back {
+    margin-top: 100px;
+}
+.shortNum_back h3 {
+    margin-bottom: 32px;
+    color: #E8E8E8;
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.shortNum__slider {
+    display: flex;
+    gap: 14px;
+    transition: 0.8s;
+}
+
+.detailStyles {
+    width: 184px;
+    height: 57px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: var(--Color-Neutral-1---Primary-dark, #121212);
+    color: var(--Color-button_text-grey, var(---Neutral-150-Text, #E8E8E8));
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.customNumCard {
+    width: 254px;
+    height: 142px;
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customCloud {
+    display: none;
+}
+
+.coAdvantages {
+    margin-top: 100px;
+}
+
+.coAdvantages__title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.coAdvantages__blocks {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.usefulArticles__section {
+    margin-top: 100px;
+}
+
+@media (max-width: 576px) {
+    .coLocation {
+        padding: 0 16px;
+    }
+
+    .info {
+        margin-top: 40px;
+    }
+
+    .info__title {
+        margin-bottom: 20px;
+        color: var(--Color-Neutral-7---White, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .info__subtitle {
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .shortNum {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .shortNum_back h3 {
+        margin-bottom: 30px;
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .shortNum__slider {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+        border-radius: 12px;
+        background: var(---Neutral-400, #232325);
+    }
+
+    .customNumCard {
+        display: none;
+    }
+
+    .coAdvantages {
+        margin-top: 50px;
+    }
+
+    .coAdvantages__title {
+        color: var(--Color-Neutral-7---White, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .coAdvantages__blocks {
+        margin-top: 20px;
+        gap: 16px;
+    }
+
+    .usefulArticles__section {
+        margin-top: 50px;
+    }
+
+    .relatedServices__section {
+        display: none;
+    }
+}

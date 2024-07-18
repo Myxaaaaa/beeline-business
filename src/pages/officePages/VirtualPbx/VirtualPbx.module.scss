@@ -1,0 +1,51 @@
+.virtualPbx {
+    padding: 0 52px;
+}
+
+.virtualPbx__detail {
+    display: none;
+}
+
+
+.necessaryCard > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.necessaryCard {
+    margin-top: 100px;
+}
+
+.necessary__cards {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.virtualPbx .statusNumber__btn {
+    margin-top: 50px;
+}
+
+.statusNumber__section {
+    margin-right: 0;
+}
+
+@media (max-width: 576px) { 
+    .virtualPbx {
+        padding: 0 16px;
+    }
+
+    .necessaryCard {
+        margin-top: 40px;
+    }
+
+    .virtualPbx .statusNumber__btn {
+        margin-top: 20px;
+    }
+
+    .relatedServices__section {
+        display: none;
+    }
+}

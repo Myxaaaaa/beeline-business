@@ -1,0 +1,43 @@
+.customText {
+    padding: 14px 0 30px;
+}
+
+.tarifs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+.tarifs_block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.tarifs_title {
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42.24px;
+    text-align: left;
+    color: #FFFFFF;
+}
+@media (max-width: 576px) {
+    .tarifs_block {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .tarifs_title {
+        font-family: Fira Sans;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.68px;
+        text-align: center;
+        width: 100%;
+        height: 64px;
+    }
+}

@@ -1,0 +1,145 @@
+.inTariff__title {
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.inTariff__subtitle {
+    margin-top: 32px;
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.inTariff__blocks {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.inTariff__blockRight {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.second__packages {
+    margin-left: 40px;
+}
+
+.third__packages {
+    margin-left: 80px;
+}
+
+.fore__packages {
+    margin-left: 40px;
+}
+
+.inTariff__packages_title {
+    color: var(---Brend-200, #FFD400);
+    font-family: "Fira Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.inTariff__packages_text {
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.inTariff__blocks_title {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .inTariff__title {
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .inTariff__subtitle {
+        margin-top: 30px;
+        color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+
+    .inTariff__subtitle br {
+        display: none;
+    }
+
+    .inTariff__blocks {
+        display: block;
+    }
+
+    .inTariff__blocks img {
+        display: none;
+    }
+
+    .inTariff__blocks_title {
+        margin-bottom: 30px;
+        display: block;
+        color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .second__packages {
+        margin-left: 0;
+    }
+
+    .third__packages {
+        margin-left: 0;
+    }
+
+    .fore__packages {
+        margin-left: 0;
+    }
+
+    .inTariff__packages_title {
+        margin-bottom: 8px;
+        color: var(---Brend-200, #FFD400);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .inTariff__packages_text {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+}

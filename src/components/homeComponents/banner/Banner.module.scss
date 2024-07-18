@@ -1,0 +1,27 @@
+.banner {
+  height: 480px;
+  color: #e8e8e8;
+}
+
+.slider .info2__p {
+  width: 603px;
+}
+
+.info3__p {
+  width: 521px;
+}
+
+.info4__p {
+  width: 552px;
+}
+
+@media (max-width: 576px) {
+  .banner {
+    height: 100%;
+  }
+
+  .slider {
+    width: 100%;
+    height: 100%;
+  }
+}

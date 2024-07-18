@@ -1,0 +1,136 @@
+.article {
+  padding: 0 80px 0 50px;
+}
+
+.banner_title {
+  padding-top: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.banner_title img {
+  width: 1000px;
+  height: 430px;
+  border-radius: 10px;
+}
+
+.banner_title h1 {
+  color: var(--Color-Neutral-7---White, #fff);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.IP_mean,
+.IP_list_head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.IP_mean h3 {
+  color: var(--Color-Neutral-6---Light-gray2, #e8e8e8);
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.IP {
+  padding-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.IP_mean p {
+  padding: 10px 0;
+  color: var(--Color-Neutral-6---Light-gray2, #e8e8e8);
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+.IP_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.IP_list li {
+  color: var(--Color-Neutral-6---Light-gray2, #e8e8e8);
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+@media (max-width: 576px) {
+  .article {
+    padding: 0 16px;
+  }
+  .banner_title h1 {
+    width: 60%;
+    text-align: center;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 144%;
+    text-transform: uppercase;
+  }
+
+  .banner_title {
+    padding-top: 30px;
+    align-items: center;
+  }
+
+  .banner_title img {
+    height: 270px;
+  }
+  .IP_info,
+  .IP_mean,
+  .IP_list_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(---Neutral-400, #232325);
+  }
+
+  .IP_info p,
+  .IP_list_head li {
+    font-size: 14px;
+  }
+
+  .IP_info h3,
+  .IP_list_head h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .IP_mean h3 {
+    font-size: 18px;
+  }
+
+  .IP {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .IP_mean p {
+    padding: 0px;
+  }
+  .IP {
+    gap: 22px;
+  }
+  .banner_title img {
+    width: 100%;
+    height: auto;
+  }
+}

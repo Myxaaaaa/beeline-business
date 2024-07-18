@@ -1,0 +1,258 @@
+.tariffs {
+  height: 599px;
+  background-color: #121212;
+  margin-top: 100px;
+}
+
+.tariffs h2 {
+  color: #fff;
+  width: 1006px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 132%;
+  padding-bottom: 32px;
+}
+
+.tariffs__cards {
+  display: flex;
+  gap: 20px;
+}
+
+.cards__container {
+  display: flex;
+  align-items: center;
+  width: 1051px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards__wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.7s ease;
+}
+
+.cards__card {
+  background-color: #232325;
+  width: 322px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.card__top {
+  border-radius: 12px 12px 0px 0px;
+  background-color: #fee248;
+  height: 60px;
+  padding: 17px 24px;
+  margin-bottom: 32px;
+}
+
+.card__top p {
+  color: #121212;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.card__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 24px;
+}
+
+.texts__text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.texts__text p {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 144%;
+}
+
+.texts__text b {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+}
+
+.texts__text span {
+  color: #e8e8e8;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+  text-decoration-line: underline;
+}
+
+.texts__sub {
+  width: 289px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 32px 24px 0;
+}
+
+.card__bottom3 {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  position: absolute;
+  bottom: 0;
+  padding: 32px 24px 24px;
+  border-top: 1px solid #39393b;
+}
+
+.card__bottom3 p {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.card__bottom3 span {
+  color: #e8e8e8;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+  text-decoration-line: underline;
+}
+
+.card__bottom3 small {
+  color: #e8e8e8;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+.card__bottom3 button {
+  height: 41px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffd400;
+  cursor: pointer;
+  border: none;
+  color: #121212;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 144%;
+}
+
+.card__button4 {
+  width: 274px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffd400;
+  color: #121212;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 144%;
+  border: none;
+  cursor: pointer;
+}
+
+.card__button4:hover,
+.card__bottom3 button:hover {
+  color: #fff;
+  transition: color 0.2s ease;
+  background-color: #39393b;
+  transition: background-color 0.2s ease;
+}
+
+@media (max-width: 576px) {
+  .tariffs {
+    margin-top: 50px;
+    padding: 0;
+    height: 547px;
+  }
+
+  .tariffs h2 {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .cards__card {
+    margin-bottom: 20px;
+    position: relative;
+    width: 287px;
+    height: 454px;
+  }
+
+  .card__top {
+    margin-bottom: 10px;
+  }
+
+  .item__gb span,
+  .item__min span {
+    font-size: 48px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+
+  .item__gb small {
+    font-size: 16px;
+  }
+
+  .card__texts {
+    margin: 10px 0 0 20px;
+    gap: 12px;
+  }
+
+  .texts__sub { 
+    width: auto;
+    margin: 30px 0 0 20px;
+  }
+
+  .texts__text p {
+    width: 85%;
+  }
+
+  .card__bottom3 {
+    margin: 0;
+    bottom: 10px;
+    padding: 10px 10px 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card__bottom3 button {
+    height: 45px;
+    width: 267px;
+  }
+
+  .card__button4 {
+    width: 94%;
+    height: 45px;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .cards__container {
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+
+  .cards__container::-webkit-scrollbar {
+    height: 11px;
+  }
+
+  .cards__container::-webkit-scrollbar-thumb {
+    border-radius: 24px;
+    background: var(---Neutral-300, #909090);
+  }
+
+  .cards__container::-webkit-scrollbar-track {
+    border-radius: 24px;
+    background: var(---Neutral-400, #232325);
+  }
+}

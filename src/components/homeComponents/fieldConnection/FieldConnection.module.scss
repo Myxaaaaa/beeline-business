@@ -1,0 +1,136 @@
+.field {
+  height: 64px;
+  position: fixed;
+  right: 46px;
+  bottom: 28px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 52px;
+  background: #ffd400;
+  animation: rightOpacity 0.8s ease-in-out;
+  transition: opacity 0.3s ease-in;
+}
+
+.field__block {
+  display: flex;
+  align-items: center;
+}
+
+.field__block p {
+  margin-left: 24px;
+}
+
+.field__block input {
+  width: 148px;
+  height: 40px;
+  padding: 10px 20px 10px 12px;
+  margin: 0 12px 0 49px;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  border: none;
+}
+
+.field__block button {
+  height: 41px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #121212;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 144%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.field__block button:hover {
+  color: #fff;
+  transition: color 0.2s ease;
+  background-color: #39393b;
+  transition: background-color 0.2s ease;
+}
+
+.field__block > img {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.block__close > img {
+  display: none;
+}
+
+/* Remove spinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* Animation */
+@keyframes rightOpacity {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .field {
+    width: 92%;
+    height: auto;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 20px;
+    display: block;
+    padding: 20px;
+  }
+
+  .field__block > img {
+    display: none;
+  }
+
+  .field__block {
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .block__close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+    width: 100%;
+  }
+
+  .block__close p {
+    position: relative;
+    margin: 0;
+  }
+
+  .block__close img {
+    display: block;
+  }
+
+  .block__submit {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .block__submit input {
+    width: 170%;
+    margin: 0;
+  }
+
+  .block__submit button {
+    width: 140%;
+  }
+}

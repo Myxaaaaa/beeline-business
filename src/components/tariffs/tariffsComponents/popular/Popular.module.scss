@@ -1,0 +1,30 @@
+.popular {
+    margin-top: 100px;
+}
+.container {
+    width: 1006px;
+}
+.popular__items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .popular {
+        margin-top: 50px;
+    }
+    .container {
+        width: 100%;
+    }
+    .popular__hidden {
+        width: 100%;
+    }
+    .popular__items {
+        display: flex;
+        gap: 16px;
+    }
+
+}
+

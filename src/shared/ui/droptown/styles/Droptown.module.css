@@ -1,0 +1,138 @@
+.droptown_flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 10;
+}
+
+.droptown {
+    user-select: none;
+    position: relative;
+    height: 56px;
+}
+
+.droptown_btn {
+    width: 90px;
+    padding: 15px 16px;
+    color: #FFF;
+    font-weight: bold;
+    color: #E8E8E8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.04px;
+    text-align: left;
+    background: #39393B;
+    border-radius: 8px;
+    border: 1px solid #39393B;
+}
+
+.droptown_btn:hover {
+    background: var(---Neutral-400, #232325);
+}
+
+.droptown_btn_active {
+    border: 1px solid #39393B;
+    border-bottom: none;
+    background: var(---Neutral-400, #232325);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.droptown_content {
+    width: 90px;
+    position: absolute;
+    background-color: #39393B;
+    font-weight: 500;
+    color: #E8E8E8;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.droptown_content:hover {
+    border: 1px solid #39393B;
+    border-top: none;
+}
+
+.droptown_block_text {
+    width: 100%;
+    font-size: 17px;
+}
+
+.droptown_content_active {
+    background: var(---Neutral-400, #232325);
+    border: 1px solid #39393B;
+    border-top: none;
+}
+
+.droptown_item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.droptown_item:hover {
+    background-color: #39393B;
+}
+
+.droptown_block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.droptown_end_inp {
+    width: 297px;
+    padding: 20px 16px;
+    border-radius: 10px;
+    background: var(--Color-Neutral-3---Dark-gray, #39393B);
+    color: var(--Color-Neutral-7---White, #FFF);
+    border: 1px solid #232325;
+    outline: none;
+}
+
+.droptown_end_inp::placeholder {
+    color: var(---Neutral-300, #909090);
+    text-align: left;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+@media (max-width: 576px) {
+    .droptown {
+        height: 50px;
+    }
+
+    .droptown_content {
+        width: 100%;
+    }
+
+    .droptown_end_inp {
+        width: 100%;
+        height: 50px;
+    }
+
+    .droptown_btn {
+        height: 50px;
+    }
+
+    .droptown_end {
+        width: 100%;
+    }
+
+    .droptown_end ::placeholder {
+        color: var(---Neutral-300, #909090);
+        font-family: "Fira Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+}

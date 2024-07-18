@@ -1,0 +1,105 @@
+.roumCards {
+    margin: 76px 0px 100px;
+}
+
+.container {
+    width: 1006px;
+}
+
+.roumCards__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.roumCards__block {
+    width: 493px;
+    height: 220px;
+    border-radius: 12px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    box-shadow: 0px 8.291px 19.898px 0px rgba(39, 44, 54, 0.05);
+    display: flex;
+}
+
+.roumCards__texts {
+    padding: 24px 0px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.roumCards__texts_title {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.roumCards__texts_text {
+    margin-top: 14px;
+    color: var(--Color-Neutral-4---Mid-gray, #909090);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.roumCards__texts_btn {
+    width: 174px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    background: none;
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    cursor: pointer;
+}
+
+.roumCards__title {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .roumCards {
+        margin: 50px 0px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .roumCards__title {
+        margin-bottom: 30px;
+        display: block;
+        color: var(---Neutral-100, #FFF);
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+        text-align: center;
+    }
+
+    .roumCards__blocks {
+        display: flex;
+        gap: 16px;
+    }
+
+    .roumCards__hidden {
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,17 @@
+.internationalCon {
+  padding-left: 52px;
+}
+
+.banner__detail {
+  display: none;
+}
+
+.banner__text {
+  width: 565px;
+}
+
+@media (max-width: 576px) {
+  .internationalCon {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,65 @@
+.businessBonus {
+  padding: 0 48px;
+}
+
+.banner__buttons {
+  bottom: 0;
+}
+
+.banner__detailButton {
+  display: none;
+}
+
+.banner__leftBox {
+  width: 616px;
+}
+
+.popular__section {
+  width: 1006px;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.popular__section h2 {
+  display: none;
+}
+
+.popular__long {
+  width: 100%;
+}
+
+.long__boxLeft {
+  width: 650px;
+}
+
+.boxLeft__text {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .businessBonus {
+    padding: 0 16px;
+  }
+
+  .popular__section {
+    width: 100%;
+  }
+
+  .popular__section h2 {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 132%;
+  }
+
+  .long__boxLeft {
+    width: 55%;
+  }
+  .banner__leftBox {
+    width: 100%;
+  }
+}

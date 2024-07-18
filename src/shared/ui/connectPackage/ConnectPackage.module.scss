@@ -1,0 +1,260 @@
+.connectPackage {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.connectPackage h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 132%;
+    color: #FFFFFF;
+}
+
+.connectPackage__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.box__tabs {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.box__tabs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    color: #909090;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31.68px;
+    text-align: left;
+}
+
+.box__tabs .active {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    background-image: url('../../assets/icons/internetPackagesIcons/line.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.box__cards {
+    width: 1006px;
+    display: flex;
+    gap: 72px;
+    padding-top: 64px;
+}
+
+.cards__connection {
+    width: 460px;
+}
+
+.connection__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list__yellow {
+    display: flex;
+    align-items: center;
+}
+
+.list p {
+    color: #e8e8e8;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.connection__numbers {
+    color: #e8e8e8;
+    font-size: 17.778px;
+    font-weight: 500;
+    line-height: 132%;
+    border: 1px solid #39393B;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.yellow__circle {
+    background-color: #FFD400;
+    color: #121212;
+}
+
+.plug__texts {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.plug__texts span {
+    color: #909090;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.connection__btn {
+    display: flex;
+    align-items: center;
+    gap: 99px;
+    margin-top: 56px;
+}
+
+.connection__btn p {
+    color: #909090;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 144%;
+    width: 167px;
+}
+
+.connection__btn b {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.connection__btn span {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.connection__btn button {
+    height: 57px;
+    padding: 18px 50px;
+    border-radius: 10px;
+    background: #ffd400;
+    color: #121212;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    border: none;
+    cursor: pointer;
+}
+
+.connection__btn button:hover {
+    color: #FFF;
+    background-color: #39393B;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.cards__img {
+    width: 474px;
+    height: 263px;
+    background: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+}
+
+.connectPackage_text {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.76px;
+    text-align: left;
+    color: #e8e8e8;
+    padding-top: 32px;
+}
+
+.blueText {
+    color: #0094FF;
+}
+
+.noAlignItems {
+    align-items: none;
+}
+
+@media (max-width: 576px) {
+    .connectPackage {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        margin-top: 140px;
+        gap: 30px;
+    }
+
+    .connectPackage h2 {
+        font-size: 24px;
+    }
+
+    .connectPackage_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.12px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .box__tabs {
+        padding-top: 50px;
+    }
+
+    .box__tabs a,
+    .box__texts a {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .box__tabs a.active,
+    .box__texts a.active {
+        font-size: 10px;
+    }
+
+    .box__cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .connectPackage_text {
+        padding-top: 20px;
+    }
+
+    .cards__connection {
+        width: 100%;
+        text-align: left;
+        order: 2;
+    }
+
+    .cards__img {
+        width: 100%;
+        order: 1;
+        margin-top: 60px;
+    }
+
+    .connection__btn {
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 10px;
+        border-top: 1px solid #39393B;
+        padding: 10px 10px 0;
+    }
+
+    .connection__btn p,
+    .connection__btn button {
+        text-align: center;
+        width: 100%;
+    }
+}

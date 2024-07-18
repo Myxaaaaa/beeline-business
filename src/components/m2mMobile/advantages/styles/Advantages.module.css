@@ -1,0 +1,92 @@
+.advantages {
+    margin: 100px 0px 0px 0px;
+}
+.advantages__title {
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42.24px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.advantages__hidden {
+    width: 1045px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.advantages__slider {
+    width: 1340px;
+    padding-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    transition: 1s;
+}
+.advantages__slider_nextBtn {
+    top: 94px;
+    width: 39.962px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    background: var(--Redesign-yellow, #FFD400);
+    position: absolute;
+    right: 0px;
+    border: none;
+    cursor: pointer;
+    bottom: 158px;
+}
+.plans_slider_nextBtn {
+    width: 39.962px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    background: var(--Redesign-yellow, #FFD400);
+    position: absolute;
+    right: 0px;
+    border: none;
+    cursor: pointer;
+    bottom: 55px;
+}
+@media (max-width: 576px) {
+    .traffic_container {
+        overflow-x: scroll;
+        padding-bottom: 20px;
+    }
+    .traffic_container {
+        padding-right: 10px;
+    }
+    .traffic_container::-webkit-scrollbar {
+        height: 11px;
+    }
+    
+    .traffic_container::-webkit-scrollbar-thumb {
+        border-radius: 24px;
+        background: var(---Neutral-300, #909090);
+    }
+    
+    .traffic_container::-webkit-scrollbar-track {
+        border-radius: 24px;
+        background: var(---Neutral-400, #232325);
+    }
+    .advantages__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.68px;
+        text-align: center;
+    }
+    .next_btn {
+        display: none;
+    }
+}

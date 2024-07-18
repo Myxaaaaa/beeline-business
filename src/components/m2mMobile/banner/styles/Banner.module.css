@@ -1,0 +1,112 @@
+.BB {
+    position: relative;
+    width: 1006px;
+    height: 356px;
+    padding: 49px 0 62px 52px;
+    border-radius: 12px;
+    background: #FFD400;
+    margin-top: 100px;
+}
+
+.BB__items {
+    width: 614px;
+    h1 {
+        color: #121212;
+        font-family: Fira Sans;
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 800;
+        text-align: left;
+        line-height: 144%;
+        text-transform: uppercase;
+    }
+
+    p {
+        width: 564px;
+        color: #121212;
+        font-family: Fira Sans;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        padding-top: 12px;
+        line-height: 132%;
+    }
+
+    button {
+        width: 283px;
+        height: 57px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 130%;
+        cursor: pointer;
+        border: none;
+        background: #121212;
+        color: #E8E8E8;
+        margin-top: 90px;
+    }
+    button:hover {
+        color: #FFF;
+        transition: color 0.2s ease;
+        background-color: #39393B;
+        transition: background-color 0.2s ease;
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 384px;
+        height: 356px;
+        margin-top: 15px;
+    }
+    button:active {
+        transform: translateY(2px);
+    }
+}
+@media (max-width: 576px) {
+    .BB {
+        width: 100%;
+        height: 520px;
+        padding: 20px 10px 14px 10px;
+        gap: 10px;
+        opacity: 0px;
+    }
+    .BB__items {
+        width: 100%;
+        h1 {
+            width: 100%;
+            height: 120px;
+            font-family: Fira Sans;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 40.32px;
+            text-align: center;
+        }
+        p {
+            font-family: Fira Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.12px;
+            text-align: center;
+            padding-top: 240px;
+            width: 100%;
+            height: 63px;
+        }
+        button {
+            width: 100%;
+            height: 57px;
+            gap: 10px;
+            border-radius: 10px;
+            opacity: 0px;
+            margin-top: 70px;
+        }
+        img {
+            top: 120px;
+            width: 100%;
+            height: 250px;
+            right: -10px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.plans_slider_nextBtn {
+    width: 39.962px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    background: var(--Redesign-yellow, #FFD400);
+    position: absolute;
+    right: 0px;
+    border: none;
+    cursor: pointer;
+}
+
+@media(max-width: 576px) {
+    .plans_slider_nextBtn {
+        display: none;
+    }
+}

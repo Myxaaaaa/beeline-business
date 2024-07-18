@@ -1,0 +1,13 @@
+.BasicTariffingPage {
+    padding-left: 48px;
+}
+
+.basic__nextButton {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .BasicTariffingPage {
+        padding-left: 16px;
+    }
+}

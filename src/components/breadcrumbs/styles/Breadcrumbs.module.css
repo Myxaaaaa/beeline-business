@@ -1,0 +1,23 @@
+.crumbs {
+    padding-top: 52px;
+}
+
+.crumbs a,
+span {
+    color: var(--Color-Neutral-4---Mid-gray, #909090);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.crumbs span {
+    color: var(--Color-Neutral-4---Mid-gray, #909090);
+}
+
+@media (max-width: 576px) {
+    .crumbs {
+        display: none;
+    }
+}

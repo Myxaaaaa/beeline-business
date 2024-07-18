@@ -1,0 +1,11 @@
+.giv_away {
+    padding-left: 48px;
+}
+.giv_away_other {
+    margin-top: 100px ;
+}
+@media (max-width: 576px) {
+    .giv_away {
+        padding: 0 20px;
+    }
+}

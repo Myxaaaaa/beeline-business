@@ -1,0 +1,38 @@
+.customAnalytics {
+    padding: 0 48px;
+}
+
+.customAnalytics__detail {
+    display: none;
+}
+
+.customAnalytics__left {
+    height: 318px;
+}
+
+.necessaryCard > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.necessaryCard {
+    margin-top: 100px;
+}
+
+.necessary__cards {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .customAnalytics {
+        padding: 0 16px;
+    }
+
+    .customAnalytics__left {
+        height: auto;
+    }
+}

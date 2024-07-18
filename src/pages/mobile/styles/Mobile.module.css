@@ -1,0 +1,8 @@
+.mobile {
+    padding: 0 48px;
+}
+@media (max-width: 576px) {
+    .mobile {
+        padding: 0 20px;
+    }
+}

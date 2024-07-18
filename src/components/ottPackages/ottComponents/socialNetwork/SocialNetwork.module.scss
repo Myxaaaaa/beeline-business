@@ -1,0 +1,10 @@
+.socialNetwork {
+    margin-top: 100px;
+}
+
+@media (max-width: 576px) {
+    .socialNetwork {
+        width: 100%;
+        margin-top: 34px;
+    }
+}

@@ -1,0 +1,18 @@
+.television {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.television_other {
+    padding-top: 100px;
+}
+
+@media (max-width: 576px) {
+    .television {
+        padding: 0 20px;
+    }
+
+    .television_other {
+        padding-top: 0px;
+    }
+}

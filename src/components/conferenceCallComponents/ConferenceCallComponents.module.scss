@@ -1,0 +1,256 @@
+.conference_banner {
+    display: flex;
+}
+
+.conference_info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 51px;
+}
+
+.conference_title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.conference_title h1 {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 144%;
+    text-transform: uppercase;
+}
+
+.conference_title p {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.conference_info_button {
+    height: 57px;
+    padding: 18px 50px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #FFD400;
+    border: none;
+
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+
+    &:hover {
+        color: #FFF;
+        transition: color 0.2s ease;
+        background-color: #39393B;
+        transition: background-color 0.2s ease;
+    }
+
+}
+
+.filling_body {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filling {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+
+.filling_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+}
+
+
+.filling_offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 42px;
+}
+
+.filling_title,
+.filling_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.filling_title h3,
+.filling_text h3 {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.filling_title p,
+.filling_text p {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.filling_text_p {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filling_info_hide {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 57px;
+    padding: 18px 50px;
+    border-radius: 10px;
+    border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+}
+
+.filling_info_button {
+    background: var(--Color-Neutral-1---Primary-dark, #121212);
+    border: none;
+
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.mobileArrowImg {
+    transform: rotate(180deg);
+}
+
+.mobileArrowImg_rotate {
+    transform: rotate(180deg);
+}
+
+.filling_auto_enter {
+    opacity: 0;
+}
+
+.filling_auto_enter_active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+}
+
+.filling_auto_exit {
+    opacity: 1;
+}
+
+.filling_auto_exit_active {
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+}
+
+.conference_img_mobile {
+    display: none;
+}
+
+@media(max-width: 576px) {
+    .conference_img {
+        display: none;
+    }
+
+    .conference_img_mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .conference_title h1 {
+        font-size: 28px;
+    }
+
+    .conference_banner {
+        flex-direction: column;
+    }
+
+    .conference_title p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .conference_title {
+        align-items: center;
+    }
+
+    .conference_info {
+        gap: 20px;
+    }
+
+    .conference_info_button {
+        width: 100%;
+        height: 57px;
+        padding: 18px 50px;
+    }
+
+    .conference_title {
+        margin-top: 40px;
+    }
+
+    .filling_offer {
+        margin-top: 50px;
+    }
+
+    .filling_title {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .filling_title h3,
+    .filling_text h3 {
+        text-align: center;
+    }
+
+    .filling_title p,
+    .filling_text p {
+        font-size: 14px;
+    }
+
+    .filling_body {
+        width: 100%;
+    }
+
+    .filling_info_hide {
+        height: 40px;
+        width: 100%;
+        padding: 1px 20px;
+        justify-content: center;
+        border-radius: 15px;
+        background: var(---Neutral-400, #232325);
+    }
+
+    .filling_info_button {
+        text-align: center;
+        font-weight: 600;
+        background: var(---Neutral-400, #232325);
+    }
+
+    .filling {
+        width: 100%;
+    }
+}

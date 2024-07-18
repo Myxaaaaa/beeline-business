@@ -1,0 +1,150 @@
+.tarifs_card_modem {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 32px;
+}
+.tarifs_card_title {
+    width: 322px;
+    height: 60px;
+    gap: 10px;
+    border-radius: 12px 12px 0px 0px;
+    opacity: 0px;
+    background: linear-gradient(336.67deg, #FBB033 -16.72%, #FDC73D 18.34%, #FFE248 40.79%);
+    padding: 17px 24px 17px 24px;
+    color: #121212;
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 700;
+}
+.tarifs_card {
+    width: 322px;
+    height: 552px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #232325;
+    position: relative;
+}
+.tarifs_card_traffic {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.tarifs_card_traffic_title {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.76px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.tarifs_card_traffic_span {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: left;
+    color: #FFFFFFCC;
+}
+.tarifs_card_calls {
+    padding-top: 32px;
+}
+.tarifs_card_calls_title {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.76px;
+    text-align: left;
+    padding-bottom: 2px;
+    color: #FFFFFF;
+}
+.tarifs_card_calls_text {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.76px;
+    text-align: left;
+    padding-top: 14px;
+    color: #FFFFFF;
+}
+.tarifs_card_calls_span {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: left;
+    color: #FFFFFFCC;
+}
+.tarifs_card_sms {
+    padding-top: 32px;
+}
+.tarifs_card_sms_title {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.76px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.tarifs_card_sms_text {
+    padding-top: 16px;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.76px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.tarifs_card_sms_span {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: left;
+    color: #FFFFFFCC;
+}
+.tarifs_card_application {
+    padding-top: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tarifs_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 474px;
+    height: 68px;
+    top: 117px;
+    left: 532px;
+    padding: 22px 24px 22px 24px;
+    gap: 10px;
+    border-radius: 8px;
+    opacity: 0px;
+    background-color: #232325;
+}
+.tarifs_info_title {
+    //styleName: H3 Regular 16px;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.04px;
+    text-align: left;
+    color: #E8E8E8;
+}
+.tarifs_card_application_title {
+    font-family: Fira Sans;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36.96px;
+    text-align: left;
+    color: #E8E8E8;
+}
+.modem_card_sms_text {
+    padding-top: 16px;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.76px;
+    text-align: left;
+    color: #FFFFFF;
+}

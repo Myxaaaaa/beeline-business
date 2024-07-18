@@ -1,0 +1,148 @@
+:root {
+  --yellow: #ffd400;
+  --title-back: linear-gradient(90deg, #09203f 0%, #537895 100%);
+}
+
+.numberAdaptive {
+  display: none;
+}
+
+.numbers_title {
+  padding: 17px 24px;
+  border-radius: 12px 12px 0px 0px;
+  background: var(--title-back);
+}
+
+.numbers_data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 42px 20px 32px 20px;
+  border-radius: 0 0 12px 12px;
+  border: 2px solid #232325;
+  border-top: none;
+}
+
+.box__circle {
+  display: none;
+}
+
+.box__numberText {
+  width: 185px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 132%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.number__box:hover .box__numberText {
+  transform: translateY(-10px);
+}
+
+.numberAdaptive:hover .box__numberText {
+  transform: translateY(-10px);
+}
+
+.box__numberText.active {
+  color: var(--yellow);
+}
+
+.box__numberText::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  border: 3px solid #E8E8E8;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box__numberText::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #ffd400;
+  border-radius: 12px;
+  opacity: 0;
+  position: absolute;
+  left: 6px;
+  cursor: pointer;
+}
+
+.box__circle:checked+.box__numberText::before {
+  border-color: #ffd400;
+}
+
+.box__circle:checked+.box__numberText::after {
+  opacity: 1;
+}
+
+.btn {
+  display: none;
+  place-items: center;
+  margin-top: 30px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .numbers_title {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .btn {
+    display: flex;
+    gap: 10px;
+  }
+
+  .numbers_data {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 15px;
+    border: none;
+    padding: 30px 0 0 0;
+  }
+
+  .numbers_title {
+    border-radius: 8px;
+  }
+
+  .numbers_title h3 {
+    font-size: 18px;
+    line-height: 132%;
+  }
+
+  .number__box {
+    display: none;
+  }
+
+  .box__numberText {
+    width: auto;
+    font-size: 18px;
+  }
+
+  .numberAdaptive {
+    display: flex;
+    justify-content: space-between;
+    height: 49px;
+    width: 100%;
+    padding: 10px 10px 15px;
+    border-bottom: 1px solid #39393b;
+  }
+
+  .box__numberText::before,
+  .box__numberText::after {
+    display: none;
+  }
+}

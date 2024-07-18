@@ -1,0 +1,180 @@
+.ottOthers {
+    margin-top: 100px;
+    padding-left: 48px;
+}
+
+.ottOthers__title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.ottOthers__hidden {
+    width: 1052px;
+    margin-top: 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.ottOthers__slider {
+    display: flex;
+    gap: 20px;
+    transition: 1s;
+}
+
+.ottOthers__item {
+    width: 322px;
+    border-radius: 12px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+}
+
+.ottOthers__item_title {
+    padding: 17px 24px;
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    border-radius: 12px 12px 0px 0px;
+    background: var(--Color-Icon-Gradient---Light, linear-gradient(337deg, #FBB033 -16.72%, #FDC73D 18.34%, #FFE248 40.79%));
+}
+
+.ottOthers__item_info {
+    padding: 42px 24px 64px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.ottOthers__item_infoText strong {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+
+.ottOthers__item_infoText {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.ottOthers__item_price {
+    padding: 32px 24px 24px;
+    border-top: 1px solid #39393B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ottOthers__item_priceNum {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.ottOthers__item_priceCurrency {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.ottOthers__item_priceText {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.ottOthers__item_price_btn {
+    width: 122px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: var(--Redesign-yellow, #FFD400);
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+}
+
+.ottOthers__item_price_btn:hover {
+    color: #FFF;
+    transition: color 0.2s ease;
+    background-color: #39393B;
+    transition: background-color 0.2s ease;
+}
+
+@media (max-width: 576px) {
+    .ottOthers {
+        width: 100%;
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+
+    .ottOthers__title {
+        text-align: center;
+        color: var(--Color-Neutral-7---White, var(---Neutral-100, #FFF));
+        font-family: "Fira Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 132%;
+    }
+    .ottOthers__hidden {
+        width: 104.5%;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    .ottOthers__hidden::-webkit-scrollbar {
+        height: 11px;
+    }
+
+    .ottOthers__hidden::-webkit-scrollbar-track {
+        margin-top: 20px;
+        background: #f1f1f1;
+        border-radius: 24px;
+        background: var(---Neutral-400, #232325);
+    }
+
+    .ottOthers__hidden::-webkit-scrollbar-thumb {
+        border-radius: 24px;
+        background: var(---Neutral-300, #909090);
+    }
+
+    .ottOthers__hidden::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    .ottOthers__slider {
+        display: flex;
+        gap: 20px;
+        transition: 1s;
+    }
+}

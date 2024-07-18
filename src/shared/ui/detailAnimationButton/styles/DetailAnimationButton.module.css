@@ -1,0 +1,65 @@
+.btn {
+    height: 57px;
+    padding: 18px 50px;
+    border-radius: 10px;
+    background: #FFD400;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    transition: background 0.5s ease-in-out;
+}
+
+.text {
+    display: inline-block;
+    text-align: center;
+    color: #121212;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    position: relative;
+    top: 0;
+    transition: color 0.5s ease-in-out;
+}
+
+.button_animation.active .btn {
+    animation: change 2s forwards;
+    animation-fill-mode: forwards;
+}
+
+.button_animation.active .text {
+    animation: jump 1.5s forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+        color: #121212;
+    }
+
+    30% {
+        transform: translateY(-50%);
+        color: #fff;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes change {
+    0% {
+        background: #FFD400;
+        border: none;
+    }
+
+    30% {
+        background: #121212;
+        border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B);
+    }
+
+    100% {
+        background: #FFD400;
+        border: none;
+    }
+}

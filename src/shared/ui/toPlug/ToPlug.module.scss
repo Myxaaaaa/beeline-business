@@ -1,0 +1,296 @@
+.toPlug__title {
+    margin-top: 10px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.toPlug__blocks {
+    margin-top: 42px;
+    display: flex;
+    gap: 32px;
+}
+
+.toPlug__info {
+    width: 500px;
+    height: 300px;
+    padding: 32px 0px 24px 0px;
+    border-radius: 12px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+}
+
+.toPlug__infoBlock {
+    padding: 0px 24px 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.toPlug__subText {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.toPlug__subText_text strong {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+.toPlug__subText_text span {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+}
+.toPlug__subText_text {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.toPlug__subText_textTd {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%;
+    cursor: pointer;
+}
+
+.toPlug__subText_textTd span {
+    margin-left: 5px;
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.toPlug__infoPrice {
+    padding: 32px 24px 0px;
+    border-top: 1px solid #39393B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toPlug__num_spanFirst {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.toPlug__num_spanSecond {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+    text-decoration-line: underline;
+}
+
+.toPlug__infoPrice_num {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+}
+
+.toPlug__infoPrice_btn {
+    width: 122px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--Redesign-yellow, #FFD400);
+    border: none;
+    cursor: pointer;
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+}
+
+.toPlug__infoPrice_btn:hover {
+    color: #FFF;
+    transition: color 0.2s ease;
+    background-color: #39393B;
+    transition: background-color 0.2s ease;
+}
+
+.toPlug__select {
+    height: 68px;
+    border-radius: 8px;
+    position: relative;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+}
+
+.toPlug__challenges {
+    width: 474px;
+    height: 68px;
+    padding: 22px 24px;
+    border-radius: 8px;
+    position: relative;
+    border: none;
+    background: none;
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.toPlug__challenges_option {
+    border: none;
+    background: none;
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    outline: none;
+}
+
+.toPlug__select_down {
+    position: absolute;
+    top: 22px;
+    right: 18px;
+}
+
+
+
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+
+    .toPlug__title {
+        margin-top: 30px;
+        color: var(---Neutral-100, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .toPlug__blocks {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .toPlug__info {
+        width: 100%;
+        height: auto;
+        padding: 20px 0px 18px 0px;
+    }
+
+    .toPlug__infoBlock {
+        padding: 0px 20px 30px;
+    }
+
+    .toPlug__subText {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .toPlug__subText_text span {
+        color: var(---Neutral-100, #FFF);
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    .toPlug__infoPrice {
+        padding: 10px 10px 0px;
+        border-top: 1px solid #39393B;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toPlug__num_spanFirst {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        text-align: right;
+        font-family: "Fira Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .toPlug__num_spanSecond {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%;
+        text-decoration-line: underline;
+    }
+
+    .toPlug__infoPrice_num {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%;
+    }
+
+    .toPlug__infoPrice_btn {
+        width: 100%;
+        height: 50px;
+        color: var(--Color-Neutral-1---Primary-dark, var(---Neutral-500, #121212));
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 144%;
+    }
+    .toPlug__challenges {
+        width: 100%;
+    }
+}

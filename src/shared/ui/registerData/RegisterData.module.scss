@@ -1,0 +1,71 @@
+.registerData {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.registerData__modal {
+  width: 482px;
+  padding: 32px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+  background: #232325;
+  text-align: center;
+  position: relative;
+  animation-name: fadeInAnimation;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.registerData__modal p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.modal__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal__top img {
+  width: 48px;
+  height: 48px;
+}
+
+.modal__top span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

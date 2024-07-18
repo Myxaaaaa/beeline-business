@@ -1,0 +1,10 @@
+.connection {
+    padding-left: 48px;
+}
+
+@media (max-width: 576px) {
+    .connection {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

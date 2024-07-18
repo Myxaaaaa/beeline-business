@@ -1,0 +1,45 @@
+.favoriteCountry {
+  margin-top: 60px;
+}
+
+.favoriteCountry h2 {
+  display: none;
+  color:#FFF;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 132%; 
+}
+
+.cards__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.favoriteCountry__text {
+  width: 286px;
+}
+
+@media (max-width: 576px) {
+  .favoriteCountry {
+    text-align: center;
+  }
+
+  .favoriteCountry h2 {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .cards__container {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .favoriteCountry__card {
+    width: 100%;
+  }
+
+  .favoriteCountry__text {
+    width: 100%;
+  }
+}

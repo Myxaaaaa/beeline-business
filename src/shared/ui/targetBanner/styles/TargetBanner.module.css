@@ -1,0 +1,123 @@
+.BB {
+  position: relative;
+  width: 1006px;
+  height: 356px;
+  padding: 49px 0 62px 52px;
+  border-radius: 12px;
+  background: #ffd400;
+  margin-top: 100px;
+}
+
+.BB__items {
+  width: 614px;
+  height: 252px;
+  position: relative;
+  
+  h1 {
+    color: #121212;
+    font-family: Fira Sans;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 40.32px;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #121212;
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    padding-top: 12px;
+  }
+
+  button {
+    width: 283px;
+    height: 57px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+    border: none;
+    background: #121212;
+    color: #e8e8e8;
+    position: absolute;
+    bottom: 0;
+  }
+
+  button:hover {
+    color: #fff;
+    transition: color 0.2s ease;
+    background-color: #39393b;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+}
+
+.BB img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 384px;
+  height: 356px;
+  margin-top: 15px;
+}
+
+@media (max-width: 576px) {
+  .BB {
+    width: 100%;
+    height: 520px;
+    margin-top: 50px;
+    padding: 20px 10px 14px 10px;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .BB__items {
+    width: 100%;
+    h1 {
+      width: 100%;
+      height: 120px;
+      font-family: Fira Sans;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 40.32px;
+      text-align: center;
+    }
+
+    p {
+      font-family: Fira Sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.12px;
+      text-align: center;
+      padding-top: 240px;
+      width: 100%;
+      height: 63px;
+    }
+    
+    button {
+      width: 100%;
+      height: 57px;
+      gap: 10px;
+      border-radius: 10px;
+      opacity: 0px;
+      margin-top: 70px;
+      position: static;
+    }
+  }
+
+  .BB img {
+    top: 120px;
+    width: 100%;
+    height: 250px;
+    right: -10px;
+  }
+}

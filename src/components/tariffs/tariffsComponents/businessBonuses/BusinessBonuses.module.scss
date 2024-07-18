@@ -1,0 +1,38 @@
+.business {
+    margin-top: 100px;
+}
+
+
+@media (max-width: 576px) {
+    .business {
+        margin-top: 166px;
+        padding: 0;
+    }
+
+    .btnStyle {
+        width: 100% !important;
+        margin-top: 20px;
+        display: block !important;
+        border-radius: 10px;
+        border: 1px solid var(--Color-Neutral-3---Dark-gray, #39393B) !important;
+        background: var(--Color-Neutral-1---Primary-dark, #121212) !important;
+        position: relative;
+        color: var(--Color-Neutral-6---Light-gray2, #E8E8E8) !important;
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    .btnStyle::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("../../../../../shared/assets//images/tariffsImages/up.svg");
+        position: absolute;
+        top: 16px;
+        left: 213px;
+    }
+}

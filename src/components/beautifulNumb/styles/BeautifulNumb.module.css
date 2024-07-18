@@ -1,0 +1,234 @@
+:root {
+    --index: calc(1vw + 1vh);
+    --white: #FFFFFF;
+    --yellow: #FFD400;
+    --text-white: #E8E8E8;
+    --back-black: #121212;
+    --gray: #909090;
+    --title-back: linear-gradient(90deg, #09203F 0%, #537895 100%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background: var(--back-black);
+    color: var(--text-white);
+    width: 100%;
+    height: auto;
+}
+
+.plugStyles {
+    display: none;
+}
+
+.link,
+a {
+    color: var(--gray);
+}
+
+.filter_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px 52px 0 0
+}
+
+.filter_cont {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.select_cont {
+    height: 100%;
+    width: 160px;
+    border-radius: 10px;
+    border: 1px solid #39393B;
+    background: #232325;
+    font-size: 18px;
+    line-height: 132%;
+    color: var(--white);
+    padding: 6px 16px 6px 20px;
+}
+
+.select_cont option {
+    display: flex;
+    width: 160px;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.input_cont {
+    display: flex;
+    gap: 12px;
+}
+
+.input_cont input {
+    width: 64px;
+    height: 100%;
+    padding: 16px 26px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #39393B;
+    background: #232325;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 132%;
+    color: var(--gray);
+}
+
+.filter_button,
+.filter__buttonAdaptive {
+    display: flex;
+    width: 362px;
+    height: 57px;
+    padding: 18px 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background: var(--yellow);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+
+    &:hover {
+        color: #FFF;
+        transition: color 0.2s ease;
+        background-color: #39393B;
+        transition: background-color 0.2s ease;
+    }
+
+    &:disabled {
+        background-color: #6c6c6c;
+        cursor: not-allowed;
+        color: inherit;
+    }
+
+    &:hover:not(:disabled) {
+        color: #FFF;
+        background-color: #39393B;
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+}
+
+.numbers_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-top: 100px;
+    padding: 0 52px 0px 0px;
+    width: 100%;
+    min-height: 176px;
+    gap: 64px;
+}
+
+.bannerImg_adaptive {
+    display: none;
+}
+
+.chooseNumber {
+    display: flex;
+    gap: 20px;
+}
+
+.chooseNumber h3 {
+    display: none;
+}
+
+.chooseNumber__items {
+    display: flex;
+    gap: 20px;
+}
+
+.cont__inputAdaptive {
+    display: none;
+}
+
+.filter__buttonAdaptive {
+    display: none;
+}
+
+
+@media(max-width: 576px) {
+    .banner {
+        padding: 0px 0 3.87rem 0;
+    }
+
+    .filter_wrapper h2 {
+        font-size: 18px;
+    }
+
+    .filter_wrapper {
+        text-align: center;
+        gap: 85px;
+        padding: 0;
+    }
+
+    .filter_wrapper h2 {
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .filter_cont {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .numbers_wrapper {
+        padding: 0;
+    }
+
+    .input_cont {
+        display: none;
+    }
+
+    .chooseNumber {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chooseNumber h3 {
+        display: block;
+        color: #CACACA;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 132%;
+    }
+
+    .cont__inputAdaptive {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 48px;
+        padding: 13.5px 22px;
+        border-radius: 8px;
+        border: 1px solid #39393B;
+        background: #232325;
+        color: #fff;
+    }
+
+    .select_cont {
+        height: 48px;
+    }
+
+    .filter_button {
+        display: none;
+    }
+
+    .filter__buttonAdaptive {
+        display: block;
+        width: 100%;
+    }
+
+    .cont__inputAdaptive::placeholder {
+        width: 100%;
+        text-align: center;
+        letter-spacing: 20px;
+    }
+}

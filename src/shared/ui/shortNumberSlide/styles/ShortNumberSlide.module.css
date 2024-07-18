@@ -1,0 +1,48 @@
+.shortNumber {
+    margin-top: 100px;
+}
+
+.shortNumber > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.shortNumber__container {
+    width: 1053px;
+    padding-top: 32px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.shortNumber__cards {
+    display: flex;
+    gap: 14px;
+    transition: transform 0.8s ease;
+}
+
+@media (max-width: 576px) {
+    .shortNumber {
+        display: none;
+    }
+
+    .shortNumber > h2 {
+        text-align: center;
+    }
+
+    .shortNumberAdaptive {
+        width: 100%;
+        padding: 16px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        background-color: #232325;
+        border-radius: 12px;
+    }
+    
+    .statusNumber__section {
+        margin-top: 40px;
+    }
+}

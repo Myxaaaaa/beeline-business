@@ -1,0 +1,111 @@
+.activated {
+    padding-top: 100px;
+}
+.activated_title {
+    font-family: Fira Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.68px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.activated_card {
+    width: 1006px;
+    height: 231px;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #232325;
+    padding-top: 24px;
+    padding-left: 24px;
+    margin-top: 32px;
+}
+.activated_card_text {
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 29.04px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.activated_card_span {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    color: #E8E8E8;
+}
+.activated_card_text_2 {
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 29.04px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 50px;
+}
+.activated_card_span_2 {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    color: #E8E8E8;
+    padding-top: 50px;
+}
+.activated_btn {
+    width: 184px;
+    height: 57px;
+    gap: 10px;
+    border-radius: 10px;
+    opacity: 0px;
+    background-color: #FFD400;
+    color: #121212;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+}
+.activated_btn:hover {
+    color: #FFF;
+    transition: color 0.2s ease;
+    background-color: #39393B;
+    transition: background-color 0.2s ease;
+}
+.activated_btn_status {
+    padding-top: 32px;
+    padding-left: 406px;
+}
+@media (max-width: 576px) {
+    .activated_title {
+        font-family: Fira Sans;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.68px;
+        text-align: center;
+    }
+    .activated_card {
+        width: 100%;
+        height: 187px;
+        gap: 0px;
+        padding-top: 16px;
+    }
+    .activated_card_span_2 {
+        padding-top: 10px;
+    }
+    .activated_card_text_2 {
+        padding-top: 33px;
+    }
+    .activated_btn_status {
+        padding-top: 32px;
+        padding-left: 3px;
+    }
+    .activated_btn {
+        width: 100%;
+        height: 57px;
+        padding: 18px 50px 18px 50px;
+        gap: 10px;
+        opacity: 0px;
+    }
+}

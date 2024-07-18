@@ -1,0 +1,131 @@
+.questions {
+    margin-top: 100px;
+}
+
+.container {
+    width: 1006px;
+}
+
+.questions__title {
+    color: var(--Color-Neutral-7---White, #FFF);
+    font-family: "Fira Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.questions__block {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.question__block_click {
+    padding: 22px 24px;
+    border-radius: 8px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.question__click_text {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.question__click_img {
+    transition: transform 0.3s ease;
+}
+
+.questions__block_answer {
+    margin-top: 8px;
+    padding: 22px 24px;
+    border-radius: 8px;
+    background: var(--Color-Neutral-2---Secondary-dark, #232325);
+    transition: 0.3s;
+}
+
+
+.questions__answer_text {
+    color: var(--Color-Neutral-6---Light-gray2, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+}
+
+.questions__block_answer_enter {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.questions__block_answer_enter_active {
+    max-height: 500px;
+    transition: max-height 300ms ease-in-out;
+}
+
+.questions__block_answer_exit {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.questions__block_answer_exit_active {
+    max-height: 0;
+    transition: max-height 300ms ease-in-out;
+}
+
+@media (max-width: 576px) {
+    .questions {
+        margin-top: 50px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .questions__title {
+        color: var(---Neutral-100, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .questions__block {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .question__block_click {
+        padding: 24px;
+    }
+    .question__click_text {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 144%;
+    }
+    .questions__answer_text {
+        color: var(---Neutral-150-Text, #E8E8E8);
+        font-family: "Fira Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 144%;
+    }
+}

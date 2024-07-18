@@ -1,0 +1,11 @@
+.m2m {
+    padding-left: 55px;
+}
+.useful_articles {
+    padding-top: 100px;
+}
+@media (max-width: 576px) {
+    .m2m {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,42 @@
+.callCenterServices {
+    padding: 0 48px;
+}
+
+.callCenterServices__detail {
+    display: none;
+}
+
+.callCenterServices__buttons {
+    bottom: 0;
+}
+
+.shortNumber__next {
+    display: none;
+}
+
+.necessaryCard > h2 {
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 700;
+}
+
+.necessaryCard {
+    margin-top: 100px;
+}
+
+.necessary__cards {
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .callCenterServices {
+        padding: 0 16px;
+    }
+
+    .necessaryCard > h2 {
+        text-align: center;
+    }
+}

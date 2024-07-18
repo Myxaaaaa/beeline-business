@@ -1,0 +1,29 @@
+.office {
+    padding: 0 48px;
+}
+
+.use_ful {
+    padding-top: 100px;
+}
+
+.office_adaptive {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .breadcrumbs {
+        display: none;
+    }
+
+    .office {
+        padding: 0 20px;
+    }
+
+    .office_adaptive {
+        display: block;
+    }
+
+    .use_ful {
+        padding-top: 0px;
+    }
+}

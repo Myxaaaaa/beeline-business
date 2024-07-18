@@ -1,0 +1,83 @@
+.vpn {
+    padding-left: 42px;
+}
+.vpn_title {
+    color: #FFFFFF;
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42.24px;
+    text-align: left;
+    padding-top: 10px;
+}
+.vpn_block {
+    display: flex;
+    padding-top: 42px;
+    gap: 32px;
+}
+.vpn_card_application {
+    padding-top: 60px;
+}
+.vpn_card_calls_text {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: left;
+    color: #FFFFFFCC;
+    padding-top: 14px;
+}
+
+.vpn_card_calls_text strong {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.76px;
+    text-align: left;
+    padding-top: 14px;
+    color: #FFFFFF;
+}
+
+.vpn_card_application_btn {
+    background: var(--Redesign-yellow, #FFD400);
+    width: 148px;
+    height: 41px;
+    padding: 10px 20px 10px 20px;
+    gap: 10px;
+    border-radius: 8px;
+    opacity: 0px;
+    border: none;
+    color: #121212;
+}
+.vpn_card_application_btn:hover {
+    color: #FFF;
+    transition: color 0.2s ease;
+    background-color: #39393B;
+    transition: background-color 0.2s ease;
+}
+@media (max-width: 576px) {
+    .breadcrumb {
+        display: none;
+    }
+    .vpn {
+        padding: 0 20px;
+    }
+    .vpn_title {
+        font-family: Fira Sans;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.68px;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .vpn_card_application_btn {
+        width: 100%;
+        height: 57px;
+        padding: 18px 50px 18px 50px;
+        gap: 10px;
+    }
+    .vpn_card_application {
+        padding-top: 12px;
+        padding-left: 10px;
+    }
+}

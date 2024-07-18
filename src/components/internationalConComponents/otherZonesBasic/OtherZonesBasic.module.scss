@@ -1,0 +1,136 @@
+.BasicTariffing {
+  height: 429px;
+  margin-top: 100px;
+  color: #fff;
+  position: relative;
+}
+
+.BasicTariffing h2 {
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 132%;
+}
+
+.BasicTariffing__container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.container__cards {
+  width: calc(322px * 4 + 20px * 3);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cards__card {
+  width: 322px;
+  height: 355px;
+  border-radius: 12px;
+  background: #232325;
+}
+
+.cards__card button {
+  width: 274px;
+  height: 41px;
+  margin: 64px 24px 32px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ffd400;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 144%;
+  position: absolute;
+  bottom: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.card__top {
+  padding: 17px 24px;
+  color: #121212;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 132%;
+  border-radius: 12px 12px 0px 0px;
+  background: #fee147;
+}
+
+.card__information {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.information__text {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.information__text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 144%;
+}
+
+.information__text b {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+}
+
+.information__text span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 132%;
+  text-decoration-line: underline;
+}
+
+.text__countries {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 576px) {
+  .BasicTariffing {
+    margin-top: 50px;
+    width: 300%;
+  }
+
+  .BasicTariffing h2 {
+    width: 34%;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .BasicTariffing__container {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .BasicTariffing__container {
+    overflow-x: scroll;
+  }
+
+  .BasicTariffing__container::-webkit-scrollbar {
+    height: 11px;
+  }
+
+  .BasicTariffing__container::-webkit-scrollbar-thumb {
+    border-radius: 24px;
+    background: var(---Neutral-300, #909090);
+  }
+
+  .BasicTariffing__container::-webkit-scrollbar-track {
+    border-radius: 24px;
+    background: var(---Neutral-400, #232325);
+  }
+}

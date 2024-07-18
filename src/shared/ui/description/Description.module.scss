@@ -1,0 +1,110 @@
+.description {
+    margin-top: 100px;
+}
+
+
+.description__title {
+    color: var(---Neutral-150-Text, #E8E8E8);
+    font-family: "Fira Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+}
+
+.description__text {
+    padding: 30px 0 32px;
+    color: #D4D4D4;
+    font-family: "Fira Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+    transition: 1s;
+}
+
+
+.description__btn {
+    width: 156px;
+    height: 57px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(---Neutral-400, #232325);
+    border: none;
+    color: var(---Neutral-150-Text, #E8E8E8);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.description__btn:hover {
+    background-color: #FFD400;
+    color: var(--Color-Neutral-1---Primary-dark, #121212);
+}
+
+.description__text {
+    max-height: 500px; /* adjust to a reasonable height */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.hidden {
+    max-height: 40px;
+    opacity: 1;
+}
+
+.visible {
+    max-height: 500px; /* adjust to a reasonable height */
+    opacity: 1;
+}
+
+.ellipsis {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+
+@media (max-width: 576px) {
+    .description {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .description__title {
+        color: var(--Color-Neutral-7---White, #FFF);
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 132%;
+    }
+
+    .description__text {
+        padding: 0;
+        padding-top: 20px;
+        color: #B6B6B6;
+        text-align: center;
+        font-family: "Fira Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+    }
+    .description__btn {
+        display: none;
+    }
+}

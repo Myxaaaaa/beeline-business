@@ -1,0 +1,124 @@
+.bannerDeterminant {
+  width: 1046px;
+  height: 348px;  
+  margin-top: 67px;
+  color: #E8E8E8;
+  position: relative;
+  background-image: url('../../assets/images/allVisual/bannerCircle.png');
+  background-repeat: no-repeat;
+  background-position: right top -15px;
+}
+
+.bannerDeterminant__left {
+  width: 546px;
+  height: 286px;
+  position: relative;
+}
+
+.bannerDeterminant__left img {
+  display: none;
+}
+
+.bannerDeterminant h1 {
+  font-size: 42px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 144%;
+  text-transform: uppercase;
+}
+
+.bannerDeterminant p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 132%;
+  padding-top: 12px;
+}
+
+.bannerDeterminant__btn {
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  bottom: 0;
+}
+
+.plug_btn, .detail__btn {
+  width: 184px;
+  height: 57px;
+  padding: 18px 0;
+  border-radius: 10px;
+  background: #FFD400;
+  color: #121212;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  border: none;
+  cursor: pointer;
+}
+
+.bannerDeterminant button:hover {
+  color: #FFF;
+  transition: color 0.2s ease;
+  background-color: #39393B;
+  transition: background-color 0.2s ease;
+}
+
+.bannerDeterminant > img {
+  height: 350px;
+  position: absolute;
+  right: 75px;
+  top: -35px;
+}
+
+@media (max-width: 576px) {
+  .bannerDeterminant {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin-top: 40px;
+      background-image: url('../../assets/images/allVisual/adaptiveSmallCircle.png');
+      background-position: center top 70px;
+  }
+
+  .bannerDeterminant__left {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bannerDeterminant__left img {
+    display: block;
+    height: 270px;
+  }
+
+  .bannerDeterminant h1 {
+      width: 100%;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 40px;
+      white-space: wrap;
+  }
+
+  .bannerDeterminant > img {
+      display: none;
+  }
+
+  .bannerDeterminant p {
+      width: 100%;
+      padding: 0;
+      font-size: 16px;
+      margin: 20px 0;
+  }
+
+  .bannerDeterminant__btn {
+    width: 100%;
+    position: static;
+  }
+
+  .bannerDeterminant__btn button {
+      width: 100%;
+      padding: 18px 0;
+  }
+}
