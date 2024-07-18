@@ -51,7 +51,7 @@ export const ZoneOneBasic = ({ data }) => {
             </div>
             <Button onCLick={openModal}>Подключить</Button>
           </div>
-          <InternationalCalls title='Другие зоны' />
+          <InternationalCalls description='' title='Другие страны' />
         </div>
         {isOpenModal && <DataModal setIsOpenModal={setIsOpenModal} item={data.ussd_code}/>}
     </section>

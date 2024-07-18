@@ -13,6 +13,7 @@ export const ShortNumberSlide = ({
   number,
   nextButton,
   data,
+  cardStyle
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -37,6 +38,7 @@ export const ShortNumberSlide = ({
                 key={item.id || index}
                 text={item.title}
                 img={item.emoji}
+                stylesNumCard={cardStyle}
               />
             ))}
           </div>

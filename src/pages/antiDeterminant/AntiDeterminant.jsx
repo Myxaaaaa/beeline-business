@@ -11,6 +11,7 @@ import { DataModal } from '../../shared/ui/dataModal/DataModal';
 export const AntiDeterminant = () => {
   const data = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
+
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {

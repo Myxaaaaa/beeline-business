@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { DataModal } from '../../shared/ui/dataModal/DataModal';
 
-const InternetPackages = () => {
+export const InternetPackages = () => {
   const data = useLoaderData();
   const [isOpenDetailed, setIsOpenDetailed] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -65,5 +65,3 @@ const InternetPackages = () => {
     </div>
   );
 };
-
-export default InternetPackages;

@@ -9,7 +9,7 @@ import { Layout } from './Layout';
 import { InternationalCon } from '../../pages/internationalConnection/InternationalCon';
 import { FavoriteCountryPage } from '../../pages/internationalConnection/favoriteCountryPage/FavoriteCountryPage';
 import { BasicTariffingPage } from '../../pages/internationalConnection/basicTariffingPage/BasicTariffingPage';
-import InternetPackages from '../../pages/internetPackages/InternetPackages';
+import { InternetPackages } from '../../pages/internetPackages/InternetPackages';
 import { Roaming } from '../../pages/roaming/Roaming';
 import { RoamingServices } from '../../components/roaming/roamingPages/roamingServices/RoamingServices';
 import { Connection } from '../../components/roaming/roamingPages/roamingServices/connection/Connection';

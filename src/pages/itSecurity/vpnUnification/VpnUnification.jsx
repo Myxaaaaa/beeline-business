@@ -5,10 +5,7 @@ import { Description } from '../../../shared/ui/description/Description';
 import { ShortNumberSlide } from '../../../shared/ui/shortNumberSlide/ShortNumberSlide';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { TargetBanner } from '../../../shared/ui/targetBanner/TargetBanner';
-import {
-  RelatedServices,
-  RelatedServicesAdaptive,
-} from '../../../shared/ui/relatedServices/RelatedServices';
+import { RelatedServices, RelatedServicesAdaptive } from '../../../shared/ui/relatedServices/RelatedServices';
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import relatedImg from '../../../shared/assets/images/allVisual/software.png';
 import { useLoaderData } from 'react-router-dom';
@@ -80,8 +77,8 @@ export const VpnUnification = () => {
 
       <ShortNumberSlide 
         data={data?.data[0]} 
-        nextButton={styles.shortNumber__next} 
-        widthContainer={1100} 
+        widthContainer={1090}
+        nextButton={styles.shortNumber__next}
         title={data?.data[0].bigdataminicard_question}
       />
 
