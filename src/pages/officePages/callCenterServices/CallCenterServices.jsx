@@ -15,6 +15,7 @@ import { useState } from 'react';
 export const CallCenterServices = () => {
   const data = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
+  
   const breadcrumbs = [
       { pathname: '/', breadcrumb: 'Главная' },
       {

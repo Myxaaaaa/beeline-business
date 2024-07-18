@@ -9,7 +9,7 @@ import { Layout } from './Layout';
 import { InternationalCon } from '../../pages/internationalConnection/InternationalCon';
 import { FavoriteCountryPage } from '../../pages/internationalConnection/favoriteCountryPage/FavoriteCountryPage';
 import { BasicTariffingPage } from '../../pages/internationalConnection/basicTariffingPage/BasicTariffingPage';
-import InternetPackages from '../../pages/internetPackages/InternetPackages';
+import { InternetPackages } from '../../pages/internetPackages/InternetPackages';
 import { Roaming } from '../../pages/roaming/Roaming';
 import { RoamingServices } from '../../components/roaming/roamingPages/roamingServices/RoamingServices';
 import { Connection } from '../../components/roaming/roamingPages/roamingServices/connection/Connection';
@@ -46,18 +46,15 @@ import { CustomAnalytics } from '../../pages/bigDataPages/customAnalytics/Custom
 import { BusinessBonus } from '../../pages/businessBonus/BusinessBonus';
 import { CallCenterServices } from '../../pages/officePages/callCenterServices/CallCenterServices';
 import NotFound from '../../pages/notFound/NotFound';
-import ServiceUnavailable from '../../pages/serviceUnavailable/ServiceUnavailable';
 
 export const router = createBrowserRouter([
   {
     element: <Layout />,
-    errorElement: <ServiceUnavailable />,
-
     children: [
-      // {
-      //   path: '*',
-      //   element: <NotFound />,
-      // },
+      {
+        path: '*',
+        element: <NotFound />,
+      },
       {
         path: '/',
         element: <HomePage />,
@@ -130,28 +127,18 @@ export const router = createBrowserRouter([
         path: '/mobile-connect/international-connection',
         element: <InternationalCon />,
         loader: async () => {
-          const res = await Api.getInternationalCommunicationDetail(
-            '?q=Базовая тарификация',
-          );
+          const res = await Api.getInternationalCommunicationDetail('?q=Базовая тарификация' );
           const banner = await Api.getBannerParams('Международная связь');
-          const favorite =
-            await Api.getInternationalCommunicationDetail('?q=Любимая Зона');
-          return {
-            basic: res.data,
-            banner: banner.data,
-            favorite: favorite.data,
-          };
+          const favorite = await Api.getInternationalCommunicationDetail('?q=Любимая Зона');
+          return { basic: res.data, banner: banner.data, favorite: favorite.data };
         },
       },
       {
         path: '/mobile-connect/international-connection/favorite-country/:favoriteId',
         element: <FavoriteCountryPage />,
         loader: async ({ params }) => {
-          const detail = await Api.getInternationalCommunicationDetail(
-            params.favoriteId,
-          );
-          const favorite =
-            await Api.getInternationalCommunicationDetail('?q=Любимая Зона');
+          const detail = await Api.getInternationalCommunicationDetail(params.favoriteId);
+          const favorite = await Api.getInternationalCommunicationDetail('?q=Любимая Зона');
           return { detail: detail.data, favorite: favorite.data };
         },
       },
@@ -159,12 +146,8 @@ export const router = createBrowserRouter([
         path: '/mobile-connect/international-connection/basic-tarification/:basicId',
         element: <BasicTariffingPage />,
         loader: async ({ params }) => {
-          const detail = await Api.getInternationalCommunicationDetail(
-            params.basicId,
-          );
-          const basic = await Api.getInternationalCommunicationDetail(
-            '?q=Базовая тарификация',
-          );
+          const detail = await Api.getInternationalCommunicationDetail(params.basicId);
+          const basic = await Api.getInternationalCommunicationDetail('?q=Базовая тарификация',);
           return { detail: detail.data, basic: basic.data };
         },
       },
@@ -285,30 +268,32 @@ export const router = createBrowserRouter([
         },
       },
       {
-        path: '/mobile-modem',
+        path: '/mobile-modem/:id',
         element: <Modem />,
-        loader: async () => {
-          const [modem, mobileVpn] = await Promise.all([
-            Api.getm2mModem(),
-            Api.getm2mMobileVpn(),
+        loader: async ({ params }) => {
+          const [internetM2MRes, relatedAdvantagesRes] = await Promise.all([
+            Api.getInternetm2mList(),
+            Api.getInternetm2mDateil(params.id),
+            Api.getRelatedAdvantagesm2mList(),
           ]);
           return {
-            modem: modem.data,
-            mobileVpn: mobileVpn.data,
+            internetM2M: internetM2MRes.data,
+            relatedAdvantages: relatedAdvantagesRes.data,
           };
         },
       },
       {
-        path: '/mobile-vpn',
+        path: '/mobile-vpn/:id',
         element: <Vpn />,
-        loader: async () => {
-          const [mobileVpn, modem] = await Promise.all([
-            Api.getm2mMobileVpn(),
-            Api.getm2mModem(),
+        loader: async ({ params }) => {
+          const [internetM2MRes, relatedAdvantagesRes] = await Promise.all([
+            Api.getInternetm2mList(),
+            Api.getInternetm2mDateil(params.id),
+            Api.getRelatedAdvantagesm2mList(),
           ]);
           return {
-            mobileVpn: mobileVpn.data,
-            modem: modem.data,
+            internetM2M: internetM2MRes.data,
+            relatedAdvantages: relatedAdvantagesRes.data,
           };
         },
       },
@@ -341,11 +326,7 @@ export const router = createBrowserRouter([
           const res = await Api.getOfficeNetworkParams('Вертуальная АТС');
           const banner = await Api.getBannerParams('Виртуальная атс');
           const allArticle = await baseGetRequest(`/article/`);
-          return {
-            data: res.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: res.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -381,7 +362,6 @@ export const router = createBrowserRouter([
       {
         path: '/office-communication/short-number',
         element: <ShortNumber />,
-
         loader: async () => {
           const allArticle = await baseGetRequest('/article/');
           const res = await Api.getOfficeNetworkParams('Короткий номер');
@@ -400,11 +380,7 @@ export const router = createBrowserRouter([
           const res = await Api.getOfficeNetworkParams('FMC');
           const banner = await Api.getBannerParams('FMC');
           const allArticle = await baseGetRequest(`/article/`);
-          return {
-            data: res.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: res.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -414,11 +390,7 @@ export const router = createBrowserRouter([
           const res = await Api.getOfficeNetworkParams('SIP Телефония');
           const banner = await Api.getBannerParams('SIP Телефония');
           const allArticle = await baseGetRequest(`/article/`);
-          return {
-            data: res.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: res.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -440,11 +412,7 @@ export const router = createBrowserRouter([
           const res = await Api.getItAndSecurityParams('Продажа ПО');
           const banner = await Api.getBannerParams('Продажа по');
           const allArticle = await baseGetRequest('/article/');
-          return {
-            data: res.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: res.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -454,11 +422,7 @@ export const router = createBrowserRouter([
           const res = await Api.getItAndSecurityParams('VPN-объеденение');
           const banner = await Api.getBannerParams('VPN-объеденение');
           const allArticle = await baseGetRequest('/article/');
-          return {
-            data: res.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: res.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -497,11 +461,9 @@ export const router = createBrowserRouter([
             Api.getBigDataBeetarget(),
             Api.getBeetargetList(),
           ]);
-          const allArticle = await baseGetRequest('/article/');
           return {
             data: data.data,
             banner: banner.data,
-            allArticle: allArticle,
           };
         },
       },
@@ -513,11 +475,9 @@ export const router = createBrowserRouter([
             Api.getBigDataAnalityc(),
             Api.getAnalitycList(),
           ]);
-          const allArticle = await baseGetRequest('/article/');
           return {
             data: data.data,
             banner: banner.data,
-            allArticle: allArticle,
           };
         },
       },
@@ -529,11 +489,9 @@ export const router = createBrowserRouter([
             Api.getBigDataSkorring(),
             Api.getSkorringList(),
           ]);
-          const allArticle = await baseGetRequest('/article/');
           return {
             data: data.data,
             banner: banner.data,
-            allArticle: allArticle,
           };
         },
       },
@@ -541,16 +499,8 @@ export const router = createBrowserRouter([
         path: '/it-security/cloud-server-rental-equipment',
         element: <CloudServer />,
         loader: async () => {
-          const [data, banner] = await Promise.all([
-            Api.getItSecurityCloundServers(),
-            Api.getCloundServersList(),
-          ]);
           const allArticle = await baseGetRequest('/article/');
-          return {
-            data: data.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { allArticle: allArticle };
         },
       },
       {
@@ -574,11 +524,7 @@ export const router = createBrowserRouter([
           const data = await Api.getBigDataParams('Тепловая карта');
           const banner = await Api.getBannerParams('Тепловая карта');
           const allArticle = await baseGetRequest('/article/');
-          return {
-            data: data.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: data.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -588,11 +534,7 @@ export const router = createBrowserRouter([
           const data = await Api.getBigDataParams('Кастомная аналитика');
           const banner = await Api.getBannerParams('Кастомная Аналитика');
           const allArticle = await baseGetRequest('/article/');
-          return {
-            data: data.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
+          return { data: data.data, banner: banner.data, allArticle: allArticle };
         },
       },
       {
@@ -611,19 +553,7 @@ export const router = createBrowserRouter([
           const data = await Api.getOfficeNetworkParams('Услуги колл-центра');
           const banner = await Api.getBannerParams('Услуги колл-центра');
           const allArticle = await baseGetRequest('/article/');
-          return {
-            data: data.data,
-            banner: banner.data,
-            allArticle: allArticle,
-          };
-        },
-        loader: async () => {
-          const res = await Api.getItAndSecurityParams('Видео аналитика');
-          const banner = await Api.getBannerDetail('Видео аналитика');
-          return {
-            res: res.data,
-            banner: banner.data,
-          };
+          return { data: data.data, banner: banner.data, allArticle: allArticle };
         },
       },
     ],
