@@ -8,7 +8,15 @@ import SearchResults from './SearchResults';
 import { NavLink } from 'react-router-dom';
 import FooterNavigation from '../footer/FooterNavigation';
 import { Input } from '../../shared/ui/customInput/Input';
-import { baseNavigationItems, mobileConnection, about, bigData, itSecurity, informationClient, officeCommunications } from '../../shared/ui/navigationItemsBase/NavigationItemsBase';
+import {
+  baseNavigationItems,
+  mobileConnection,
+  about,
+  bigData,
+  itSecurity,
+  informationClient,
+  officeCommunications,
+} from '../../shared/ui/navigationItemsBase/NavigationItemsBase';
 import { MobileIcons } from '../../shared/assets/icons/sideBarIcons/mobileIcons/MobileIcons';
 import { Office } from '../../shared/assets/icons/sideBarIcons/office/Office';
 import { Products } from '../../shared/assets/icons/sideBarIcons/products/Products';
@@ -18,6 +26,7 @@ import { HomeIcons } from '../../shared/assets/icons/sideBarIcons/customIcons/ho
 import axios from 'axios';
 import Droptown from '../../shared/ui/droptown/Droptown';
 import kg from '../../shared/assets/icons/droptown/flag.png';
+import { changeLanguage } from '../../shared/api/Api';
 
 const modalContentMap = {
   mobile: mobileConnection,
@@ -39,14 +48,14 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
 
   const isMobile = useMediaQuery({ maxWidth: 576 });
   const [status, setStatus] = useState(2);
-  const [selectedLanguage, setSelectedLanguage] = useState('KG');
+  const [statusLanguage, setStatusLanguage] = useState(
+    localStorage.getItem('lng') || 'ru',
+  );
 
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-      setSelectedLanguage(savedLanguage);
-    }
-  }, []);
+  const handleLanguageChange = lng => {
+    changeLanguage(lng);
+    setStatusLanguage(lng);
+  };
 
   const handleNavigationClick = modalType => {
     if (activeDropdowns.includes(modalType)) {
@@ -68,7 +77,7 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     }
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     setSearchQuery(e.target.value);
   };
 
@@ -77,9 +86,12 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
       if (searchQuery) {
         setIsLoading(true);
         try {
-          const response = await axios.get('https://beeline.pp.ua/api/v1/search/', {
-            params: { q: searchQuery },
-          });
+          const response = await axios.get(
+            'https://beeline.pp.ua/api/v1/search/',
+            {
+              params: { q: searchQuery },
+            },
+          );
           setData(response.data);
           setError(null);
         } catch (error) {
@@ -103,11 +115,6 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     setStatus(number);
   };
 
-  const handleLanguageSelect = language => {
-    setSelectedLanguage(language);
-    localStorage.setItem('selectedLanguage', language);
-  };
-
   const iconMapping = {
     '/': <HomeIcons />,
     '/mobile': <MobileIcons />,
@@ -127,14 +134,14 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     <section className={styles.sideBarAdaptive}>
       <aside className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
         <div className={styles.sideBar_title}>
-          <Droptown 
-            droptownStyle={styles.drop__input} 
-            options={['KG', 'RU', 'ENG']} 
-            setSelected={handleLanguageSelect} 
-            blockStyle={styles.blockStyle} 
-            dropTownBtn={styles.dropTownBtn} 
+          <Droptown
+            droptownStyle={styles.drop__input}
+            options={['ky', 'ru', 'en']}
+            setSelected={handleLanguageChange}
+            blockStyle={styles.blockStyle}
+            dropTownBtn={styles.dropTownBtn}
             flags={[kg, '', '']}
-            selectedOption={selectedLanguage}
+            selectedOption={statusLanguage}
           />
           <img src={beeline} alt="logo" />
           <button className={styles.sideBar_btn} onClick={toggleSideBar}>
@@ -143,10 +150,22 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
         </div>
         <ul className={styles.sideBar_nav}>
           <li>
-            <NavLink to="https://beeline.kg/" className={status === 1 ? styles.active : styles.notActive} onClick={() => handleStatusClick(1)}>Частным лицам</NavLink>
+            <NavLink
+              to="https://beeline.kg/"
+              className={status === 1 ? styles.active : styles.notActive}
+              onClick={() => handleStatusClick(1)}
+            >
+              Частным лицам
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/" className={status === 2 ? styles.active : styles.notActive} onClick={() => handleStatusClick(2)}>Бизнесу</NavLink>
+            <NavLink
+              to="/"
+              className={status === 2 ? styles.active : styles.notActive}
+              onClick={() => handleStatusClick(2)}
+            >
+              Бизнесу
+            </NavLink>
           </li>
         </ul>
         <div className={styles.searchContainer}>
@@ -169,7 +188,7 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
                 query={searchQuery}
                 isLoading={isLoading}
                 error={error}
-                isSearching={searchQuery === ''} 
+                isSearching={searchQuery === ''}
               />
             </div>
           )}
