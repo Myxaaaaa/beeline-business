@@ -41,6 +41,7 @@ export const VideoAnalytics = () => {
   const icons = [tv, fire, flip, camera, car];
 
   const shortNumData = data?.res[0]?.mini_card?.map((item, index) => ({
+    id: item.id,
     img: icons[index],
     imgCard: cloud,
     text: item.title,
@@ -56,16 +57,19 @@ export const VideoAnalytics = () => {
   const relatedServicesData = [
     {
       title: 'Центр мониторинга и реагирования (SKY SOC)',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
       link: '/it-security/sky-soc-roaming',
       img: relatedImg,
     },
     {
       title: 'Аренда облачного сервера (Cloud Servers)',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
       link: '/it-security/cloud-server-rental-equipment',
       img: relatedImg,
     },
     {
       title: 'Продажа ПО',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
       link: '/it-security/software-sale',
       img: relatedImg,
     },
@@ -94,17 +98,17 @@ export const VideoAnalytics = () => {
       <section className={style.shortNum}>
         <h3>{data?.res[0]?.bigdataminicard_question}</h3>
         <div className={style.shortNum__blocks}>
-          {shortNumData?.map((item, index) => (
+          {shortNumData?.map(item => (
             <ShortNumberCard
-              key={`shortNumberCard-${index}`} // Adding unique key prop
+              key={item.id}
               text={item.text}
               img={item.imgCard}
               stylesNumCard={style.customNumCard}
             />
           ))}
-          {shortNumData?.map((item, index) => (
+          {shortNumData?.map(item => (
             <ShortNumberAdaptive
-              key={`shortNumberAdaptive-${index}`} // Adding unique key prop
+              key={item.id}
               img={item.img}
               alt={item.alt}
               text={item.text}
@@ -119,7 +123,7 @@ export const VideoAnalytics = () => {
         <div className={style.videoAdvantages__blocks}>
           {videoAdvantagesData?.map(item => (
             <NecessaryCard
-              key={item.id} // Adding unique key prop
+              key={item.id}
               img={item.img}
               alt={item.alt}
               text={item.text}

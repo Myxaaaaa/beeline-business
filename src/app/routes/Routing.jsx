@@ -360,9 +360,11 @@ export const router = createBrowserRouter([
             Api.getOfficeList(),
             Api.getOfficeBannerService(),
           ]);
+          const allArticle = await baseGetRequest(`/article/`);
           return {
             data: data.data,
             banner: banner.data,
+            allArticle: allArticle,
           };
         },
       },
