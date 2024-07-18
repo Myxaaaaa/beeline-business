@@ -10,6 +10,7 @@ import { DataModal } from '../../shared/ui/dataModal/DataModal';
 export const BusinessBonus = () => {
     const data = useLoaderData();
     const [modalOpen, setModalOpen] = useState(false);
+
     const breadcrumbs = [
         { pathname: '/', breadcrumb: 'Главная' },
         {
@@ -63,6 +64,7 @@ export const BusinessBonus = () => {
             <h2>БизнесБонусы</h2>
             {dataObject && dataObject?.map(item => (
                 <PopularCard 
+                    key={item.id}
                     title={item.title}
                     text={item.description}
                     img={item.visual}

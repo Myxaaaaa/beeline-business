@@ -50,30 +50,21 @@ export const Vpn = () => {
         <div className={styles.breadcrumb}>
           <Breadcrumbs crumbs={breadcrumbs} />
         </div>
-        {mobileVpn
-          .map(item => (
-            <>
-              <h2 className={styles.vpn_title}>{item.title}</h2>
-            </>
-          ))}
-        {mobileVpn
-          .map(item => (
-            <VpnCard
-              textStyles={styles.vpn_card_application_btn}
-              applyStyles={styles.vpn_card_application}
-              setIsRegisterModal={setIsRegisterModal}
-              title={'1 МБ/1.95 с'}
-              calls_text={'Бесплатно'}
-              calls_text_other={'Бесплатно'}
-              calls_span_other={'внутри корп. группы'}
-              sms_span={'на SMS'}
-              application_title={'150 С'}
-              calls_text_2={'1 МИН/4 C '}
-              item={item}
-              renderCallTexts={renderCallTexts}
-              renderSmsTexts={renderSmsTexts}
-            />
-          ))}
+        {mobileVpn.map(item => (
+          <>
+            <h2 className={styles.vpn_title}>{item.title}</h2>
+          </>
+        ))}
+        {mobileVpn.map(item => (
+          <VpnCard
+            textStyles={styles.vpn_card_application_btn}
+            applyStyles={styles.vpn_card_application}
+            setIsRegisterModal={setIsRegisterModal}
+            item={item}
+            renderCallTexts={renderCallTexts}
+            renderSmsTexts={renderSmsTexts}
+          />
+        ))}
         <OtherModem />
         {isRegisterOpen && (
           <RegisterModal

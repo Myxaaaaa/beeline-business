@@ -6,6 +6,7 @@ import { BusinessBonuses } from '../../../components/tariffs/tariffsComponents/b
 
 export const FavoriteCountryPage = () => {
   const data = useLoaderData();
+  
   return (
     <div className={styles.favoriteCountryPage}>
       <ZoneOneFavorite data={data.detail} />

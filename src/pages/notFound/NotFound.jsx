@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
-    <section className={styles.head}>
-      <img className={styles.img} src={img} alt="" />
-      <div className={styles.head_container}>
-        <div className={styles.head_block}>
+    <section className={styles.head_service}>
+      <div className={styles.img_header} >
+       <img className={styles.img} src={img} alt="" />
+      </div>
+      <div className={styles.service_container}>
+        <div className={styles.service_block}>
           <h1 className={styles.head_title}>УПССС... Страница не найдена</h1>
           <p className={styles.head_text}>
             К сожалению, страница, которую вы ищете, не существует. Возможно, она была удалена, перемещена или вы просто ошиблись в адресе.
@@ -25,9 +27,9 @@ const NotFound = () => {
 
       </div>
 
-      <footer className={styles.footer_service} >
-      <Footer styleMadeLine={styles.made_line} styleLine={styles.line} styleNav={styles.navigation} mad_line={styles.mad_lines} />
-      </footer>
+      {/* <footer className={styles.footer_service} > 
+        <Footer footer={styles.footer_block} mad_line={styles.mad_lines}  styleMadeLine={styles.made_line} styleNav={styles.navigation} styleLine={styles.line} /> 
+      </footer> */}
     </section>
   );
 };
