@@ -8,33 +8,33 @@ import { Link } from 'react-router-dom';
 const ServiceUnavailable = () => {
   return (
     <section className={styles.head_service}>
-      <div className={styles.img_header} >
+      <div className={styles.img_header}>
         <img className={styles.img} src={img} alt="" />
       </div>
       <div className={styles.service_container}>
         <div className={styles.service_block}>
-          <h1 className={styles.head_title}>УПССС...
-                Внутренняя ошибка сервера</h1>
+          <h1 className={styles.head_title}>
+            УПССС... Внутренняя ошибка сервера
+          </h1>
           <p className={styles.head_text}>
-          Извините, сервер столкнулся с внутренней ошибкой и не может обработать ваш запрос. Это может произойти по разным причинам, включая проблемы с серверным программным обеспечением или временные сбои.
+            Извините, сервер столкнулся с внутренней ошибкой и не может
+            обработать ваш запрос. Это может произойти по разным причинам,
+            включая проблемы с серверным программным обеспечением или временные
+            сбои.
           </p>
           <div className={styles.head_footer}>
-            <Link to={'http://localhost:5173/'} >
-              <Button  className={styles.head_btn}>На Главную</Button>
+            <Link to={'http://localhost:5173/'}>
+              <Button className={styles.head_btn}>На Главную</Button>
             </Link>
           </div>
         </div>
         <img className={styles.head_img} src={notFound_img} alt="head" />
-
       </div>
-      <footer className={styles.footer_service} > 
+      {/* <footer className={styles.footer_service} > 
         <Footer footer={styles.footer_block} mad_line={styles.mad_lines}  styleMadeLine={styles.made_line} styleNav={styles.navigation} styleLine={styles.line} /> 
-      </footer>
+      </footer> */}
     </section>
   );
-// }
 };
 
 export default ServiceUnavailable;
-
-// styleMadeLine={styles.made_line} styleLine={styles.line} styleNav={styles.navigation} mad_line={styles.mad_lines} 
