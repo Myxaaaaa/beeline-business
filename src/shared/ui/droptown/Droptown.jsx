@@ -3,7 +3,7 @@ import styles from './styles/Droptown.module.css';
 import down from '../../assets/icons/droptown/down.png';
 import up from '../../assets/icons/droptown/up.png';
 
-const Droptown = forwardRef(({ blockStyle, setSelected, droptownStyle, options = [], errors = {}, style, onBlur, onFocus, selectedOption, flags = [] }, ref, dropTownBtn) => {
+const Droptown = forwardRef(({ blockStyle, setSelected, droptownStyle, options = [], errors = {}, style, onBlur, onFocus, selectedOption, flags = [], dropTownBtn }, ref) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedOptionState, setSelectedOptionState] = useState(selectedOption || options[0] || '');
   const [phoneNumber, setPhoneNumber] = useState('');

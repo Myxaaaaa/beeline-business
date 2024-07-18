@@ -1,7 +1,7 @@
-import Slider from 'react-slick';
-import './Slider.scss';
 import styles from './Banner.module.scss';
 import { SliderHome } from '../../../shared/ui/sliderHome/SliderHome';
+import Slider from 'react-slick';
+import './Slider.scss';
 
 export const Banner = ({ clickPlug, data }) => {
   const settings = {

@@ -5,10 +5,7 @@ import { Description } from '../../../shared/ui/description/Description';
 import { ShortNumberSlide } from '../../../shared/ui/shortNumberSlide/ShortNumberSlide';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { TargetBanner } from '../../../shared/ui/targetBanner/TargetBanner';
-import {
-  RelatedServices,
-  RelatedServicesAdaptive,
-} from '../../../shared/ui/relatedServices/RelatedServices';
+import { RelatedServices, RelatedServicesAdaptive } from '../../../shared/ui/relatedServices/RelatedServices';
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import relatedImg from '../../../shared/assets/images/allVisual/software.png';
 import { useLoaderData } from 'react-router-dom';
@@ -79,7 +76,8 @@ export const CustomAnalytics = () => {
         <ShortNumberSlide
           data={data.data[0]}
           title={data.data[0].bigdataminicard_question}
-          number={24.5}
+          number={30.5}
+          cardStyle={styles.short__cards}
         />
       )}
 

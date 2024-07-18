@@ -8,10 +8,9 @@ import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 
 export const DataModal = ({ setIsOpenModal, item }) => {
-  const modalRef = useRef(null)
-  const closeModal = () => {
-    setIsOpenModal(false);
-  }
+  const modalRef = useRef(null);
+
+  const closeModal = () => setIsOpenModal(false);
 
   const handleClickOutside = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {

@@ -62,13 +62,15 @@
   display: none;
 }
 
-/* Remove spinner */
+.drop__numbers {
+  display: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
 }
 
-/* Animation */
 @keyframes rightOpacity {
   from {
       opacity: 0;

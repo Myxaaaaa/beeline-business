@@ -74,7 +74,7 @@ export const HeatMap = () => {
 
       <ShortNumberSlide
         data={data.data[0]}
-        number={47.8}
+        number={48.8}
         title={data?.data[0].bigdataminicard_question}
       />
 

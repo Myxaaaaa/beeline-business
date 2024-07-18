@@ -21,7 +21,7 @@ export const OptionDeterminant = ({ data }) => (
   <section className={styles.optionDeterminant}>
     <h2>Выбирайте удобную для Вас опцию:</h2>
       {data && data.map(item => (
-        <div className={styles.optionDeterminant__cards}>
+        <div className={styles.optionDeterminant__cards} key={item.id}>
           <CardComponent
             number="1"
             openCloseTextStatic="Номер всегда"
