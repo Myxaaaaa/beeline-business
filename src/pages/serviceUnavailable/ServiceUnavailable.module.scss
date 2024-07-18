@@ -1,46 +1,51 @@
-.head {
-  padding-top: 100px;
+.head_service {
+  padding-top: 200px;
+  background-image: url('../../shared/assets/images/allVisual/bannerCircle.png');
+  background-repeat: no-repeat;
+  background-position: right 140px top 180px;
 }
-.footer_service {
-  padding-top: 30px;
-  padding-right: 220px;
+// .footer_service {
+//   padding-top: 30px;
+//   padding-right: 320px;
+// }
+.img_header {
+  max-width: 900px;
+  margin: 0 auto;
 }
 .img {
-  padding-left: 350px;
-  position: relative;
+  z-index: 0;
+  position: absolute;
 }
-.head_container {
-  padding-left: 320px;
+.service_container {
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  padding-top: 42px;
-  position: absolute;
-  bottom: 200px;
+  position: relative;
 }
 .line {
   border-bottom: 2px solid #222223;
   padding: 80px;
-  width: 150%;
+  width: 115.8%;
 }
 .mad_lines {
   border-bottom: 2px solid #222223;
-  width: 150%;
+  width: 115.8%;
 }
 .made_line {
-  padding-left: 300px;
+  padding-left: 270px;
 }
 .navigation {
-  padding-bottom: 0;
-  padding-right: 0;
-  padding-left: 150px;
-  padding-top: 56px;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 270px;
   display: flex;
   gap: 193px;
 }
-.head_block {
+.service_block {
   width: 521px;
 }
-
 .head_title {
   color: #e8e8e8;
   font-size: 42px;
@@ -90,30 +95,39 @@
 
 @media (max-width: 576px) {
   .navigation {
-    padding-left: 20px;
-    padding-top: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px;
   }
   .made_line {
-    display: none;
+    padding-left: 0px;
   }
   .made_lines {
     display: none;
   }
-  footer {
-    padding-top: 0;
-    padding: 0 20px;
+  .footer_service {
+    margin-top: 70px;
+    padding: 30px 1px;
   }
   .line {
     padding: 0;
     width: 100%;
+    border-bottom: 0px solid #222223;
   }
-  .head {
-    padding: 0 20px;
-    padding-top: 200px;
+  .head_service {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+  }
+  .head_service {
+    padding-top: 20px;
+    padding: 50px 20px;
+    background-position: right 5px top 40px;
   }
   .img {
     padding-left: 0;
     width: 100%;
+    top: 190px;
   }
   .breadcrumb {
     display: none;
@@ -126,13 +140,13 @@
     top: 71px;
     right: -8.2px;
   }
-  .head_container {
+  .service_container {
     display: block;
     padding-top: 42px;
     position: relative;
     padding: 0 20px;
   }
-  .head_block {
+  .service_block {
     width: 100%;
   }
   .head_title {
