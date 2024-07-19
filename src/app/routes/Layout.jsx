@@ -5,7 +5,7 @@ import { ScrollToTop } from '../../components/tariffs/tariffsPages/scrollToTop/S
 import { AllFixed } from '../../components/allFixed/AllFixed';
 import NotFound from '../../pages/notFound/NotFound';
 import SideBar from '../../components/sideBar/SideBar';
-import '../styles/global.css';
+import '../styles/global.scss';
 
 export const Layout = () => {
   return (
