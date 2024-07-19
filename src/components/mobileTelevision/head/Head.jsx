@@ -16,8 +16,8 @@ export const Head = ({ data }) => {
 
   return (
     <section className={styles.head}>
-      {data?.map((item, index) => (
-        <div key={index}>
+      {data?.map(item => (
+        <div key={item.id}>
           <div className={styles.breadcrumb}>
             <Breadcrumbs crumbs={breadcrumbs} />
           </div>

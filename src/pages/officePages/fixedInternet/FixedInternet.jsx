@@ -48,9 +48,8 @@ export const FixedInternet = () => {
         text: item.title,
     }));
 
-    const fixAdvantagesData = data?.res[0]?.advantages?.map(item => ({
-        img: item.emoji, alt: car, text: item.title
-
+    const fixAdvantagesData = data?.res[0]?.advantages?.map((item, index) => ({
+        img: item.emoji, alt: car, text: item.title, id: index
     }));
 
     const relatedServicesData = [
@@ -84,6 +83,9 @@ export const FixedInternet = () => {
                 plug="Подключить"
                 detailStyles={style.detailStyles}
                 plugStyles={style.customBtn}
+                textStyle={style.textStyle}
+                btn={style.btn}
+                stylesText={style.stylesText}
             />
             <Description
                 title={data?.res[0]?.question_title}
@@ -91,19 +93,19 @@ export const FixedInternet = () => {
             />
             <section className={style.connectServices}>
                 <h2 className={style.connectServices__title}>{data?.res[0]?.bigdataminicard_question}</h2>
-                <div className={style.connectServices__blocks}>
-                    {connectData.map(item => (
+                <div className={style.connectServices__blocks} >
+                    {connectData.map((item, index) => (
                         <ShortNumberCard
+                            key={index}
                             text={item.text}
                             img={item.imgCard}
                             stylesNumCard={style.customNumCard}
                         />
                     ))}
-
                 </div>
                 <div className={style.shortNumberAdaptive}>
-                    {connectData.map(item => (
-                        <ShortNumberAdaptive img={item.img} alt={item.alt} text={item.text} />
+                    {connectData.map((item, index) => (
+                        <ShortNumberAdaptive key={index} img={item.img} alt={item.alt} text={item.text} />
                     ))}
                 </div>
             </section>
@@ -112,6 +114,7 @@ export const FixedInternet = () => {
                 <div className={style.fixAdvantages__blocks}>
                     {fixAdvantagesData.map(item => (
                         <NecessaryCard
+                            key={item.id}
                             img={item.img}
                             alt={item.alt}
                             text={item.text}
@@ -120,7 +123,7 @@ export const FixedInternet = () => {
                 </div>
             </section>
             <TargetBanner
-                title="Фиксирование не значит, Огроничение."
+                title="Фиксирование не значит, Ограничение."
                 text="Свяжитесь с менеджером для подключения Интернета"
                 btn="Получить консультацию "
             />
@@ -128,7 +131,6 @@ export const FixedInternet = () => {
                 section={style.relatedServices__section}
                 items={relatedServicesData}
             />
-
             <RelatedServicesAdaptive />
             <UsefulArticles useful={style.usefulArticles__section} />
         </section>

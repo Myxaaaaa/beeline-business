@@ -40,53 +40,36 @@ export const International = () => {
     },
   ];
 
-  const callsTariff = detailData.continue_tariffs?.find(tariff => tariff.calls_sms === 'Звонки');
+  const callsTariff = detailData.continue_tariffs?.find(
+    tariff => tariff.calls_sms === 'Звонки',
+  );
   const minValue = callsTariff ? callsTariff.rich_tariff : '';
 
-  const callSms = detailData.continue_tariffs?.find(tariff => tariff.calls_sms === 'SMS');
+  const callSms = detailData.continue_tariffs?.find(
+    tariff => tariff.calls_sms === 'SMS',
+  );
   const sms = callSms ? callSms.rich_tariff : '';
 
-  const callBonus = detailData.continue_tariffs?.find(tariff => tariff.calls_sms === 'БизнесБонус');
+  const callBonus = detailData.continue_tariffs?.find(
+    tariff => tariff.calls_sms === 'БизнесБонус',
+  );
   const bonus = callBonus ? callBonus.rich_tariff : '';
 
-  const calls = detailData.continue_tariffs.filter(tariff => tariff.calls_sms.includes('Доп. Звонки'));
+  const calls = detailData.continue_tariffs.filter(tariff =>
+    tariff.calls_sms.includes('Доп. Звонки'),
+  );
 
-  const messages = detailData.continue_tariffs.filter(tariff => tariff.calls_sms.includes('Доп. SMS'));
+  const messages = detailData.continue_tariffs.filter(tariff =>
+    tariff.calls_sms.includes('Доп. SMS'),
+  );
 
-
-  // const tariffsData = [
-  //   {
-  //     text: 'Бизнес Эркиндик 500',
-  //     gb: '20',
-  //     min: '200',
-  //     sms: '20',
-  //     som: '500',
-  //     tariff1,
-  //     tariff2,
-  //     tariff3,
-  //     link: "/mobile-connect/tariffs/freedom"
-  //   },
-  //   {
-  //     text: 'Бизнес Эркиндик 650',
-  //     gb: '30',
-  //     min: '250',
-  //     sms: '30',
-  //     som: '650',
-  //     tariff1,
-  //     tariff2,
-  //     tariff3,
-  //     link: "/mobile-connect/tariffs/secondFreedom"
-  //   },
-  // ];
   return (
     <div className={style.international_df}>
       <section className={style.international}>
         <div className={style.container}>
           <Breadcrumbs crumbs={breadcrumbs} />
           <>
-            <h1 className={style.international__title}>
-              {detailData.title}
-            </h1>
+            <h1 className={style.international__title}>{detailData.title}</h1>
             <div className={style.international__info}>
               <div className={style.international__block}>
                 <div className={style.international__block_texts}>
@@ -96,7 +79,10 @@ export const International = () => {
                       src={internerLogo}
                       alt="internet"
                     />
-                    <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: detailData.gigabytes }} />
+                    <p
+                      className={style.international__texts_text}
+                      dangerouslySetInnerHTML={{ __html: detailData.gigabytes }}
+                    />
                   </div>
                   <div className={style.international__texts}>
                     <img
@@ -104,7 +90,10 @@ export const International = () => {
                       src={phoneLogo}
                       alt="phone"
                     />
-                    <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: minValue }} />
+                    <p
+                      className={style.international__texts_text}
+                      dangerouslySetInnerHTML={{ __html: minValue }}
+                    />
                   </div>
                   <div className={style.international__texts}>
                     <img
@@ -112,7 +101,10 @@ export const International = () => {
                       src={tariff1}
                       alt="message"
                     />
-                    <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: sms }} />
+                    <p
+                      className={style.international__texts_text}
+                      dangerouslySetInnerHTML={{ __html: sms }}
+                    />
                   </div>
                   {bonus && (
                     <div className={style.international__texts}>
@@ -121,18 +113,23 @@ export const International = () => {
                         src={tariff1}
                         alt="message"
                       />
-                      <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: bonus }} />
+                      <p
+                        className={style.international__texts_text}
+                        dangerouslySetInnerHTML={{ __html: bonus }}
+                      />
                     </div>
                   )}
-
                 </div>
                 <div className={style.international__block_textsIn}>
                   <h5 className={style.international__block_textsIn_title}>
                     Звонки
                   </h5>
-                  {calls.map(item => (
-                    <div className={style.international__texts}>
-                      <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: item.rich_tariff }} />
+                  {calls.map((item, index) => (
+                    <div key={index} className={style.international__texts}>
+                      <p
+                        className={style.international__texts_text}
+                        dangerouslySetInnerHTML={{ __html: item.rich_tariff }}
+                      />
                     </div>
                   ))}
                 </div>
@@ -140,12 +137,14 @@ export const International = () => {
                   <h5 className={style.international__block_textsIn_title}>
                     SMS
                   </h5>
-                  {messages.map(item => (
-                    <div className={style.international__texts}>
-                      <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: item.rich_tariff }} />
+                  {messages.map((item, index) => (
+                    <div key={index} className={style.international__texts}>
+                      <p
+                        className={style.international__texts_text}
+                        dangerouslySetInnerHTML={{ __html: item.rich_tariff }}
+                      />
                     </div>
                   ))}
-
                 </div>
                 <Button
                   onCLick={openModal}
@@ -154,11 +153,12 @@ export const International = () => {
                   Оставить заявку
                 </Button>
               </div>
-              <InternationalCalls title='Подробнее о тарифе' description={detailData.detail_desc} />
+              <InternationalCalls
+                title="Подробнее о тарифе"
+                description={detailData.detail_desc}
+              />
             </div>
           </>
-          {/* })} */}
-
         </div>
       </section>
       {isModalOpen && (
@@ -167,12 +167,13 @@ export const International = () => {
           setIsModalOpen={setIsModalOpen}
         />
       )}
-      <TariffsHomeCard cardWrap={style.cardWrap} cardText={style.card__filled} cardBtn={style.cardBtn} />
+      <TariffsHomeCard
+        cardWrap={style.cardWrap}
+        cardText={style.card__filled}
+        cardBtn={style.cardBtn}
+      />
 
       {detailData.title !== 'Бизнес Укмуш Международный' && <BusinessBonuses />}
-
     </div>
   );
 };
-
-
