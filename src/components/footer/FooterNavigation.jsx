@@ -17,7 +17,8 @@ const FooterNavigation = ({
   titleStyles,
   listNavigation,
   liStyle,
-  servicesP
+  servicesP,
+  navLink
 }) => {
   const location = useLocation();
   const currentPath = location.pathname;
@@ -64,6 +65,7 @@ const FooterNavigation = ({
                   servicesP={`${styles.services__p} ${servicesP}`}
                   ulServices={styles.services__ul}
                   liServices={styles.services__li}
+                  navLink={navLink}
                 />
               ) : (
                 <NavigationSection

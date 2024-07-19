@@ -55,8 +55,12 @@
         text-align: center;
     }
 
+    .shortNumber > h2, .necessaryCard > h2 {
+        text-align: center;
+    }
+
     .necessaryCard {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     .necessary__cards {
@@ -75,7 +79,7 @@
     }
     
     .statusNumber__section {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     .fixedMobileCon .statusNumber__btn {

@@ -101,6 +101,9 @@
     }
 
     .info__text {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr); /* Определяем количество строк */
+        overflow: hidden;
         display: flex;
         gap: 15px;
         flex-direction: column;
@@ -116,11 +119,15 @@
     }
 
     .info__text p {
-        height: 64px;
+        margin: 0; /* Убираем отступы, чтобы текст не выходил за рамки */
         overflow: hidden;
-        color:#909090;
+        color: #909090;
         font-size: 12px;
         font-weight: 400;
         line-height: 132%;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* Количество строк для отображения */
     }
 }
