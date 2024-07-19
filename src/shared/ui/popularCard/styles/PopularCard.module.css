@@ -130,6 +130,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: 132%;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 
   .card_text {
@@ -168,7 +170,6 @@
     color: white;
   }
 
-
   .card_img {
     height: 130px;
     left: 15px;
@@ -190,37 +191,11 @@
     line-height: 132%;
   }
 
-
   .relatedServices__hidden {
     width: 100%;
     margin-top: 30px;
     overflow-x: auto;
     padding-bottom: 20px;
-  }
-
-
-  .relatedServices__slider {
-    gap: 10px;
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar {
-    height: 11px;
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar-track {
-    margin-top: 20px;
-    background: #f1f1f1;
-    border-radius: 24px;
-    background: var(---Neutral-400, #232325);
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar-thumb {
-    border-radius: 24px;
-    background: var(---Neutral-300, #909090);
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar-thumb:hover {
-    background: #555;
   }
 
   .relatedServicesAdaptive {
@@ -303,7 +278,6 @@
     line-height: 132%;
   }
 
-
   .relatedServices__hidden {
     width: 100%;
     margin-top: 30px;
@@ -311,29 +285,8 @@
     padding-bottom: 20px;
   }
 
-
   .relatedServices__slider {
     gap: 10px;
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar {
-    height: 11px;
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar-track {
-    margin-top: 20px;
-    background: #f1f1f1;
-    border-radius: 24px;
-    background: var(---Neutral-400, #232325);
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar-thumb {
-    border-radius: 24px;
-    background: var(---Neutral-300, #909090);
-  }
-
-  .relatedServices__hidden::-webkit-scrollbar-thumb:hover {
-    background: #555;
   }
 
   .relatedServicesAdaptive {
@@ -400,11 +353,18 @@
     font-weight: 400;
     line-height: 132%;
   }
-}
 
-
-@media (max-width: 380px) {
   .card_text {
+    margin: 0;
+    overflow: hidden;
+    color: #909090;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 132%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
     padding: 0;
   }
 }
