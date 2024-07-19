@@ -36,7 +36,6 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isIconVisible, setIsIconVisible] = useState(true);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
-
   const isMobile = useMediaQuery({ maxWidth: 576 });
   const [status, setStatus] = useState(2);
   const [selectedLanguage, setSelectedLanguage] = useState('KG');
@@ -188,6 +187,7 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
           listNavigation={styles.listNavigation}
           liStyle={styles.liStyle}
           servicesP={styles.services__p}
+          navLink={styles.connection__active}
         />
       </aside>
     </section>

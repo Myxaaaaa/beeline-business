@@ -331,4 +331,8 @@
   .sideBarAdaptive .dropTownBtn {
     padding: 10px;
   }
+
+  .connection__active {
+    color: #ffd400;
+  }
 }

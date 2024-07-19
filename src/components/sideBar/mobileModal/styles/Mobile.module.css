@@ -28,8 +28,6 @@ h6 {
     font-weight: 500;
 }
 
-/* Mobile-SideBar 
----------------------------------------------------*/
 .mobileModal {
     position: fixed;
     width: 340px;
@@ -185,10 +183,11 @@ h6 {
     }
 
     .mobileSelect_container {
+        padding: 0 0 20px;
         display: flex;
-        padding: 0;
         flex-direction: column;
         align-items: flex-start;
+        gap: 0;
         align-self: stretch;
         border-radius: 8px;
         background: transparent;

@@ -105,7 +105,7 @@
     padding: 15px 15.5px 15px 15px;
     height: 176px;
     width: 100%;
-    background-position: left -10px center;
+    background-position: left -35px center;
   }
 
   .card_container {
@@ -113,6 +113,7 @@
   }
 
   .card_info {
+    gap: 15px;
     width: 55%;
     height: 190px;
     display: flex;
@@ -149,6 +150,8 @@
   }
 
   .card_link {
+    position: absolute;
+    bottom: 15px;
     display: block;
     margin-top: auto;
     color: var(---Brend-200, #FFD400);
@@ -168,7 +171,7 @@
 
   .card_img {
     height: 130px;
-    left: 35px;
+    left: 15px;
   }
 }
 
@@ -283,10 +286,6 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 132%;
-  }
-
-  .card_info {
-    gap: 0px;
   }
 }
 
@@ -408,5 +407,4 @@
   .card_text {
     padding: 0;
   }
-
 }
