@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styles from './styles/Services.module.css';
-import ServicesCard from '../../../shared/ui/servicesCard/ServicesCard';
 import {
   NextButton,
   handleNextSlide,
@@ -11,7 +10,7 @@ export const Services = ({ relatedAdvantages }) => {
   const servicesCardsData = relatedAdvantages
     ?.filter(item => item.choices_internet_m2m === 'Связанные услуги')
     .map((item, index) => ({
-      id: index, // If there's no unique identifier, use the index as a fallback
+      id: index, 
       title: item.title,
       text: item.description,
       img: item.image,
