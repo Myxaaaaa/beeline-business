@@ -8,15 +8,7 @@ import SearchResults from './SearchResults';
 import { NavLink } from 'react-router-dom';
 import FooterNavigation from '../footer/FooterNavigation';
 import { Input } from '../../shared/ui/customInput/Input';
-import {
-  baseNavigationItems,
-  mobileConnection,
-  about,
-  bigData,
-  itSecurity,
-  informationClient,
-  officeCommunications,
-} from '../../shared/ui/navigationItemsBase/NavigationItemsBase';
+import { baseNavigationItems, mobileConnection, about, bigData, itSecurity, informationClient, officeCommunications } from '../../shared/ui/navigationItemsBase/NavigationItemsBase';
 import { MobileIcons } from '../../shared/assets/icons/sideBarIcons/mobileIcons/MobileIcons';
 import { Office } from '../../shared/assets/icons/sideBarIcons/office/Office';
 import { Products } from '../../shared/assets/icons/sideBarIcons/products/Products';
@@ -25,7 +17,9 @@ import { Information } from '../../shared/assets/icons/sideBarIcons/information/
 import { HomeIcons } from '../../shared/assets/icons/sideBarIcons/customIcons/homeIcons/HomeIcons';
 import axios from 'axios';
 import Droptown from '../../shared/ui/droptown/Droptown';
-import kg from '../../shared/assets/icons/droptown/flag.png';
+import Kg from '../../shared/assets/icons/droptown/Kyrgyzstan.png';
+import Ru from '../../shared/assets/icons/droptown/Russia.png';
+import Eng from '../../shared/assets/icons/droptown/English.png';
 import { changeLanguage } from '../../shared/api/Api';
 
 const modalContentMap = {
@@ -47,9 +41,8 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 576 });
   const [status, setStatus] = useState(2);
-  const [statusLanguage, setStatusLanguage] = useState(
-    localStorage.getItem('lng') || 'ru',
-  );
+  const [statusLanguage, setStatusLanguage] = useState(localStorage.getItem('lng') || 'ru');
+  const [isActiveLanguage, setIsActiveLanguage] = useState(false);
 
   const handleLanguageChange = lng => {
     changeLanguage(lng);
@@ -85,12 +78,9 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
       if (searchQuery) {
         setIsLoading(true);
         try {
-          const response = await axios.get(
-            'https://beeline.pp.ua/api/v1/search/',
-            {
-              params: { q: searchQuery },
-            },
-          );
+          const response = await axios.get('https://beeline.pp.ua/api/v1/search/', {
+            params: { q: searchQuery },
+          });
           setData(response.data);
           setError(null);
         } catch (error) {
@@ -129,6 +119,18 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     icon: iconMapping[item.path],
   }));
 
+  const languageMapping = {
+    ky: 'Кыргызча',
+    ru: 'Русский',
+    en: 'English',
+  };
+  
+  const reverseLanguageMapping = {
+    Кыргызча: 'ky',
+    Русский: 'ru',
+    English: 'en',
+  };
+
   return (
     <section className={styles.sideBarAdaptive}>
       <aside className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
@@ -139,8 +141,13 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
             setSelected={handleLanguageChange}
             blockStyle={styles.blockStyle}
             dropTownBtn={styles.dropTownBtn}
-            flags={[kg, '', '']}
+            flags={[Kg, Ru, Eng]}
             selectedOption={statusLanguage}
+            isActive={isActiveLanguage}
+            setIsActive={setIsActiveLanguage}
+            droptownBtnActive={styles.dropTownBtn}
+            languageMapping={languageMapping}
+            reverseLanguageMapping={reverseLanguageMapping}
           />
           <img src={beeline} alt="logo" />
           <button className={styles.sideBar_btn} onClick={toggleSideBar}>

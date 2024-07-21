@@ -16,7 +16,7 @@ export const InTariff = () => {
         id: item.id,
         title: item.name,
         text: item.description,
-        extraClass: idToClassMapping[item.id] || '' // Получаем класс из маппинга или пустую строку, если нет соответствия
+        extraClass: idToClassMapping[item.id] || ''
     }));
 
     return (

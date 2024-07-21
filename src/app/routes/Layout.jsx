@@ -3,7 +3,6 @@ import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/footer/Footer';
 import { ScrollToTop } from '../../components/tariffs/tariffsPages/scrollToTop/ScrollToTop';
 import { AllFixed } from '../../components/allFixed/AllFixed';
-import NotFound from '../../pages/notFound/NotFound';
 import SideBar from '../../components/sideBar/SideBar';
 import '../styles/global.scss';
 

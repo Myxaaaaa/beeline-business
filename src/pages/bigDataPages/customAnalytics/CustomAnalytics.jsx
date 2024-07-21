@@ -11,10 +11,12 @@ import relatedImg from '../../../shared/assets/images/allVisual/software.png';
 import { useLoaderData } from 'react-router-dom';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 import { useState } from 'react';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 export const CustomAnalytics = () => {
   const data = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
+  const [dataModalOpen, setDataModalOpen] = useState(false)
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -50,6 +52,7 @@ export const CustomAnalytics = () => {
   ];
 
   const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
 
   return (
     <section className={styles.customAnalytics}>
@@ -97,7 +100,8 @@ export const CustomAnalytics = () => {
       <TargetBanner
         title="Закажите Аналитику для Рекламной Компании!"
         text="Закажите Кастомную аналитику перед запуском рекламной кампании для понимания желания покупателя!"
-        btn="Получить консультацию "
+        btn="Получить консультацию"
+        handleOpenModal={handleOpenDataModal}
       />
 
       <RelatedServices items={relatedServicesData} />
@@ -107,6 +111,9 @@ export const CustomAnalytics = () => {
 
       {modalOpen && (
         <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+      )}
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
       )}
     </section>
   );

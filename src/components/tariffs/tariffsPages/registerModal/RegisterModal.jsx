@@ -4,16 +4,14 @@ import { Input } from '../../../../shared/ui/customInput/Input';
 import { BitApi } from '../../../../shared/api/Bitrix';
 import Droptown from '../../../../shared/ui/droptown/Droptown';
 import { useRef, useState } from 'react';
+import Kg from '../../../../shared/assets/icons/droptown/Kyrgyzstan.png';
+import Ru from '../../../../shared/assets/icons/droptown/Russia.png';
 
-export const RegisterModal = ({
-  setIsRegisterModal,
-  productName,
-  setSuccessOpen,
-  setShowModal,
-}) => {
+export const RegisterModal = ({ setIsRegisterModal, productName, setSuccessOpen, setShowModal }) => {
   const [errors, setErrors] = useState({});
   const [focusedInputId, setFocusedInputId] = useState(null);
   const [selectedCountryCode, setSelectedCountryCode] = useState('+996');
+  const [isActive, setIsActive] = useState(false);
   const modalRef = useRef(null);
   const formRefs = {
     name: useRef(null),
@@ -113,6 +111,16 @@ export const RegisterModal = ({
     },
   ];
 
+  const languageMapping = {
+    '+996': '+996',
+    '+7': '+7',
+  };
+  
+  const reverseLanguageMapping = {
+    '+996': '+996',
+    '+7': '+7',
+  };
+
   return (
     <section className={style.RegisterModal__back} onClick={handleClickOutside}>
       <div ref={modalRef} className={style.RegisterModal__block}>
@@ -172,6 +180,12 @@ export const RegisterModal = ({
               style={`${errors.phone ? style.input_error : ''} ${focusedInputId === 'phone' ? style.input_focused : ''}`}
               onBlur={() => handleBlur('phone')}
               onFocus={() => handleFocus('phone')}
+              flags={[Kg, Ru]}
+              isActive={isActive}
+              setIsActive={setIsActive}
+              languageMapping={languageMapping}
+              reverseLanguageMapping={reverseLanguageMapping}
+              selectedOption={selectedCountryCode} // Убедитесь, что передаете текущий выбранный вариант
             />
           </div>
           <div className={style.RegisterModal__block_input_wrapper}>
