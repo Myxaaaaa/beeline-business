@@ -1,7 +1,9 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles/Droptown.module.css';
+// import flag from '../../assets/icons/droptown/flag.png';
 import down from '../../assets/icons/droptown/down.png';
 import up from '../../assets/icons/droptown/up.png';
+import { forwardRef } from 'react';
 
 const Droptown = forwardRef(
   (
