@@ -17,8 +17,8 @@ export const Banner = ({ clickPlug, data }) => {
 
   const Links = [
     { link: '/office-communication/virtual-pbx-international-connection' },
-    { link: '/office-communication/fixed-mobile-convergence' },
     { link: '/mobile-connect/roaming' },
+    { link: '/office-communication/fixed-mobile-convergence' },
     { link: '/bigData-Beetarget' }
   ]
 

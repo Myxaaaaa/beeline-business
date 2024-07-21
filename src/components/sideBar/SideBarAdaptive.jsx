@@ -54,6 +54,13 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
   );
   const [isActiveLanguage, setIsActiveLanguage] = useState(false);
 
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('lng');
+    if (savedLanguage) {
+      setStatusLanguage(savedLanguage);
+    }
+  }, []);
+
   const handleNavigationClick = modalType => {
     if (activeDropdowns.includes(modalType)) {
       setActiveDropdowns(activeDropdowns.filter(item => item !== modalType));
@@ -133,12 +140,6 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     en: 'English',
   };
 
-  const reverseLanguageMapping = {
-    Кыргызча: 'ky',
-    Русский: 'ru',
-    English: 'en',
-  };
-
   return (
     <section className={styles.sideBarAdaptive}>
       <aside className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
@@ -155,7 +156,6 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
             setIsActive={setIsActiveLanguage}
             droptownBtnActive={styles.dropTownBtn}
             languageMapping={languageMapping}
-            reverseLanguageMapping={reverseLanguageMapping}
           />
           <img src={beeline} alt="logo" />
           <button className={styles.sideBar_btn} onClick={toggleSideBar}>
