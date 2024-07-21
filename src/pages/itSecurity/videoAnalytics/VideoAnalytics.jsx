@@ -3,8 +3,8 @@ import { Banner } from '../../../shared/ui/banner/Banner';
 import style from './VideoAnalytics.module.scss';
 import short from '../../../shared/assets/images/shortNum/short.svg';
 import {
-  ShortNumberAdaptive,
-  ShortNumberCard,
+    ShortNumberAdaptive,
+    ShortNumberCard,
 } from '../../../shared/ui/shortNumberCard/ShortNumberCard';
 import terminal from '../../../shared/assets/icons/advantages/terminal.svg';
 import car from '../../../shared/assets/icons/advantages/car.svg';
@@ -15,8 +15,8 @@ import tv from '../../../shared/assets/icons/advantages/tv.svg';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { TargetBanner } from '../../../shared/ui/targetBanner/TargetBanner';
 import {
-  RelatedServices,
-  RelatedServicesAdaptive,
+    RelatedServices,
+    RelatedServicesAdaptive,
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
@@ -107,7 +107,7 @@ export const VideoAnalytics = () => {
                 <div className={style.shortNum__blocks}>
                     {shortNumData?.map(item => (
                         <ShortNumberCard
-                        key={item.id}
+                            key={item.id}
                             text={item.text}
                             img={item.imgCard}
                             stylesNumCard={style.customNumCard}
@@ -115,7 +115,7 @@ export const VideoAnalytics = () => {
                     ))}
                     {shortNumData?.map(item => (
                         <ShortNumberAdaptive
-                        key={item.id}
+                            key={item.id}
                             img={item.img}
                             alt={item.alt}
                             text={item.text}
@@ -135,6 +135,7 @@ export const VideoAnalytics = () => {
                 title="Видео Аналитика для вашего бизнеса"
                 text="Подключите видео аналитику если вы ещё не отслеживаете безопасность и продажи в бизнесе!"
                 btn="Подключить"
+                handleClickModal={handleClickModal}
             />
 
             <RelatedServices
@@ -147,7 +148,7 @@ export const VideoAnalytics = () => {
             <UsefulArticles useful={style.usefulArticles__section} />
 
             {isOpenModal && (
-                <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code}/>
+                <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code} />
             )}
         </section>
     )
