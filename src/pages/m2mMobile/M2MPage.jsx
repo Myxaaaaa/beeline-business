@@ -7,14 +7,18 @@ import {Tarifs} from '../../components/m2mMobile/tarifs/Tarifs';
 import {Services} from '../../components/m2mMobile/services/Services';
 import { UsefulArticles } from '../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../shared/ui/dataModal/DataModal';
 
 export const M2MPage = () => {
   const { relatedAdvantages, banner } = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
 
   return (
     <section className={styles.m2m} >
         <div>
-          <Head banner={banner} />
+          <Head handleClickModal={handleOpenModal} banner={banner} />
           <Necessary relatedAdvantages={relatedAdvantages} />
           <Advantages relatedAdvantages={relatedAdvantages} />
           <Banner/>
@@ -24,6 +28,9 @@ export const M2MPage = () => {
             <UsefulArticles/>
           </div>
         </div>
+        {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={banner && banner?.map(item => item.ussd_code)} />
+      )}
     </section>
   )
 }
