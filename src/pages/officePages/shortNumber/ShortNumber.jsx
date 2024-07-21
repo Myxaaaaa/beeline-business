@@ -28,9 +28,15 @@ import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles
 import cloud from '../../../shared/assets/icons/shortNumberCard/cloud.svg';
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
 import { useLoaderData } from 'react-router-dom';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 
 export const ShortNumber = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const handleClickModal = () => {
+    setIsOpenModal(true);
+  }
   const data = useLoaderData();
 
   const breadcrumbs = [
@@ -99,6 +105,7 @@ export const ShortNumber = () => {
           detail="Подробнее"
           detailStyles={style.detailStyles}
           plug="Подключить"
+          handleClickModal={handleClickModal}
         />
       </section>
       <Description
@@ -145,6 +152,10 @@ export const ShortNumber = () => {
 
       <RelatedServicesAdaptive />
       <UsefulArticles useful={style.usefulArticles__section} />
+
+      {isOpenModal && (
+        <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code} />
+      )}
     </section>
   );
 };

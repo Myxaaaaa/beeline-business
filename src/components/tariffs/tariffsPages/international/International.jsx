@@ -124,12 +124,9 @@ export const International = () => {
                   <h5 className={style.international__block_textsIn_title}>
                     Звонки
                   </h5>
-                  {calls.map((item, index) => (
-                    <div key={index} className={style.international__texts}>
-                      <p
-                        className={style.international__texts_text}
-                        dangerouslySetInnerHTML={{ __html: item.rich_tariff }}
-                      />
+                  {calls.map(item => (
+                    <div className={style.international__texts} key={item.id}>
+                      <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: item.rich_tariff }} />
                     </div>
                   ))}
                 </div>
@@ -137,12 +134,9 @@ export const International = () => {
                   <h5 className={style.international__block_textsIn_title}>
                     SMS
                   </h5>
-                  {messages.map((item, index) => (
-                    <div key={index} className={style.international__texts}>
-                      <p
-                        className={style.international__texts_text}
-                        dangerouslySetInnerHTML={{ __html: item.rich_tariff }}
-                      />
+                  {messages.map(item => (
+                    <div className={style.international__texts} key={item.id}>
+                      <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: item.rich_tariff }} />
                     </div>
                   ))}
                 </div>

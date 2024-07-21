@@ -1,5 +1,6 @@
 import styles from './Banner.module.scss';
 import { Button } from '../customButton/Button';
+import { useState } from 'react';
 
 export const Banner = ({ title, titleStyles, stylesText, text, img, alt, plugStyles, section, left, btn, handleClickModal }) => {
   return (
