@@ -7,7 +7,11 @@ import {
 import { PopularCard } from '../../../shared/ui/popularCard/PopularCard';
 
 
-export const Services = ({relatedAdvantages}) => {  
+export const Services = ({relatedAdvantages, cardData}) => {  
+    const getLinkForCard = (title) => {
+        const card = cardData.find((card) => card.title === title);
+        return card ? card.link : '#';
+      };
     const servicesCardsData = relatedAdvantages?.filter(item => item.choices_internet_m2m === "Связанные услуги")
     .map(item => ({
         title: item.title,
@@ -18,7 +22,7 @@ export const Services = ({relatedAdvantages}) => {
 
     const handleNextSlideClick = () =>
       handleNextSlide(currentSlide, setCurrentSlide);
-
+console.log()
   return (
     <section className={styles.services}>
         <div className={styles.services_container}>
@@ -30,7 +34,7 @@ export const Services = ({relatedAdvantages}) => {
                         style={{ transform: `translateX(-${currentSlide * 47}%)` }}
                     >
                         {servicesCardsData.map((item) => (
-                            <PopularCard title={item.title} text={item.text} img={item.img} />
+                            <PopularCard title={item.title} text={item.text} img={item.img} link={getLinkForCard(item.title)}/>
                         ))}
                     </div>
                     <footer className={styles.next_btn} >
