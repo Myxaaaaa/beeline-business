@@ -14,11 +14,12 @@ import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 export const CloudServer = () => {
   const { data, banner } = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
-  const handleOpenModal = () => setModalOpen(true)
+  const [dataModalOpen, setDataModalOpen] = useState(false)
 
   const relatedServicesData = [
     {
@@ -55,24 +56,30 @@ export const CloudServer = () => {
     },
   ];
 
+  const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
+
   return (
     <section className={styles.cloud_server}>
       <div className={styles.breadcrumb}>
         <Breadcrumbs crumbs={breadcrumbs} />
       </div>
       {data?.map?.(item => (
-        <Banner
-          key={`banner-${item.id}`} // Adding unique key prop
-          title={item.title}
-          text={item.description}
-          detail={'Подробнее'}
-          img={item.visual}
-          alt={'CloundServer'}
-          plug={'Подключить'}
-          detailStyles={styles.btn_banner}
-          btn={styles.btn}
-          handleClickModal={handleOpenModal}
-        />
+        <div>
+          <Banner
+            key={`banner-${item.id}`} // Adding unique key prop
+            title={item.title}
+            text={item.description}
+            detail={'Подробнее'}
+            img={item.visual}
+            alt={'CloundServer'}
+            plug={'Подключить'}
+            detailStyles={styles.btn_banner}
+            btn={styles.btn}
+            handleClickModal={handleOpenModal}
+          />
+          <h1>{item.ussd_code}</h1>
+        </div>
       ))}
       {banner?.map?.(item => (
         <Description
@@ -111,6 +118,7 @@ export const CloudServer = () => {
           'Аренда облачного сервера для масштабирования бизнеса без переплат.'
         }
         btn={'Подключить'}
+        handleOpenModal={handleOpenDataModal}
       />
       <RelatedServices
         section={styles.relatedServices__section}
@@ -122,7 +130,10 @@ export const CloudServer = () => {
       </div>
 
       {modalOpen && (
-        <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+        <DataModal setIsOpenModal={setModalOpen} item={data && data?.map(item => item.ussd_code)} />
+      )}
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
       )}
     </section>
   );

@@ -2,15 +2,8 @@ import styles from './styles/Head.module.css';
 import Breadcrumbs from '../../breadcrumbs/Breadcrumbs';
 import { Button } from '../../../shared/ui/customButton/Button';
 import head_img from '../../../shared/assets/images/giveAwayInternet/head/head_img.png'
-import { DataModal } from '../../../shared/ui/dataModal/DataModal';
-import { useState } from 'react';
 
-export const Head = ({item}) => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const openModal = () => {
-    setIsOpenModal(true)
-  }
+export const Head = ({item, handleClickModal}) => {
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -38,7 +31,7 @@ export const Head = ({item}) => {
 }</span>{' '}
           </h4>
           <div className={styles.head_footer}>
-            <Button onCLick={openModal} className={styles.head_btn}>Подключить</Button>
+            <Button onCLick={handleClickModal} className={styles.head_btn}>Подключить</Button>
           </div>
         </div>
         <img className={styles.head_img} src={head_img} alt="head" />
@@ -46,9 +39,6 @@ export const Head = ({item}) => {
       <h2 className={styles.head_endText}>
         {item.intern_distribution_banners.add_description}
       </h2>
-      {isOpenModal && (
-        <DataModal setIsOpenModal={setIsOpenModal} />
-      )}
     </section>
   );
 };

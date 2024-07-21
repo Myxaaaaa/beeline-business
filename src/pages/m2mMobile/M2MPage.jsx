@@ -7,23 +7,48 @@ import {Tarifs} from '../../components/m2mMobile/tarifs/Tarifs';
 import {Services} from '../../components/m2mMobile/services/Services';
 import { UsefulArticles } from '../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../shared/ui/dataModal/DataModal';
 
 export const M2MPage = () => {
+  const cardData = [
+    {
+      title: 'Статический IP-адрес',
+      link: '',
+    },
+    {
+      title: 'Корпоративный VPN',
+      link: '',
+    },
+    {
+      title: 'Оборудование',
+      link: '/mobile-connect/equipment',
+    },
+    {
+      title: 'Интернет для M2M',
+      link: '/mobile-connect/internet-for-m2m-devices',
+    },
+  ];
   const { relatedAdvantages, banner } = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
 
   return (
     <section className={styles.m2m} >
         <div>
-          <Head banner={banner} />
+          <Head handleClickModal={handleOpenModal} banner={banner} />
           <Necessary relatedAdvantages={relatedAdvantages} />
           <Advantages relatedAdvantages={relatedAdvantages} />
           <Banner/>
           <Tarifs/>
-          <Services relatedAdvantages={relatedAdvantages} />
+          <Services cardData={cardData} relatedAdvantages={relatedAdvantages} />
           <div className={styles.useful_articles} >
             <UsefulArticles/>
           </div>
         </div>
+        {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={banner && banner?.map(item => item.ussd_code)} />
+      )}
     </section>
   )
 }

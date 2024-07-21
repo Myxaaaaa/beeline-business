@@ -1,7 +1,12 @@
 import styles from './ConnectPackage.module.css';
 import { ConnectPackage as InternetPackage } from '../../../shared/ui/connectPackage/ConnectPackage';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { RegisterModal } from '../../tariffs/tariffsPages/registerModal/RegisterModal';
 
 const ConnectPackageHead = ({ data }) => {
+  const [dataModalOpen, setDataModalOpen] = useState(false)
+  const handleOpenDataModal = () => setDataModalOpen(true)
   const internetPackages = [
     {
       title: 'Стандартный пакет: 130 каналов',
@@ -16,11 +21,15 @@ const ConnectPackageHead = ({ data }) => {
   return (
     <div className={styles.internetPackages}>
       <InternetPackage
+        handleOpenModal={handleOpenDataModal} 
         title="Как активировать пакет Beeline TV?"
         packages={data}
         boxWidth={408}
         titles={internetPackages}
       />
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
+      )}
     </div>
   );
 };

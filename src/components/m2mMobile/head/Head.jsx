@@ -5,12 +5,7 @@ import { Button } from '../../../shared/ui/customButton/Button';
 import { useState } from 'react';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
-export const Head = ({ banner }) => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const openModal = () => {
-    setIsOpenModal(true)
-  }
+export const Head = ({ banner, handleClickModal }) => {
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -36,7 +31,7 @@ export const Head = ({ banner }) => {
                 <h1 className={styles.head_title}>{item.title}</h1>
                 <p className={styles.head_text}>{item.description}</p>
                 <div className={styles.head_footer}>
-                  <Button onCLick={openModal}  className={styles.head_btn}>Подключить</Button>
+                  <Button onCLick={handleClickModal}  className={styles.head_btn}>Подключить</Button>
                 </div>
               </div>
               <img
@@ -48,9 +43,6 @@ export const Head = ({ banner }) => {
             <h2 className={styles.head_endText}>{item.add_description}</h2>
           </div>
         ))}
-        {isOpenModal && (
-        <DataModal setIsOpenModal={setIsOpenModal} />
-      )}
     </section>
   );
 };
