@@ -64,16 +64,19 @@ export const FixedInternet = () => {
     const relatedServicesData = [
         {
             title: 'Центр мониторинга и реагирования (SKY SOC)',
+            text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса',
             link: '/it-security/sky-soc-roaming',
             img: relatedImg,
         },
         {
             title: 'Аренда облачного сервера (Cloud Servers)',
+            text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса',
             link: '/it-security/cloud-server-rental-equipment',
             img: relatedImg,
         },
         {
             title: 'Продажа ПО',
+            text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса',
             link: '/it-security/software-sale',
             img: relatedImg,
         },
@@ -136,6 +139,7 @@ export const FixedInternet = () => {
                 title="Фиксирование не значит, Ограничение."
                 text="Свяжитесь с менеджером для подключения Интернета"
                 btn="Получить консультацию "
+                handleClickModal={handleClickModal}
             />
             <RelatedServices
                 section={style.relatedServices__section}

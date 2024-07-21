@@ -12,19 +12,19 @@ export const RelatedServicesAdaptive = () => {
     {
       title: 'Центр мониторинга и реагирования (SKY SOC)',
       text: 'Услуга обеспечивает безопасное соединение, стабильную скорость передачи данных, защищает ваши данные от кражи. Услуга доступна для подключения на устройствах M2M.',
-      link: '',
+      link: '/it-security/sky-soc-roaming',
       img: visual1,
     },
     {
       title: 'Аренда облачного сервера (Cloud Servers)',
       text: 'Корпоративный VPN позволит вам связать офисы по всему Кыргызстану единой корпоративной сетью для удалённого подключения.',
-      link: '',
+      link: '/it-security/cloud-server-rental-equipment',
       img: visual2,
     },
     {
       title: 'Продажа ПО',
       text: 'Приобретайте Microsoft лицензии от официального реселлера по самым низким ценам: ОС, прикладное программное обеспечение, и др.',
-      link: '',
+      link: '/it-security/software-sale',
       img: visual3,
     },
   ];
