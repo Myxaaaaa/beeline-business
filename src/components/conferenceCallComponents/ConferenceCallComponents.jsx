@@ -101,7 +101,7 @@ export const ConferenceCallComponents = () => {
             }
           />
         </div>
-        <Banner link="/mobile-connect/internet-for-m2m-devices" />
+        <Banner />
         <OtherServices />
       </div>
     </section>
