@@ -57,6 +57,7 @@ export const Vpn = () => {
         ))}
         {mobileVpn.map(item => (
           <VpnCard
+            title={parse(item.gigabytes)}
             textStyles={styles.vpn_card_application_btn}
             applyStyles={styles.vpn_card_application}
             setIsRegisterModal={setIsRegisterModal}

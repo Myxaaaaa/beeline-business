@@ -12,9 +12,13 @@ import {
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 export const CloudServer = () => {
   const { data, banner } = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
 
   const relatedServicesData = [
     {
@@ -42,12 +46,12 @@ export const CloudServer = () => {
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
-      pathname: '/products-based-big-data',
-      breadcrumb: 'Продукты на основе BIG DATA',
+      pathname: '/itSecurity',
+      breadcrumb: 'IT и безопасность',
     },
     {
-      pathname: '/bigData/-Financial-market-analytics',
-      breadcrumb: 'Аналитика финансового рынка',
+      pathname: '/it-security/cloud-server-rental-equipment',
+      breadcrumb: 'Аренда Облачного Сервера',
     },
   ];
 
@@ -67,6 +71,7 @@ export const CloudServer = () => {
           plug={'Подключить'}
           detailStyles={styles.btn_banner}
           btn={styles.btn}
+          handleClickModal={handleOpenModal}
         />
       ))}
       {banner?.map?.(item => (
@@ -101,7 +106,7 @@ export const CloudServer = () => {
         </div>
       ))}
       <TargetBanner
-        title={'Аренда облочного сервера'}
+        title={'Аренда облачного сервера'}
         text={
           'Аренда облачного сервера для масштабирования бизнеса без переплат.'
         }
@@ -115,6 +120,10 @@ export const CloudServer = () => {
       <div className={styles.use_full}>
         <UsefulArticles />
       </div>
+
+      {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+      )}
     </section>
   );
 };

@@ -14,7 +14,7 @@
 
 .droptown_btn {
     width: 90px;
-    padding: 15px 16px;
+    padding: 15px 10px 15px 15px;
     color: #FFF;
     font-weight: bold;
     color: #E8E8E8;
@@ -70,6 +70,7 @@
 }
 
 .droptown_item {
+    display: flex;
     padding: 10px;
     cursor: pointer;
     transition: all 0.2s;

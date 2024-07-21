@@ -1,7 +1,6 @@
 import styles from './NotFound.module.css';
 import notFound_img from '../../shared/assets/images/notFound/notFound.png';
 import { Button } from '../../shared/ui/customButton/Button';
-import { Footer } from '../../components/footer/Footer';
 import img from '../../shared/assets/images/notFound/404.png'
 import { Link } from 'react-router-dom';
 
@@ -26,10 +25,6 @@ const NotFound = () => {
         <img className={styles.head_img} src={notFound_img} alt="head" />
 
       </div>
-
-      {/* <footer className={styles.footer_service} > 
-        <Footer footer={styles.footer_block} mad_line={styles.mad_lines}  styleMadeLine={styles.made_line} styleNav={styles.navigation} styleLine={styles.line} /> 
-      </footer> */}
     </section>
   );
 };

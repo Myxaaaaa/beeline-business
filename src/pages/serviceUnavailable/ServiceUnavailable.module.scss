@@ -1,13 +1,7 @@
 .head_service {
   padding-top: 200px;
-  background-image: url('../../shared/assets/images/allVisual/bannerCircle.png');
-  background-repeat: no-repeat;
-  background-position: right 140px top 180px;
+  
 }
-// .footer_service {
-//   padding-top: 30px;
-//   padding-right: 320px;
-// }
 .img_header {
   max-width: 900px;
   margin: 0 auto;
@@ -23,6 +17,9 @@
   display: flex;
   align-items: center;
   position: relative;
+  background-image: url('../../shared/assets/images/allVisual/bannerCircle.png');
+  background-repeat: no-repeat;
+  background-position: right -70px top -30px;
 }
 .line {
   border-bottom: 2px solid #222223;
@@ -37,9 +34,9 @@
   padding-left: 270px;
 }
 .navigation {
-  max-width: 1200px;
+  max-width: 1900px;
   margin: auto;
-  padding-left: 270px;
+  padding-left: 130px;
   display: flex;
   gap: 193px;
 }
@@ -95,38 +92,35 @@
 
 @media (max-width: 576px) {
   .navigation {
-    flex-direction: column;
     gap: 20px;
     padding: 0px;
   }
   .made_line {
+    padding: 0 20px;
     padding-left: 0px;
   }
   .made_lines {
     display: none;
+    width: 100%;
   }
   .footer_service {
     margin-top: 70px;
     padding: 30px 1px;
   }
   .line {
-    padding: 0;
-    width: 100%;
+    padding: 0 20px;
+    width: 50%;
     border-bottom: 0px solid #222223;
   }
   .head_service {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
-  }
-  .head_service {
-    padding-top: 20px;
-    padding: 50px 20px;
     background-position: right 5px top 40px;
   }
   .img {
-    padding-left: 0;
-    width: 100%;
+    // padding-left: 0;
+    width: 90%;
     top: 190px;
   }
   .breadcrumb {
@@ -137,7 +131,7 @@
     position: absolute;
     width: 100%;
     height: 350px;
-    top: 71px;
+    top: 86px;
     right: -8.2px;
   }
   .service_container {
@@ -145,6 +139,7 @@
     padding-top: 42px;
     position: relative;
     padding: 0 20px;
+    background-position: top 30px;
   }
   .service_block {
     width: 100%;
@@ -165,7 +160,7 @@
     font-weight: 400;
     line-height: 21.12px;
     text-align: center;
-    padding-top: 363px;
+    padding-top: 399px;
     width: 100%;
   }
   .head_btn {

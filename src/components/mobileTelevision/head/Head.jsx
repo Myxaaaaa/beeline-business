@@ -9,8 +9,8 @@ export const Head = ({ data }) => {
       breadcrumb: 'Мобильная связь',
     },
     {
-      pathname: '/mobile-connect/internet-for-m2m-devices',
-      breadcrumb: 'Интернет для М2М-устройств',
+      pathname: '/mobile-connect/tv-mobile-television',
+      breadcrumb: 'Укмуш TV',
     },
   ];
 
@@ -32,7 +32,6 @@ export const Head = ({ data }) => {
                     {item.it_work}
                   </span>
                 </h4>
-                <button className={styles.head_btn}>Подробнее</button>
               </div>
             </div>
             <img className={styles.head_img} src={item.visual} alt="head_img" />

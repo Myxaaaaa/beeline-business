@@ -1,5 +1,7 @@
 import styles from './styles/Activated.module.css';
 import { Button } from '../../../shared/ui/customButton/Button';
+import { RegisterModal } from '../../tariffs/tariffsPages/registerModal/RegisterModal';
+import { useState } from 'react';
 
 const renderCardText = (text, spanText, className, spanClassName) => (
   <h4 className={className}>
@@ -8,6 +10,12 @@ const renderCardText = (text, spanText, className, spanClassName) => (
 );
 
 export const Activated = ({item}) => {
+  const [isRegisterOpen, setIsRegisterModal] = useState(false);
+
+  const openRegister = () => {
+    setIsRegisterModal(true);
+  };
+
   return (
     <section className={styles.activated}>
       <h2 className={styles.activated_title}>Как активировать услугу?</h2>
@@ -32,8 +40,14 @@ export const Activated = ({item}) => {
         )}
       </div>
       <footer className={styles.activated_btn_status}>
-        <Button className={styles.activated_btn}>Подключить</Button>
+        <Button className={styles.activated_btn} onCLick={openRegister}  >Подключить</Button>
       </footer>
+      {isRegisterOpen && (
+          <RegisterModal
+            isRegisterOpen={isRegisterOpen}
+            setIsRegisterModal={setIsRegisterModal}
+          />
+      )}
     </section>
   );
 };
