@@ -17,6 +17,7 @@ export const SoftwareSales = () => {
   const data = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
   const [dataModalOpen, setDataModalOpen] = useState(false)
+  
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },

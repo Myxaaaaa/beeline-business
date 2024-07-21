@@ -8,7 +8,15 @@ import SearchResults from './SearchResults';
 import { NavLink } from 'react-router-dom';
 import FooterNavigation from '../footer/FooterNavigation';
 import { Input } from '../../shared/ui/customInput/Input';
-import { baseNavigationItems, mobileConnection, about, bigData, itSecurity, informationClient, officeCommunications } from '../../shared/ui/navigationItemsBase/NavigationItemsBase';
+import {
+  baseNavigationItems,
+  mobileConnection,
+  about,
+  bigData,
+  itSecurity,
+  informationClient,
+  officeCommunications,
+} from '../../shared/ui/navigationItemsBase/NavigationItemsBase';
 import { MobileIcons } from '../../shared/assets/icons/sideBarIcons/mobileIcons/MobileIcons';
 import { Office } from '../../shared/assets/icons/sideBarIcons/office/Office';
 import { Products } from '../../shared/assets/icons/sideBarIcons/products/Products';
@@ -41,13 +49,17 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 576 });
   const [status, setStatus] = useState(2);
-  const [statusLanguage, setStatusLanguage] = useState(localStorage.getItem('lng') || 'ru');
+  const [statusLanguage, setStatusLanguage] = useState(
+    localStorage.getItem('lng') || 'ru',
+  );
   const [isActiveLanguage, setIsActiveLanguage] = useState(false);
 
-  const handleLanguageChange = lng => {
-    changeLanguage(lng);
-    setStatusLanguage(lng);
-  };
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('lng');
+    if (savedLanguage) {
+      setStatusLanguage(savedLanguage);
+    }
+  }, []);
 
   const handleNavigationClick = modalType => {
     if (activeDropdowns.includes(modalType)) {
@@ -78,9 +90,12 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
       if (searchQuery) {
         setIsLoading(true);
         try {
-          const response = await axios.get('https://beeline.pp.ua/api/v1/search/', {
-            params: { q: searchQuery },
-          });
+          const response = await axios.get(
+            'https://beeline.pp.ua/api/v1/search/',
+            {
+              params: { q: searchQuery },
+            },
+          );
           setData(response.data);
           setError(null);
         } catch (error) {
@@ -124,12 +139,6 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     ru: 'Русский',
     en: 'English',
   };
-  
-  const reverseLanguageMapping = {
-    Кыргызча: 'ky',
-    Русский: 'ru',
-    English: 'en',
-  };
 
   return (
     <section className={styles.sideBarAdaptive}>
@@ -137,8 +146,8 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
         <div className={styles.sideBar_title}>
           <Droptown
             droptownStyle={styles.drop__input}
-            options={['ky', 'ru', 'en']}  
-            setSelected={handleLanguageChange}
+            options={['ky', 'ru', 'en']}
+            setSelected={changeLanguage}
             blockStyle={styles.blockStyle}
             dropTownBtn={styles.dropTownBtn}
             flags={[Kg, Ru, Eng]}
@@ -147,7 +156,6 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
             setIsActive={setIsActiveLanguage}
             droptownBtnActive={styles.dropTownBtn}
             languageMapping={languageMapping}
-            reverseLanguageMapping={reverseLanguageMapping}
           />
           <img src={beeline} alt="logo" />
           <button className={styles.sideBar_btn} onClick={toggleSideBar}>

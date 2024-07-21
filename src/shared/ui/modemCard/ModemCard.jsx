@@ -4,7 +4,6 @@ import { Button } from '../../ui/customButton/Button';
 import { NavLink } from 'react-router-dom';
 
 export const ModemCard = ({
-  toStyle,
   applyStyles,
   card_title,
   title,
@@ -33,7 +32,7 @@ export const ModemCard = ({
 
   return (
     <section className={styles.tarifs_card}>
-      <h1 className={styles.tarifs_card_title}>{card_title}</h1>
+      <h1 className={styles.tarifs_card_title}>{item.title}</h1>
       <div className={styles.tarifs_card_modem}>
         <div className={styles.tarifs_card_traffic}>
           <img src={internet_img} alt="internet_img" />

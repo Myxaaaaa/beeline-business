@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Button } from '../customButton/Button';
 import styles from './HeadCard.module.css';
+import { DataModal } from '../dataModal/DataModal';
 
 export const HeadCard = ({ data, handleClickModal }) => {
+
   return (
     <section className={styles.head}>
       {data?.map((item, index) => (
@@ -10,7 +13,7 @@ export const HeadCard = ({ data, handleClickModal }) => {
             <h1 className={styles.head_title}>{item.title}</h1>
             <p className={styles.head_text}>{item.description}</p>
             <div className={styles.head_footer}>
-              <Button className={styles.head_btn} onCLick={handleClickModal}>Подключить</Button>
+              <Button onCLick={handleClickModal} className={styles.head_btn}>Подключить</Button>
             </div>
           </div>
           <img className={styles.head_img} src={item.visual} alt="head" />

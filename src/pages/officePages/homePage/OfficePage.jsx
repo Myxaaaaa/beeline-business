@@ -7,9 +7,13 @@ import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles
 import Breadcrumbs from '../../../components/breadcrumbs/Breadcrumbs';
 import { RelatedServicesAdaptive } from '../../../shared/ui/relatedServices/RelatedServices';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 export const OfficePage = () => {
   const { data, banner } = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
   const cardData = [
     {
       title: 'Виртуальная АТС',
@@ -50,7 +54,7 @@ export const OfficePage = () => {
         <div className={styles.breadcrumb}>
           <Breadcrumbs crumbs={breadcrumbs} />
         </div>
-        <HeadCard data={data} />
+        <HeadCard handleClickModal={handleOpenModal} data={data} />
         <MobileCard cardData={cardData} banner={banner} />
         <StatusNumber
           title="Станьте обладателем статусного номера"
@@ -66,6 +70,9 @@ export const OfficePage = () => {
           </div>
         </section>
       </div>
+      {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={data && data?.map(item => item.ussd_code)} />
+      )}
     </section>
   );
 };

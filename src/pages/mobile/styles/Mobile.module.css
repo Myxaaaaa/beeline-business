@@ -5,4 +5,7 @@
     .mobile {
         padding: 0 20px;
     }
+    .breadcrumb {
+        display: none;
+    }
 }

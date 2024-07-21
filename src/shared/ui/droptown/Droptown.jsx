@@ -20,20 +20,17 @@ const Droptown = forwardRef(
       setIsActive,
       droptownBtnActive,
       languageMapping = {},
-      reverseLanguageMapping = {} 
     },
     ref
   ) => {
-    const [selectedOptionState, setSelectedOptionState] = useState(
-      reverseLanguageMapping[selectedOption] || Object.keys(languageMapping)[0] 
-    );
+    const [selectedOptionState, setSelectedOptionState] = useState(languageMapping[selectedOption]);
     const [phoneNumber, setPhoneNumber] = useState('');
 
     useEffect(() => {
       if (options.length > 0) {
-        setSelectedOptionState(reverseLanguageMapping[selectedOption] || Object.keys(languageMapping)[0]);
+        setSelectedOptionState(languageMapping[selectedOption] || Object.keys(languageMapping)[0]);
       }
-    }, [options, selectedOption, reverseLanguageMapping, languageMapping]);
+    }, [options, selectedOption, languageMapping]);
 
     const formatPhoneNumber = (inputValue) => {
       const phoneNumber = inputValue.replace(/\D/g, '');
@@ -57,8 +54,8 @@ const Droptown = forwardRef(
     };
 
     const handleOptionClick = (option) => {
-      setSelectedOptionState(languageMapping[option]);
       setSelected(option);
+      setSelectedOptionState(option);
       setIsActive(false);
     };
 
@@ -66,14 +63,14 @@ const Droptown = forwardRef(
       <div className={`${styles.droptown_flex} ${blockStyle}`}>
         <div className={styles.droptown}>
           <div
-            className={`${styles.droptown_btn} ${isActive ? droptownBtnActive : ''}`}
+            className={`${styles.droptown_btn} ${isActive ? styles[droptownBtnActive] : ''}`}
             onClick={() => setIsActive(!isActive)}
           >
             {selectedOptionState}
             <img src={isActive ? up : down} alt="arrow" />
           </div>
           {isActive && (
-            <div className={styles.droptown_content}>
+            <div className={`${styles.droptown_content} ${styles.droptown_content_active}`}>
               {options.map((option, index) => (
                 <div
                   key={index}

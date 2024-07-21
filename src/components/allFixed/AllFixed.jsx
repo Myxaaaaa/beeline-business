@@ -14,7 +14,7 @@ export const AllFixed = () => {
 
   const fieldOpen = () => {
     setIsFieldOpen(true);
-    setIsConnection1Visible(false);
+    setIsConnection2Visible(!isConnection2Visible);
   };
 
   const handleScroll = () => {
@@ -42,11 +42,9 @@ export const AllFixed = () => {
 
   return (
     <section>
-      {isConnection1Visible && (
-        <Button className={`${styles.connection__adaptivity} ${isFieldOpen ? styles.connection__adaptivity2 : ''}`}>
-          <Connection1 />
-        </Button>
-      )}
+      <Button className={`${styles.connection__adaptivity} ${isFieldOpen ? styles.connection__adaptivity2 : ''}`}>
+        <Connection1 />
+      </Button>
 
       {isConnection1Visible && (
         <Button className={styles.connection__one}>
@@ -55,7 +53,7 @@ export const AllFixed = () => {
       )}
 
       {isConnection2Visible && (
-        <Button className={styles.connection__two} onClick={fieldOpen}>
+        <Button className={styles.connection__two} onCLick={fieldOpen}>
           <Connection2 />
         </Button>
       )}
@@ -63,7 +61,7 @@ export const AllFixed = () => {
       {isFieldOpen && (
         <FieldConnection
           setIsFieldOpen={setIsFieldOpen}
-          setIsConnection1Visible={setIsConnection1Visible}
+          setIsConnection1Visible={setIsConnection2Visible}
         />
       )}
     </section>

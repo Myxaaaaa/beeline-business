@@ -11,7 +11,7 @@ import { useLoaderData } from 'react-router-dom';
 export const ConferenceCallComponents = () => {
   const [hide, setHide] = useState(true);
   const data = useLoaderData();
-  const nodeRef = useRef(null); // Add ref for CSSTransition
+  const nodeRef = useRef(null);
 
   const toggleHide = () => {
     setHide(!hide);
@@ -42,7 +42,6 @@ export const ConferenceCallComponents = () => {
               />
               <p>{data[7].conference_call_desc}</p>
             </div>
-            <Button className={styles.conference_info_button}>Подробнее</Button>
           </div>
           <img
             className={styles.conference_img}
@@ -64,11 +63,9 @@ export const ConferenceCallComponents = () => {
                 exitActive: styles.filling_auto_exit_active,
               }}
               unmountOnExit
-              nodeRef={nodeRef} // Pass the ref to CSSTransition
+              nodeRef={nodeRef}
             >
               <div ref={nodeRef}>
-                {' '}
-                {/* Use the ref here */}
                 <div className={styles.filling_offer}>
                   {data?.results?.length > 0 && (
                     <div className={styles.filling_title}>

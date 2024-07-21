@@ -26,18 +26,8 @@
     display: none;
 }
 .btn_banner {
-    width: 184px;
-    height: 57px;
-    padding: 18px 0;
-    border-radius: 10px;
-    background: #121212;
-    color: #E8E8E8;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 130%;
-    border: 1px solid #39393b;
-    cursor: pointer;
-}
+    display: none;
+ }
 .necessaryCard>h2 {
     font-size: 28px;
     color: #e8e8e8;
