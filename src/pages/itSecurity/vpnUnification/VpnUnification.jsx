@@ -100,6 +100,7 @@ export const VpnUnification = () => {
         title="VPN-объединение"
         text="Объедините офисы единой корпоративной сетью для защищенной   передачи данных"
         btn="Подключить"
+        handleOpenModal={handleOpenModal}
       />
 
       <RelatedServices

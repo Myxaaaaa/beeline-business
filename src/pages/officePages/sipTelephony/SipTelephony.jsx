@@ -73,6 +73,7 @@ export const SipTelephony = () => {
         title="БЫСТРОЕ ПОДКЛЮЧЕНИЕ Sip телефонии"
         text="Получите подробную консультацию и подключите SIP телефонию прямо сейчас!"
         btn="Подобрать номер"
+        link='/mobile-connect/beautiful-number'
       />
 
       <RelatedServices

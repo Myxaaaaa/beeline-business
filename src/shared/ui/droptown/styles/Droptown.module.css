@@ -4,14 +4,16 @@
     align-items: center;
     gap: 5px;
 }
+
 .droptown {
     user-select: none;
     position: relative;
     height: 56px;
 }
+
 .droptown_btn {
     width: 90px;
-    padding: 15px 16px;
+    padding: 15px 10px 15px 15px;
     color: #FFF;
     font-weight: bold;
     color: #E8E8E8;
@@ -27,9 +29,11 @@
     border-radius: 8px;
     border: 1px solid #39393B;
 }
+
 .droptown_btn:hover {
     background: var(---Neutral-400, #232325);
 }
+
 .droptown_btn_active {
     border: 1px solid #39393B;
     border-bottom: none;
@@ -37,8 +41,8 @@
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+
 .droptown_content {
-    width: 90px;
     position: absolute;
     background-color: #39393B;
     font-weight: 500;
@@ -46,24 +50,32 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
+
 .droptown_content:hover {
     border: 1px solid #39393B;
     border-top: none;
 }
+
 .droptown_block_text {
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
 }
+
 .droptown_content_active {
     background: var(---Neutral-400, #232325);
     border: 1px solid #39393B;
     border-top: none;
 }
+
 .droptown_item {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 5px 10px 10px;
     cursor: pointer;
     transition: all 0.2s;
 }
+
 .droptown_item:hover {
     background-color: #39393B;
 }
@@ -73,6 +85,7 @@
     align-items: center;
     gap: 5px;
 }
+
 .droptown_end_inp {
     width: 297px;
     padding: 20px 16px;
@@ -82,6 +95,7 @@
     border: none;
     outline: none;
 }
+
 .droptown_end_inp::placeholder {
     color: var(---Neutral-300, #909090);
     text-align: left;
@@ -91,25 +105,36 @@
     font-weight: 400;
     line-height: 144%;
 }
+
+.droptown_img {
+    width: 34px;
+}
+
 @media (max-width: 576px) {
     .droptown {
         height: 50px;
     }
+
     .droptown_content {
         width: 100%;
     }
+
     .droptown_end_inp {
         width: 100%;
         height: 50px;
     }
+
     .droptown_btn {
+        width: 100%;
         height: 50px;
     }
+
     .droptown_end {
         width: 100%;
     }
+
     .droptown_end ::placeholder {
-        color: var(---Neutral-300, #909090);
+        color: #909090;
         font-family: "Fira Sans";
         font-size: 14px;
         font-style: normal;
