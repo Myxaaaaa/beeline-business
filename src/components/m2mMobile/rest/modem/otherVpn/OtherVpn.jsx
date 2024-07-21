@@ -37,14 +37,8 @@ export const OtherVpn = () => {
           applyStyles={styles.tarifs_card_application}
           toStyle={'/mobile-vpn'}
           textStyles={styles.tarifs_card_application_btn}
-          card_title={'Мобильный VPN'}
           title={parse(item.gigabytes)}
-          calls_text={'Бесплатно'}
-          calls_text_other={'Бесплатно'}
-          calls_span_other={'внутри корп. группы'}
-          sms_span={'внутри сети'}
           apply_text={`${item.price} С`}
-          calls_text_2={'1 МИН/4 C '}
           renderCallTexts={renderCallTexts}
           renderSmsTexts={renderSmsTexts}
           item={item}

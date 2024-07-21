@@ -12,10 +12,14 @@ import { ShortNumberSlide } from '../../../shared/ui/shortNumberSlide/ShortNumbe
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 
 export const Analytics = () => {
   const {data, banner} = useLoaderData()
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
 
  
   const breadcrumbs = [
@@ -60,7 +64,7 @@ export const Analytics = () => {
      <Breadcrumbs crumbs={breadcrumbs} />
    </div>
    {banner?.map?.(item => (
-     <Banner title={item.title} text={item.description}  detail={'Подробнее'} img={item.visual} alt={'Beetarget'} plug={'Подключить'} detailStyles={styles.btn_banner} btn={styles.btn} />
+          <Banner handleClickModal={handleOpenModal} title={item.title} text={item.description}  detail={'Подробнее'} img={item.visual} alt={'Beetarget'} plug={'Подключить'} detailStyles={styles.btn_banner} btn={styles.btn} />
    ))}
    {data?.map?.(item => (
        <Description title={item.question_title} text={item.question_description} />
@@ -88,6 +92,9 @@ export const Analytics = () => {
    <div className={styles.use_full} >
      <UsefulArticles/>
    </div>
+   {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+    )}
 </section>
   );
 };

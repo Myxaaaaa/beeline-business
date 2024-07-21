@@ -51,7 +51,7 @@ import ServiceUnavailable from '../../pages/serviceUnavailable/ServiceUnavailabl
 export const router = createBrowserRouter([
   {
     element: <Layout />,
-    errorElement: <ServiceUnavailable />,
+    // errorElement: <ServiceUnavailable />,
 
     children: [
       {

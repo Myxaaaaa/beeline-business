@@ -1,7 +1,9 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles/Droptown.module.css';
+// import flag from '../../assets/icons/droptown/flag.png';
 import down from '../../assets/icons/droptown/down.png';
 import up from '../../assets/icons/droptown/up.png';
+import { forwardRef } from 'react';
 
 const Droptown = forwardRef(
   (
@@ -21,7 +23,7 @@ const Droptown = forwardRef(
       droptownBtnActive,
       languageMapping = {},
     },
-    ref
+    ref,
   ) => {
     const [selectedOptionState, setSelectedOptionState] = useState(languageMapping[selectedOption]);
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -32,7 +34,7 @@ const Droptown = forwardRef(
       }
     }, [options, selectedOption, languageMapping]);
 
-    const formatPhoneNumber = (inputValue) => {
+    const formatPhoneNumber = inputValue => {
       const phoneNumber = inputValue.replace(/\D/g, '');
       let formattedPhoneNumber = inputValue.startsWith('+') ? '+' : '';
 
@@ -48,7 +50,7 @@ const Droptown = forwardRef(
       return formattedPhoneNumber;
     };
 
-    const handlePhoneChange = (e) => {
+    const handlePhoneChange = e => {
       const formattedValue = formatPhoneNumber(e.target.value);
       setPhoneNumber(formattedValue);
     };
@@ -77,8 +79,14 @@ const Droptown = forwardRef(
                   onClick={() => handleOptionClick(option)}
                   className={styles.droptown_item}
                 >
-                  <h3 className={styles.droptown_block_text}>{languageMapping[option]}</h3>
-                  <img className={styles.droptown_img} src={flags[index]} alt="flag" />
+                  <h3 className={styles.droptown_block_text}>
+                    {languageMapping[option]}
+                  </h3>
+                  <img
+                    className={styles.droptown_img}
+                    src={flags[index]}
+                    alt="flag"
+                  />
                 </div>
               ))}
             </div>
@@ -99,7 +107,7 @@ const Droptown = forwardRef(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default Droptown;

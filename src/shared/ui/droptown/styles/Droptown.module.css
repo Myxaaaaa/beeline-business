@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    z-index: 10;
 }
 
 .droptown {
@@ -46,16 +45,22 @@
 
 .droptown_content {
     position: absolute;
+    width: 100%;
     background-color: #39393B;
     font-weight: 500;
     color: #E8E8E8;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.droptown_content:hover {
+    border: 1px solid #39393B;
+    border-top: none;
 }
 
 .droptown_block_text {
     width: 100%;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .droptown_content_active {
@@ -73,6 +78,10 @@
     transition: all 0.2s;
 }
 
+.droptown_item:hover {
+    background-color: #39393B;
+}
+
 .droptown_block {
     display: flex;
     align-items: center;
@@ -85,7 +94,7 @@
     border-radius: 10px;
     background: var(--Color-Neutral-3---Dark-gray, #39393B);
     color: var(--Color-Neutral-7---White, #FFF);
-    border: 1px solid #232325;
+    border: none;
     outline: none;
 }
 
@@ -106,6 +115,10 @@
 @media (max-width: 576px) {
     .droptown {
         height: 50px;
+    }
+
+    .droptown_content {
+        width: 100%;
     }
 
     .droptown_end_inp {

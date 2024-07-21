@@ -13,6 +13,8 @@
 .services__hidden {
     width: 1045px;
     position: relative;
+    display: flex;
+    align-items: center;
     overflow: hidden;
 }
 

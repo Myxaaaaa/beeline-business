@@ -12,9 +12,13 @@ import {
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { useState } from 'react';
 
 export const BeeTaget = () => {
   const { data, banner } = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -65,6 +69,7 @@ export const BeeTaget = () => {
           alt={'Beetarget'}
           plug={'Подключить'}
           detailStyles={styles.btn_banner}
+          handleClickModal={handleOpenModal}
         />
       ))}
       {data?.map?.(item => (
@@ -113,6 +118,9 @@ export const BeeTaget = () => {
       <div className={styles.use_full}>
         <UsefulArticles />
       </div>
+      {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+      )}
     </section>
   );
 };

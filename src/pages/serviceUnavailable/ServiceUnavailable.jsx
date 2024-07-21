@@ -30,9 +30,9 @@ const ServiceUnavailable = () => {
         </div>
         <img className={styles.head_img} src={notFound_img} alt="head" />
       </div>
-      {/* <footer className={styles.footer_service} > 
+      <footer className={styles.footer_service} > 
         <Footer footer={styles.footer_block} mad_line={styles.mad_lines}  styleMadeLine={styles.made_line} styleNav={styles.navigation} styleLine={styles.line} /> 
-      </footer> */}
+      </footer>
     </section>
   );
 };

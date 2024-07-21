@@ -23,11 +23,6 @@ export const Header = () => {
 
   const handleNavClick = newStatus => setStatus(newStatus);
 
-  const handleLanguageChange = lng => {
-    changeLanguage(lng);
-    setStatusLanguage(lng);
-  };
-
   useEffect(() => {
     if (location !== prevLocation) {
       setIsSidebarOpen(false);
@@ -63,21 +58,21 @@ export const Header = () => {
       <span className={styles.header__language}>
         <button
           className={statusLanguage === 'ru' ? styles.active : ''}
-          onClick={() => handleLanguageChange('ru')}
+          onClick={() => changeLanguage('ru')}
         >
           Рус
         </button>
         /
         <button
           className={statusLanguage === 'ky' ? styles.active : ''}
-          onClick={() => handleLanguageChange('ky')}
+          onClick={() => changeLanguage('ky')}
         >
           Кыр
         </button>
         /
         <button
           className={statusLanguage === 'en' ? styles.active : ''}
-          onClick={() => handleLanguageChange('en')}
+          onClick={() => changeLanguage('en')}
         >
           Англ
         </button>
