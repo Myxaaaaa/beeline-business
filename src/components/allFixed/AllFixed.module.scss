@@ -1,33 +1,19 @@
-.connection__two,
+/* AllFixed.module.scss */
+.connection__adaptivity,
 .connection__one,
-.connection__adaptivity {
+.connection__two {
   height: 64px;
   position: fixed;
   z-index: 1;
   right: 46px;
-  bottom: 28px;
   border: 0;
   background: transparent;
   cursor: pointer;
   transition: opacity 0.3s ease-in;
 }
 
-.connection__two *,
-.connection__one * {
-  transition: all 0.1s ease-out;
-  transition-property: border, fill;
-}
-
-.connection__two:hover *,
-.connection__one:hover * {
-  border: 2px solid #39393b;
-  border-radius: 32px;
-  fill: #121212;
-}
-
-.connection__two:hover path,
-.connection__one:hover path {
-  stroke: #e8e8e8;
+.connection__two {
+  bottom: 28px;
 }
 
 .connection__one {
@@ -43,10 +29,6 @@
 }
 
 @media (max-width: 576px) {
-  .home .statusNumber__btn {
-    margin-top: 10px;
-  }
-
   .connection__adaptivity,
   .connection__two {
     right: 18px;
