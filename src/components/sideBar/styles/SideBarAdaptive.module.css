@@ -152,7 +152,7 @@
   border-bottom-left-radius: 0px;
 }
 
-@media(max-width: 576px) {
+@media(max-width: 1024px) {
   .sideBarAdaptive {
     display: block;
   }

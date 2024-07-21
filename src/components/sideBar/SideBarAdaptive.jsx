@@ -137,7 +137,7 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
         <div className={styles.sideBar_title}>
           <Droptown
             droptownStyle={styles.drop__input}
-            options={['ky', 'ru', 'en']}
+            options={['ky', 'ru', 'en']}  
             setSelected={handleLanguageChange}
             blockStyle={styles.blockStyle}
             dropTownBtn={styles.dropTownBtn}
