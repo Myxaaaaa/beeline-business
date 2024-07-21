@@ -1,23 +1,32 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useState } from 'react';
 import styles from './styles/Droptown.module.css';
+import flag from '../../assets/icons/droptown/flag.png';
 import down from '../../assets/icons/droptown/down.png';
 import up from '../../assets/icons/droptown/up.png';
 
-const Droptown = forwardRef(({ blockStyle, setSelected, droptownStyle, options = [], errors = {}, style, onBlur, onFocus, selectedOption, flags = [], dropTownBtn }, ref) => {
+const Droptown = ({
+  blockStyle,
+  setSelected,
+  droptownStyle,
+  options,
+  register,
+  errors,
+}) => {
   const [isActive, setIsActive] = useState(false);
-  const [selectedOptionState, setSelectedOptionState] = useState(selectedOption || options[0] || '');
+  const [selectedOption, setSelectedOption] = useState(options[0]);
   const [phoneNumber, setPhoneNumber] = useState('');
 
-  useEffect(() => {
-    if (options.length > 0) {
-      setSelectedOptionState(selectedOption);
-    }
-  }, [options, selectedOption]);
-
   const formatPhoneNumber = inputValue => {
+    // Remove all non-digit characters
     const phoneNumber = inputValue.replace(/\D/g, '');
-    let formattedPhoneNumber = inputValue.startsWith('+') ? '+' : '';
 
+    // Check if inputValue starts with a plus sign, indicating an international number
+    let formattedPhoneNumber = '';
+    if (inputValue.startsWith('+')) {
+      formattedPhoneNumber = '+';
+    }
+
+    // Apply formatting: (XXX) XXX-XXXX or (XXX) XXX XXXX
     if (phoneNumber.length > 0) {
       formattedPhoneNumber += `(${phoneNumber.substring(0, 3)}`;
     }
@@ -39,19 +48,25 @@ const Droptown = forwardRef(({ blockStyle, setSelected, droptownStyle, options =
     <div className={`${styles.droptown_flex} ${blockStyle}`}>
       <div className={styles.droptown}>
         <div
-          className={`${styles.droptown_btn} ${isActive ? styles.droptown_btn_active : ''} ${dropTownBtn}`}
+          className={`${styles.droptown_btn} ${isActive ? styles.droptown_btn_active : ''}`}
           onClick={() => setIsActive(!isActive)}
         >
-          {selectedOptionState}
-          <img src={isActive ? up : down} alt="arrow" />
+          {selectedOption}
+          {isActive ? (
+            <img src={down} alt="arrow" />
+          ) : (
+            <img src={up} alt="arrow" />
+          )}
         </div>
         {isActive && (
-          <div className={styles.droptown_content}>
+          <div
+            className={`${styles.droptown_content} ${isActive ? styles.droptown_content_active : ''}`}
+          >
             {options.map((option, index) => (
               <div
                 key={index}
                 onClick={() => {
-                  setSelectedOptionState(option);
+                  setSelectedOption(option);
                   setSelected(option);
                   setIsActive(false);
                 }}
@@ -59,7 +74,13 @@ const Droptown = forwardRef(({ blockStyle, setSelected, droptownStyle, options =
               >
                 <div className={styles.droptown_block}>
                   <h3 className={styles.droptown_block_text}>{option}</h3>
-                  <img className={styles.droptown_img} src={flags[index]} alt="flag" />
+                  <div>
+                    <img
+                      className={styles.droptown_img}
+                      src={flag}
+                      alt="flag"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -69,18 +90,15 @@ const Droptown = forwardRef(({ blockStyle, setSelected, droptownStyle, options =
 
       <div className={`${styles.droptown_end} ${droptownStyle}`}>
         <input
-          className={`${styles.droptown_end_inp} ${errors?.phone ? styles.inputError : ''} ${style}`}
+          className={`${styles.droptown_end_inp} ${errors.phone ? styles.inputError : ''}`}
           type="tel"
           placeholder="(778) 900 988"
-          value={phoneNumber}
+          value={phoneNumber} // Use local state for value
           onChange={handlePhoneChange}
-          ref={ref}
-          onBlur={onBlur}
-          onFocus={onFocus}
         />
       </div>
     </div>
   );
-});
+};
 
 export default Droptown;
