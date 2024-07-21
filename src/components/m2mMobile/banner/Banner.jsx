@@ -18,7 +18,9 @@ export const Banner = () => {
           Получите консультацию специалиста по услуге М2М, заполнив простую
           форму!
         </p>
-        <Button onCLick={openRegister} >Получить консультацию</Button>
+        <Link to={link}>
+          <Button onCLick={openRegister} >Получить консультацию</Button>
+        </Link>
         <img src={headPhone_img} alt="headPhone_img" />
       </div>
       {isRegisterOpen && (
