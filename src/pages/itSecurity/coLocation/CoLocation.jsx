@@ -148,6 +148,7 @@ export const CoLocation = () => {
         title="Безопасное Хранение Данных Вашей Компании!"
         text="Храните данные Вашей компании в надежном месте с   гарантией безопасности."
         btn="Получить консультацию"
+        handleClickModal={handleClickModal}
       />
       <RelatedServices section={style.relatedServices__section} items={relatedServicesData} />
       <RelatedServicesAdaptive />

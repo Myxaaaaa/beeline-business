@@ -3,7 +3,7 @@ import number from '../../assets/images/allVisual/beautifulNumber.png';
 import { Button } from '../customButton/Button';
 import { Link } from 'react-router-dom';
 
-export const StatusNumber = ({ title, text, btnText, btnStyles, section }) => {
+export const StatusNumber = ({ title, text, btnText, btnStyles, section, link }) => {
   return (
     <section className={`${styles.BB} ${section}`}>
       <div className={styles.BB__items}>
@@ -12,7 +12,7 @@ export const StatusNumber = ({ title, text, btnText, btnStyles, section }) => {
           <img src={number} alt="number" className={styles.items__img} />
         </div>
         <p>{text}</p>
-        <Link to="/mobile-connect/beautiful-number">
+        <Link to={link}>
           <Button className={btnStyles}>{btnText}</Button>
         </Link>
       </div>
