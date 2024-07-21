@@ -20,7 +20,6 @@ export const CloudServer = () => {
   const { data, banner } = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
   const [dataModalOpen, setDataModalOpen] = useState(false)
-  console.log(data)
 
   const relatedServicesData = [
     {
