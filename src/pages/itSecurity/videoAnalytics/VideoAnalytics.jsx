@@ -23,8 +23,16 @@ import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.s
 import speed from '../../../shared/assets/icons/shortNumberCard/speed.svg';
 import cloud from '../../../shared/assets/icons/shortNumberCard/cloud.svg';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 export const VideoAnalytics = () => {
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
+    const handleClickModal = () => {
+        setIsOpenModal(true);
+    }
+
     const data = useLoaderData();
 
     const breadcrumbs = [
@@ -86,6 +94,7 @@ export const VideoAnalytics = () => {
                 detail="Подробнее"
                 detailStyles={style.detailStyles}
                 plug="Подключить"
+                handleClickModal={handleClickModal}
             />
             <section className={style.info}>
                 <h2 className={style.info__title}>{data?.res[0]?.question_title}</h2>
@@ -136,6 +145,10 @@ export const VideoAnalytics = () => {
             <RelatedServicesAdaptive />
 
             <UsefulArticles useful={style.usefulArticles__section} />
+
+            {isOpenModal && (
+                <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code}/>
+            )}
         </section>
     )
 }

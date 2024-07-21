@@ -11,21 +11,30 @@ import flip from '../../../shared/assets/icons/advantages/flip.svg';
 import fire from '../../../shared/assets/icons/advantages/fire.svg';
 import tv from '../../../shared/assets/icons/advantages/tv.svg';
 import {
-  ShortNumberAdaptive,
-  ShortNumberCard,
+    ShortNumberAdaptive,
+    ShortNumberCard,
 } from '../../../shared/ui/shortNumberCard/ShortNumberCard';
 import { TargetBanner } from '../../../shared/ui/targetBanner/TargetBanner';
 import {
-  RelatedServices,
-  RelatedServicesAdaptive,
+    RelatedServices,
+    RelatedServicesAdaptive,
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import cloud from '../../../shared/assets/icons/shortNumberCard/cloud.svg';
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg'
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 export const FixedInternet = () => {
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
+    const handleClickModal = () => {
+        setIsOpenModal(true);
+    }
+
     const data = useLoaderData();
+    console.log(data)
 
     const breadcrumbs = [
         { pathname: '/', breadcrumb: 'Главная' },
@@ -86,6 +95,7 @@ export const FixedInternet = () => {
                 textStyle={style.textStyle}
                 btn={style.btn}
                 stylesText={style.stylesText}
+                handleClickModal={handleClickModal}
             />
             <Description
                 title={data?.res[0]?.question_title}
@@ -133,6 +143,11 @@ export const FixedInternet = () => {
             />
             <RelatedServicesAdaptive />
             <UsefulArticles useful={style.usefulArticles__section} />
+
+            {isOpenModal && (
+                <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code}/>
+            )}
         </section>
+
     )
 }

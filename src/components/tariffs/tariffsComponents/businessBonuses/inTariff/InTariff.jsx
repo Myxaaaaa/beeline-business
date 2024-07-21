@@ -34,7 +34,7 @@ export const InTariff = () => {
                     {packagesData?.map(item => (
                         <div className={`${style.inTariff__packages} ${item.extraClass}`} key={item.id}>
                             <h6 className={style.inTariff__packages_title}>{item.title}</h6>
-                            <p className={style.inTariff__packages_text}>{item.text}</p>
+                            <p className={style.inTariff__packages_text} dangerouslySetInnerHTML={{__html: item.text}}/>
                         </div>
                     ))}
                 </div>

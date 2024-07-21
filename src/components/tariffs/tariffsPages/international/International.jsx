@@ -131,7 +131,7 @@ export const International = () => {
                     Звонки
                   </h5>
                   {calls.map(item => (
-                    <div className={style.international__texts}>
+                    <div className={style.international__texts} key={item.id}>
                       <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: item.rich_tariff }} />
                     </div>
                   ))}
@@ -141,7 +141,7 @@ export const International = () => {
                     SMS
                   </h5>
                   {messages.map(item => (
-                    <div className={style.international__texts}>
+                    <div className={style.international__texts} key={item.id}>
                       <p className={style.international__texts_text} dangerouslySetInnerHTML={{ __html: item.rich_tariff }} />
                     </div>
                   ))}
