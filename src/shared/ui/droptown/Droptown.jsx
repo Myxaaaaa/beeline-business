@@ -20,20 +20,17 @@ const Droptown = forwardRef(
       setIsActive,
       droptownBtnActive,
       languageMapping = {},
-      reverseLanguageMapping = {}
     },
     ref
   ) => {
-    const [selectedOptionState, setSelectedOptionState] = useState(
-      reverseLanguageMapping[selectedOption] || Object.keys(languageMapping)[0]
-    );
+    const [selectedOptionState, setSelectedOptionState] = useState(languageMapping[selectedOption]);
     const [phoneNumber, setPhoneNumber] = useState('');
 
     useEffect(() => {
       if (options.length > 0) {
-        setSelectedOptionState(reverseLanguageMapping[selectedOption] || Object.keys(languageMapping)[0]);
+        setSelectedOptionState(languageMapping[selectedOption] || Object.keys(languageMapping)[0]);
       }
-    }, [options, selectedOption, reverseLanguageMapping, languageMapping]);
+    }, [options, selectedOption, languageMapping]);
 
     const formatPhoneNumber = (inputValue) => {
       const phoneNumber = inputValue.replace(/\D/g, '');
@@ -57,8 +54,8 @@ const Droptown = forwardRef(
     };
 
     const handleOptionClick = (option) => {
-      setSelectedOptionState(languageMapping[option]);
       setSelected(option);
+      setSelectedOptionState(option);
       setIsActive(false);
     };
 
