@@ -4,9 +4,13 @@ import { HeadCard } from '../../../shared/ui/headCard/HeadCard';
 import { StatusNumber } from '../../../shared/ui/statusNumber/StatusNumber';
 import Breadcrumbs from '../../../components/breadcrumbs/Breadcrumbs';
 import { useLoaderData } from 'react-router-dom';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { useState } from 'react';
 
 export const ItSecurity = () => {
   const {data, banner} = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true)
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -48,7 +52,7 @@ export const ItSecurity = () => {
           <div className={styles.breadcrumb}  >
             <Breadcrumbs crumbs={breadcrumbs} />
           </div>
-          <HeadCard data={data} />
+          <HeadCard handleClickModal={handleOpenModal} data={data} />
           <MobileCard cardData={cardData} banner={banner} />
           <StatusNumber
           title="Станьте обладателем статусного номера"
@@ -56,6 +60,9 @@ export const ItSecurity = () => {
           btnText="Подобрать номер"
         />
       </div>
+      {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={data && data?.map(item => item.ussd_code)} />
+      )}
     </section>
   )
 }

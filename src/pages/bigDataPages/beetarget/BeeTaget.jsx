@@ -14,11 +14,12 @@ import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 import { useState } from 'react';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 export const BeeTaget = () => {
   const { data, banner } = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
-  const handleOpenModal = () => setModalOpen(true)
+  const [dataModalOpen, setDataModalOpen] = useState(false)
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -54,7 +55,8 @@ export const BeeTaget = () => {
       text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
     },
   ];
-
+  const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
   return (
     <section className={styles.beetarget}>
       <div className={styles.breadcrumb}>
@@ -109,6 +111,7 @@ export const BeeTaget = () => {
           'Уже сформировали критерии выбора ? Свяжитесь со специалистом по BeeTarget'
         }
         btn={'Получить консультацию'}
+        handleOpenModal={handleOpenDataModal}
       />
       <RelatedServices
         section={styles.relatedServices__section}
@@ -119,7 +122,10 @@ export const BeeTaget = () => {
         <UsefulArticles />
       </div>
       {modalOpen && (
-        <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+        <DataModal setIsOpenModal={setModalOpen} item={banner && banner?.map(item => item.ussd_code)} />
+      )}
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
       )}
     </section>
   );

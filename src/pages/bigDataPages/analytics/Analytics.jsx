@@ -14,12 +14,13 @@ import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 
 export const Analytics = () => {
   const {data, banner} = useLoaderData()
   const [modalOpen, setModalOpen] = useState(false);
-  const handleOpenModal = () => setModalOpen(true)
+  const [dataModalOpen, setDataModalOpen] = useState(false)
 
  
   const breadcrumbs = [
@@ -57,7 +58,8 @@ export const Analytics = () => {
         id: 3
     }
   ];
-
+  const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
   return (
     <section className={styles.analytics} >
     <div className={styles.breadcrumb}  >
@@ -86,15 +88,18 @@ export const Analytics = () => {
    </div>
    ))} 
 
-   <TargetBanner title={'необходима наша помощь в таргетинге?'} text={'Уже сформировали критерии выбора ? Свяжитесь со специалистом по BeeTarget'} btn={'Получить консультацию'} />
+   <TargetBanner title={'необходима наша помощь в таргетинге?'} text={'Уже сформировали критерии выбора ? Свяжитесь со специалистом по BeeTarget'} btn={'Получить консультацию'} handleOpenModal={handleOpenDataModal} />
    <RelatedServices section={styles.relatedServices__section} items={relatedServicesData} />
    <RelatedServicesAdaptive />
    <div className={styles.use_full} >
      <UsefulArticles/>
    </div>
    {modalOpen && (
-        <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
-    )}
+        <DataModal setIsOpenModal={setModalOpen} item={banner && banner?.map(item => item.ussd_code)} />
+      )}
+  {dataModalOpen && (
+    <RegisterModal setIsRegisterModal={setDataModalOpen} />
+  )}
 </section>
   );
 };
