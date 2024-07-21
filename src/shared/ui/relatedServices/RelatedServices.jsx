@@ -76,6 +76,9 @@ export const RelatedServices = ({ section, items = [] }) => {
                 link={item.link}
                 img={item.img}
                 card={style.slider__card}
+                section={style.popular__section}
+                textStyles={style.popular__text}
+                btnStyle={style.popular__btn}
               />
             ))}
           </div>

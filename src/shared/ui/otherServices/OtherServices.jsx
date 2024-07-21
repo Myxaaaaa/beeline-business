@@ -21,7 +21,7 @@ export const OtherServices = () => {
   const cardsData = [
     {
       title: 'Интернет-пакеты',
-      text: 'Тариф для организации безопасной и надежной виртуальной сети для M2M SIM-карт.',
+      text: 'Тариф для организации безопасной и надежной виртуальной сети для M2M SIM-карт',
       link: '/mobile-connect/internet-packages',
       img: visual1,
     },

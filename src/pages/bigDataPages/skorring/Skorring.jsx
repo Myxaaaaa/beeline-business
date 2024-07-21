@@ -14,7 +14,7 @@ import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
 
 export const Skorring = () => {
-  const {data, banner} = useLoaderData()
+  const { data, banner } = useLoaderData();
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -27,7 +27,6 @@ export const Skorring = () => {
       breadcrumb: 'Скорринг',
     },
   ];
-
 
   const relatedServicesData = [
     {
@@ -54,39 +53,64 @@ export const Skorring = () => {
   ];
 
   return (
-    <section className={styles.skorring} >
-    <div className={styles.breadcrumb}  >
-     <Breadcrumbs crumbs={breadcrumbs} />
-   </div>
-   {banner?.map?.(item => (
-     <Banner title={item.title} text={item.description}  detail={'Подробнее'} img={item.visual} alt={'Beetarget'} plug={'Подключить'} detailStyles={styles.btn_banner} />
-   ))}
-   {data?.map?.(item => (
-       <Description title={item.question_title} text={item.question_description} />
-   ))}
+    <section className={styles.skorring}>
+      <div className={styles.breadcrumb}>
+        <Breadcrumbs crumbs={breadcrumbs} />
+      </div>
+      {banner?.map?.(item => (
+        <Banner
+          key={item.id}
+          title={item.title}
+          text={item.description}
+          detail={'Подробнее'}
+          img={item.visual}
+          alt={'Beetarget'}
+          plug={'Подключить'}
+          detailStyles={styles.btn_banner}
+        />
+      ))}
+      {data?.map?.(item => (
+        <Description
+          key={item.id}
+          title={item.question_title}
+          text={item.question_description}
+        />
+      ))}
 
-   <div className={styles.short_number} >
-       <ShortNumberSlide number={35.4} data={data[0]} nextButton={styles.shortNumber__next}/>
-   </div>
+      <div className={styles.short_number}>
+        <ShortNumberSlide
+          number={35.4}
+          data={data[0]}
+          nextButton={styles.shortNumber__next}
+        />
+      </div>
 
+      {data?.map?.(item => (
+        <div key={item.id} className={styles.necessaryCard}>
+          <h2>Преимущества :</h2>
+          <div className={styles.necessary__cards}>
+            {item.advantages?.map(card => (
+              <NecessaryCard key={card.id} text={card.title} img={card.emoji} />
+            ))}
+          </div>
+        </div>
+      ))}
 
- {data?.map?.(item => (
-   <div className={styles.necessaryCard}>
-     <h2>Преимущества :</h2>
-     <div className={styles.necessary__cards}>
-       {item && item?.advantages?.map(card => (
-         <NecessaryCard key={card.id} text={card.title} img={card.emoji} />
-       ))}
-     </div>
-   </div>
-   ))} 
-
-   <TargetBanner title={'необходима наша помощь в таргетинге?'} text={'Уже сформировали критерии выбора ? Свяжитесь со специалистом по BeeTarget'} btn={'Получить консультацию'} />
-   <RelatedServices section={styles.relatedServices__section} items={relatedServicesData} />
-   <RelatedServicesAdaptive />
-   <div className={styles.use_full} >
-     <UsefulArticles/>
-   </div>
-</section>
+      <TargetBanner
+        title={'необходима наша помощь в таргетинге?'}
+        text={
+          'Уже сформировали критерии выбора ? Свяжитесь со специалистом по BeeTarget'
+        }
+        btn={'Получить консультацию'}
+      />
+      <RelatedServices
+        section={styles.relatedServices__section}
+        items={relatedServicesData}
+      />
+      <RelatedServicesAdaptive />
+      <div className={styles.use_full}>
+        <UsefulArticles />
+      </div>
+    </section>
   );
 };

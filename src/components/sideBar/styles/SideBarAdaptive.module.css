@@ -143,7 +143,16 @@
   text-decoration: underline;
 }
 
-@media(max-width: 576px) {
+.dropTownBtn {
+  width: 131px;
+  border: 1px solid #39393B;
+  border-bottom: none;
+  background: var(---Neutral-400, #232325);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+@media(max-width: 1024px) {
   .sideBarAdaptive {
     display: block;
   }
@@ -298,7 +307,7 @@
     margin-top: 40px;
   }
 
-  .active {
+  .sideBarAdaptive .active {
     color: #ffd400;
     font-size: 18px;
     font-weight: 500;
@@ -329,6 +338,10 @@
   }
 
   .sideBarAdaptive .dropTownBtn {
-    padding: 0;
+    padding: 10px;
+  }
+
+  .connection__active {
+    color: #ffd400;
   }
 }

@@ -11,6 +11,8 @@ export const OtherZonesFavorite = ({ data, detail }) => {
     link: `/mobile-connect/international-connection/favorite-country/${item.id}`
   }))
 
+  const zoneOrder = ['Любимая страна. Зона 1', 'Любимая страна. Зона 2', 'Любимая страна. Зона 3', 'Любимая страна. Зона 4'];
+
   const addLinks = filteredData?.map((item, index) => ({
     ...item,
     link: links[index]?.link
@@ -21,7 +23,7 @@ export const OtherZonesFavorite = ({ data, detail }) => {
       <h2>Другие зоны</h2>
       <div className={styles.otherZones__cards} style={{ transform: `translateX(-${0 * 100}%)` }}>
         <div className={styles.cards__container}>
-          {addLinks && addLinks?.map(item => (
+          {addLinks && addLinks?.sort((a, b) => zoneOrder?.indexOf(a.title) - zoneOrder?.indexOf(b.title))?.map(item => (
             <FavoriteCountrySlider
               key={item.id}
               zone={item.title}

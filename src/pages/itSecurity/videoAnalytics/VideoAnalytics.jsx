@@ -35,53 +35,55 @@ export const VideoAnalytics = () => {
 
     const data = useLoaderData();
 
-    const breadcrumbs = [
-        { pathname: '/', breadcrumb: 'Главная' },
-        {
-            pathname: '/itSecurity',
-            breadcrumb: 'IT и безопасность',
-        },
-        {
-            pathname: '/it-security/video-analytics',
-            breadcrumb: 'Видео аналитика',
-        },
-    ];
-    const icons = [tv, fire, flip, camera, car];
+  const breadcrumbs = [
+    { pathname: '/', breadcrumb: 'Главная' },
+    {
+      pathname: '/itSecurity',
+      breadcrumb: 'IT и безопасность',
+    },
+    {
+      pathname: '/it-security/video-analytics',
+      breadcrumb: 'Видео аналитика',
+    },
+  ];
+  const icons = [tv, fire, flip, camera, car];
 
-    const shortNumData = data?.res[0]?.mini_card?.map((item, index) => ({
-        id: item.id,
-        img: icons[index],
-        imgCard: cloud,
-        text: item.title,
-    }));
+  const shortNumData = data?.res[0]?.mini_card?.map((item, index) => ({
+    id: item.id,
+    img: icons[index],
+    imgCard: cloud,
+    text: item.title,
+  }));
 
-    const videoAdvantagesData = data?.res[0]?.advantages?.map(item => ({
-        id: item.id, img: item.emoji, alt: car, text: item.title
-    }));
-    const sortedData = videoAdvantagesData?.sort((a, b) => a.id - b.id);
+  const videoAdvantagesData = data?.res[0]?.advantages?.map(item => ({
+    id: item.id,
+    img: item.emoji,
+    alt: car,
+    text: item.title,
+  }));
 
-    const relatedServicesData = [
-        {
-            title: 'Центр мониторинга и реагирования (SKY SOC)',
-            text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
-            link: '/it-security/sky-soc-roaming',
-            img: relatedImg,
-        },
-        {
-            title: 'Аренда облачного сервера (Cloud Servers)',
-            text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
-            link: '/it-security/cloud-server-rental-equipment',
-            img: relatedImg,
-        },
-        {
-            title: 'Продажа ПО',
-            text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
-            link: '/it-security/software-sale',
-            img: relatedImg,
-        },
-    ];
+  const relatedServicesData = [
+    {
+      title: 'Центр мониторинга и реагирования (SKY SOC)',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
+      link: '/it-security/sky-soc-roaming',
+      img: relatedImg,
+    },
+    {
+      title: 'Аренда облачного сервера (Cloud Servers)',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
+      link: '/it-security/cloud-server-rental-equipment',
+      img: relatedImg,
+    },
+    {
+      title: 'Продажа ПО',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
+      link: '/it-security/software-sale',
+      img: relatedImg,
+    },
+  ];
 
-    const bannerData = data?.banner[0];
+  const bannerData = data?.banner[0];
 
     return (
         <section className={style.videoAnalytics}>
@@ -137,12 +139,12 @@ export const VideoAnalytics = () => {
                 btn="Подключить"
             />
 
-            <RelatedServices
-                section={style.relatedServices__section}
-                items={relatedServicesData}
-            />
+      <RelatedServices
+        section={style.relatedServices__section}
+        items={relatedServicesData}
+      />
 
-            <RelatedServicesAdaptive />
+      <RelatedServicesAdaptive />
 
             <UsefulArticles useful={style.usefulArticles__section} />
 

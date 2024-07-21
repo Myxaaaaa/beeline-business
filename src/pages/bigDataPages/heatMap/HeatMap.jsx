@@ -11,10 +11,12 @@ import relatedImg from '../../../shared/assets/images/allVisual/software.png';
 import { useLoaderData } from 'react-router-dom';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 import { useState } from 'react';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 export const HeatMap = () => {
   const data = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
+  const [dataModalOpen, setDataModalOpen] = useState(false)
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -50,6 +52,7 @@ export const HeatMap = () => {
   ];
 
   const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
 
   return (
     <section className={styles.heatMap}>
@@ -74,7 +77,7 @@ export const HeatMap = () => {
 
       <ShortNumberSlide
         data={data.data[0]}
-        number={47.8}
+        number={48.8}
         title={data?.data[0].bigdataminicard_question}
       />
 
@@ -90,7 +93,8 @@ export const HeatMap = () => {
       <TargetBanner
         title="Предложения для Локации Бизнеса!"
         text="Получите лучшие предложения по локации Вашего бизнеса!"
-        btn="Получить консультацию "
+        btn="Получить консультацию"
+        handleOpenModal={handleOpenDataModal}
       />
 
       <RelatedServices items={relatedServicesData} />
@@ -100,6 +104,9 @@ export const HeatMap = () => {
 
       {modalOpen && (
         <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+      )}
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
       )}
     </section>
   );

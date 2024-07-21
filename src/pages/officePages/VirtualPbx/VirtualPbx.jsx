@@ -14,6 +14,8 @@ import { useState } from 'react'
 
 export const VirtualPbx = () => {
   const data = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -25,15 +27,14 @@ export const VirtualPbx = () => {
       breadcrumb: 'Виртуальная АТС',
     },
   ];
-  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => setModalOpen(true)
 
   const relatedServicesData = [
     { title: "Услуги Колл центра", link: "/office-communication/call-center-services-equipment", text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса', img: relatedImg },
     { title: "SIP Телефония", link: "/office-communication/sip-office-telephony-roaming", text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса', img: relatedImg },
     { title: "Короткий номер", link: "/office-communication/short-number", text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса', img: relatedImg }
   ];
-
-  const handleOpenModal = () => setModalOpen(true)
 
   return (
     <section className={styles.virtualPbx}>

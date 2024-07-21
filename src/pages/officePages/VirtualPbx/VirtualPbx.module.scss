@@ -6,7 +6,6 @@
     display: none;
 }
 
-
 .necessaryCard > h2 {
     font-size: 28px;
     color: #e8e8e8;
@@ -37,8 +36,12 @@
         padding: 0 16px;
     }
 
+    .necessaryCard > h2 {
+        text-align: center;
+    }
+
     .necessaryCard {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     .virtualPbx .statusNumber__btn {

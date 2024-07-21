@@ -17,7 +17,7 @@ export const MobileCard = ({ cardData, banner }) => {
             text={card.description.length > 100 ? `${card.description.slice(0, 100)}...` : card.description}
             link={getLinkForCard(card.title)}
             img={card.visual}
-            textStyles={card.text_styles || styles.text_styles} // Use the default text styles if none provided
+            textStyles={card.text_styles || styles.text_styles}
           />
         ))}
       </div>

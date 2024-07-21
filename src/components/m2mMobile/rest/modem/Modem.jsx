@@ -64,12 +64,6 @@ export const Modem = () => {
               textStyles={styles.modem_card_application_btn}
               setIsRegisterModal={setIsRegisterModal}
               title={parse(item.gigabytes)}
-              calls_title={'Звонки'}
-              calls_text={'1 мин/4.9 с'}
-              calls_text_2={'1 мин/3.3 с'}
-              sms_span={'внутри КР'}
-              sms_text={'Бесплатные'}
-              sms_span_other={'внутри корп. группы'}
               item={item}
               renderCallTexts={renderCallTexts}
               renderSmsTexts={renderSmsTexts}
