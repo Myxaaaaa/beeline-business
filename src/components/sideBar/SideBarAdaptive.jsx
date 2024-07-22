@@ -25,7 +25,9 @@ import { Information } from '../../shared/assets/icons/sideBarIcons/information/
 import { HomeIcons } from '../../shared/assets/icons/sideBarIcons/customIcons/homeIcons/HomeIcons';
 import axios from 'axios';
 import Droptown from '../../shared/ui/droptown/Droptown';
-import kg from '../../shared/assets/icons/droptown/flag.png';
+import Kg from '../../shared/assets/icons/droptown/Kyrgyzstan.png';
+import Ru from '../../shared/assets/icons/droptown/Russia.png';
+import Eng from '../../shared/assets/icons/droptown/English.png';
 import { changeLanguage } from '../../shared/api/Api';
 
 const modalContentMap = {
@@ -50,11 +52,14 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
   const [statusLanguage, setStatusLanguage] = useState(
     localStorage.getItem('lng') || 'ru',
   );
+  const [isActiveLanguage, setIsActiveLanguage] = useState(false);
 
-  const handleLanguageChange = lng => {
-    changeLanguage(lng);
-    setStatusLanguage(lng);
-  };
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('lng');
+    if (savedLanguage) {
+      setStatusLanguage(savedLanguage);
+    }
+  }, []);
 
   const handleNavigationClick = modalType => {
     if (activeDropdowns.includes(modalType)) {
@@ -129,6 +134,12 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
     icon: iconMapping[item.path],
   }));
 
+  const languageMapping = {
+    ky: 'Кыргызча',
+    ru: 'Русский',
+    en: 'English',
+  };
+
   return (
     <section className={styles.sideBarAdaptive}>
       <aside className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
@@ -136,11 +147,15 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
           <Droptown
             droptownStyle={styles.drop__input}
             options={['ky', 'ru', 'en']}
-            setSelected={handleLanguageChange}
+            setSelected={changeLanguage}
             blockStyle={styles.blockStyle}
             dropTownBtn={styles.dropTownBtn}
-            flags={[kg, '', '']}
+            flags={[Kg, Ru, Eng]}
             selectedOption={statusLanguage}
+            isActive={isActiveLanguage}
+            setIsActive={setIsActiveLanguage}
+            droptownBtnActive={styles.dropTownBtn}
+            languageMapping={languageMapping}
           />
           <img src={beeline} alt="logo" />
           <button className={styles.sideBar_btn} onClick={toggleSideBar}>

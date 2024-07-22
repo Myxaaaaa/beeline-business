@@ -2,7 +2,7 @@ import styles from './ConnectPackage.module.scss';
 import { useState } from 'react';
 import { Button } from '../customButton/Button';
 
-export const ConnectPackage = ({ title, packages, boxWidth, titles, stylesNavigate, stylesHeading3, imgStyles }) => {
+export const ConnectPackage = ({handleOpenModal, title, packages, boxWidth, titles, stylesNavigate, stylesHeading3, imgStyles }) => {
   const [isActive, setIsActive] = useState(0);
 
   const handleClickActive = index => {
@@ -76,7 +76,7 @@ export const ConnectPackage = ({ title, packages, boxWidth, titles, stylesNaviga
                   <b>{packages[isActive].price}</b> <span>c</span>/{' '}
                   {packages[isActive].it_work} мес
                 </p>
-                <Button>Подключить</Button>
+                <Button onCLick={handleOpenModal} >Подключить</Button>
               </div>
             </div>
           )}

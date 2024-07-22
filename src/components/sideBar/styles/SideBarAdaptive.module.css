@@ -144,6 +144,15 @@
   text-decoration: underline;
 }
 
+.dropTownBtn {
+  width: 131px;
+  border: 1px solid #39393B;
+  border-bottom: none;
+  background: var(---Neutral-400, #232325);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
 @media(max-width: 1024px) {
   .sideBarAdaptive {
     display: block;
@@ -330,6 +339,7 @@
   }
 
   .sideBarAdaptive .dropTownBtn {
+    border-radius: 8px;
     padding: 10px;
   }
 

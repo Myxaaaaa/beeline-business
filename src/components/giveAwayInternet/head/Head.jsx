@@ -3,7 +3,7 @@ import Breadcrumbs from '../../breadcrumbs/Breadcrumbs';
 import { Button } from '../../../shared/ui/customButton/Button';
 import head_img from '../../../shared/assets/images/giveAwayInternet/head/head_img.png'
 
-export const Head = ({item}) => {
+export const Head = ({item, handleClickModal}) => {
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -11,8 +11,8 @@ export const Head = ({item}) => {
       breadcrumb: 'Мобильная связь',
     },
     {
-      pathname: '/mobile-connect/internet-for-m2m-devices',
-      breadcrumb: 'Интернет для М2М-устройств',
+      pathname: '/mobile-connect/internet-distribution',
+      breadcrumb: 'Раздавай Интернет',
     },
   ];
   return (
@@ -31,7 +31,7 @@ export const Head = ({item}) => {
 }</span>{' '}
           </h4>
           <div className={styles.head_footer}>
-            <Button className={styles.head_btn}>Подробнее</Button>
+            <Button onCLick={handleClickModal} className={styles.head_btn}>Подключить</Button>
           </div>
         </div>
         <img className={styles.head_img} src={head_img} alt="head" />

@@ -2,8 +2,10 @@ import head_img from '../../../shared/assets/images/m2mMobile/head/head_img.png'
 import styles from './Head.module.css';
 import Breadcrumbs from '../../breadcrumbs/Breadcrumbs';
 import { Button } from '../../../shared/ui/customButton/Button';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
-export const Head = ({ banner }) => {
+export const Head = ({ banner, handleClickModal }) => {
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
     {
@@ -29,7 +31,7 @@ export const Head = ({ banner }) => {
                 <h1 className={styles.head_title}>{item.title}</h1>
                 <p className={styles.head_text}>{item.description}</p>
                 <div className={styles.head_footer}>
-                  <Button className={styles.head_btn}>Подробнее</Button>
+                  <Button onCLick={handleClickModal}  className={styles.head_btn}>Подключить</Button>
                 </div>
               </div>
               <img

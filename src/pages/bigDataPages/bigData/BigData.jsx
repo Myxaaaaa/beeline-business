@@ -4,9 +4,18 @@ import { MobileCard } from '../../../shared/ui/mobileCard/MobileCard';
 import { StatusNumber } from '../../../shared/ui/statusNumber/StatusNumber';
 import Breadcrumbs from '../../../components/breadcrumbs/Breadcrumbs';
 import { useLoaderData } from 'react-router-dom';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { useState } from 'react';
 
 export const BigData = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const handleClickModal = () => {
+    setIsOpenModal(true);
+  }
   const data = useLoaderData();
+
+  const banner = data.banner;
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -36,26 +45,28 @@ export const BigData = () => {
   }));
   
 
-  const banner = data.servicesBanner;
-
   return (
     <section className={style.bigData}>
       <Breadcrumbs crumbs={breadcrumbs} />
-      <HeadCard data={data.banner} />
+      <HeadCard data={banner} handleClickModal={handleClickModal}/>
       <section className={style.bigDataInfo}>
         <h4>
           Услуги BIG DATA включают в себя сбор, хранение, обработку и анализ больших объемов данных
           из различных источников которые увеличивают конкурентоспособность компании.
         </h4>
       </section>
-      <MobileCard cardData={cardData} banner={banner}/>
+      <MobileCard cardData={cardData} banner={data.servicesBanner}/>
       <section className={style.heatMap}>
         <StatusNumber
           title="Тепловая карта "
           text="Для того, чтобы определить правильную локацию по открытию Вашего бизнеса мы предлагаем удобную карту с выделенными зонами и часами  скопления Ваших потенциальных клиентов."
           btnText="Подключить "
+          link= '/bigData-heat-map'
         />
       </section>
+      {isOpenModal && banner && (
+        <DataModal setIsOpenModal={setIsOpenModal} item={banner[0].ussd_code} />
+      )}
     </section>
   );
 };

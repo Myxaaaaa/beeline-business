@@ -42,7 +42,7 @@ export const InternetPackages = () => {
       <BannerPackage data={data.banner} handleOpenModal={handleOpenModal} />
 
       <DropInfo
-        title="Наша самая скоростная мобильная сеть, бесперебойный интернет, надежное соединение и и широкий охват позволят Вам решить самые сложные задачи в сфере бизнес-коммуникаций."
+        title="Наша самая скоростная мобильная сеть, бесперебойный интернет, надежное соединение и широкий охват позволят Вам решить самые сложные задачи в сфере бизнес-коммуникаций."
         text={text}
         isOpen={isOpenDetailed}
         toggleOpen={toggleDetailed}

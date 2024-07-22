@@ -11,10 +11,13 @@ import relatedImg from '../../../shared/assets/images/allVisual/software.png';
 import { useLoaderData } from 'react-router-dom';
 import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 import { useState } from 'react';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 export const SoftwareSales = () => {
   const data = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
+  const [dataModalOpen, setDataModalOpen] = useState(false)
+  
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -50,6 +53,7 @@ export const SoftwareSales = () => {
   ];
 
   const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
 
   return (
     <section className={styles.softwareSales}>
@@ -93,6 +97,7 @@ export const SoftwareSales = () => {
         title="Консультация по Приобретению ПО для Бизнеса!"
         text="Оставьте заявку на консультацию для приобретения ПО и других необходимых Вашему бизесу программ."
         btn="Получить консультацию"
+        handleOpenModal={handleOpenDataModal}
       />
 
       <RelatedServices
@@ -106,6 +111,9 @@ export const SoftwareSales = () => {
 
       {modalOpen && (
         <DataModal setIsOpenModal={setModalOpen} item={data?.banner && data?.banner?.map(item => item.ussd_code)} />
+      )}
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
       )}
     </section>
   );

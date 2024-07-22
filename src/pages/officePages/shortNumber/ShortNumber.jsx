@@ -28,9 +28,15 @@ import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles
 import cloud from '../../../shared/assets/icons/shortNumberCard/cloud.svg';
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
 import { useLoaderData } from 'react-router-dom';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 
 export const ShortNumber = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const handleClickModal = () => {
+    setIsOpenModal(true);
+  }
   const data = useLoaderData();
 
   const breadcrumbs = [
@@ -71,16 +77,19 @@ export const ShortNumber = () => {
   const relatedServicesData = [
     {
       title: 'Центр мониторинга и реагирования (SKY SOC)',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса',
       link: '/it-security/sky-soc-roaming',
       img: relatedImg,
     },
     {
       title: 'Аренда облачного сервера (Cloud Servers)',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса',
       link: '/it-security/cloud-server-rental-equipment',
       img: relatedImg,
     },
     {
       title: 'Продажа ПО',
+      text: 'Выбирайте гибкие тарифы, отвечающие потребностям Вашего бизнеса',
       link: '/it-security/software-sale',
       img: relatedImg,
     },
@@ -99,6 +108,7 @@ export const ShortNumber = () => {
           detail="Подробнее"
           detailStyles={style.detailStyles}
           plug="Подключить"
+          handleClickModal={handleClickModal}
         />
       </section>
       <Description
@@ -137,6 +147,7 @@ export const ShortNumber = () => {
         title="Выберите Идеальный Номер для Вашей Компании!"
         text="Выберите лучший номер для вашей компании прямо сейчас XXXX"
         btnText="Подключить "
+        link='/mobile-connect/beautiful-number'
       />
       <RelatedServices
         section={style.relatedServices__section}
@@ -145,6 +156,10 @@ export const ShortNumber = () => {
 
       <RelatedServicesAdaptive />
       <UsefulArticles useful={style.usefulArticles__section} />
+
+      {isOpenModal && (
+        <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code} />
+      )}
     </section>
   );
 };

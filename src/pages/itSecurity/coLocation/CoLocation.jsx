@@ -26,8 +26,14 @@ import {
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
 import { useLoaderData } from 'react-router-dom';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 export const CoLocation = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const handleClickModal = () => {
+    setIsOpenModal(true);
+  }
   const data = useLoaderData();
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -96,6 +102,7 @@ export const CoLocation = () => {
         detail="Подробнее"
         detailStyles={style.detailStyles}
         plug="Подключить"
+        handleClickModal={handleClickModal}
       />
       <section className={style.info}>
         <h2 className={style.info__title}>{data?.res[0]?.question_title}</h2>
@@ -141,10 +148,15 @@ export const CoLocation = () => {
         title="Безопасное Хранение Данных Вашей Компании!"
         text="Храните данные Вашей компании в надежном месте с   гарантией безопасности."
         btn="Получить консультацию"
+        handleClickModal={handleClickModal}
       />
       <RelatedServices section={style.relatedServices__section} items={relatedServicesData} />
       <RelatedServicesAdaptive />
       <UsefulArticles useful={style.usefulArticles__section} />
+
+      {isOpenModal && (
+        <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code} />
+      )}
     </section>
   );
 };

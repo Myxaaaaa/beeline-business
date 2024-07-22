@@ -3,8 +3,8 @@ import { Banner } from '../../../shared/ui/banner/Banner';
 import style from './VideoAnalytics.module.scss';
 import short from '../../../shared/assets/images/shortNum/short.svg';
 import {
-  ShortNumberAdaptive,
-  ShortNumberCard,
+    ShortNumberAdaptive,
+    ShortNumberCard,
 } from '../../../shared/ui/shortNumberCard/ShortNumberCard';
 import terminal from '../../../shared/assets/icons/advantages/terminal.svg';
 import car from '../../../shared/assets/icons/advantages/car.svg';
@@ -15,17 +15,25 @@ import tv from '../../../shared/assets/icons/advantages/tv.svg';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { TargetBanner } from '../../../shared/ui/targetBanner/TargetBanner';
 import {
-  RelatedServices,
-  RelatedServicesAdaptive,
+    RelatedServices,
+    RelatedServicesAdaptive,
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import { UsefulArticles } from '../../../components/beautifulNumb/usefulArticles/UsefulArticles';
 import relatedImg from '../../../shared/assets/images/relatedServicesImg/small.svg';
 import speed from '../../../shared/assets/icons/shortNumberCard/speed.svg';
 import cloud from '../../../shared/assets/icons/shortNumberCard/cloud.svg';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
 
 export const VideoAnalytics = () => {
-  const data = useLoaderData();
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
+    const handleClickModal = () => {
+        setIsOpenModal(true);
+    }
+
+    const data = useLoaderData();
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -77,65 +85,60 @@ export const VideoAnalytics = () => {
 
   const bannerData = data?.banner[0];
 
-  return (
-    <section className={style.videoAnalytics}>
-      <Breadcrumbs crumbs={breadcrumbs} />
-      <Banner
-        title={bannerData.title}
-        img={bannerData.visual}
-        alt={short}
-        text={bannerData.description}
-        detail="Подробнее"
-        detailStyles={style.detailStyles}
-        plug="Подключить"
-      />
-      <section className={style.info}>
-        <h2 className={style.info__title}>{data?.res[0]?.question_title}</h2>
-        <p className={style.info__subtitle}>
-          {data?.res[0]?.question_description}
-        </p>
-      </section>
-      <section className={style.shortNum}>
-        <h3>{data?.res[0]?.bigdataminicard_question}</h3>
-        <div className={style.shortNum__blocks}>
-          {shortNumData?.map(item => (
-            <ShortNumberCard
-              key={item.id}
-              text={item.text}
-              img={item.imgCard}
-              stylesNumCard={style.customNumCard}
+    return (
+        <section className={style.videoAnalytics}>
+            <Breadcrumbs crumbs={breadcrumbs} />
+            <Banner
+                title={bannerData.title}
+                img={bannerData.visual}
+                alt={short}
+                text={bannerData.description}
+                detail="Подробнее"
+                detailStyles={style.detailStyles}
+                plug="Подключить"
+                handleClickModal={handleClickModal}
             />
-          ))}
-          {shortNumData?.map(item => (
-            <ShortNumberAdaptive
-              key={item.id}
-              img={item.img}
-              alt={item.alt}
-              text={item.text}
+            <section className={style.info}>
+                <h2 className={style.info__title}>{data?.res[0]?.question_title}</h2>
+                <p className={style.info__subtitle}>
+                    {data?.res[0]?.question_description}
+                </p>
+            </section>
+            <section className={style.shortNum}>
+                <h3>{data?.res[0]?.bigdataminicard_question}</h3>
+                <div className={style.shortNum__blocks}>
+                    {shortNumData?.map(item => (
+                        <ShortNumberCard
+                            key={item.id}
+                            text={item.text}
+                            img={item.imgCard}
+                            stylesNumCard={style.customNumCard}
+                        />
+                    ))}
+                    {shortNumData?.map(item => (
+                        <ShortNumberAdaptive
+                            key={item.id}
+                            img={item.img}
+                            alt={item.alt}
+                            text={item.text}
+                        />
+                    ))}
+                </div>
+            </section>
+            <section className={style.videoAdvantages}>
+                <h3 className={style.videoAdvantages__title}>{data?.res[0]?.advantages_text}</h3>
+                <div className={style.videoAdvantages__blocks}>
+                    {videoAdvantagesData?.map(item => (
+                        <NecessaryCard key={item.id} img={item.img} alt={item.alt} text={item.text} />
+                    ))}
+                </div>
+            </section>
+            <TargetBanner
+                title="Видео Аналитика для вашего бизнеса"
+                text="Подключите видео аналитику если вы ещё не отслеживаете безопасность и продажи в бизнесе!"
+                btn="Подключить"
+                handleClickModal={handleClickModal}
             />
-          ))}
-        </div>
-      </section>
-      <section className={style.videoAdvantages}>
-        <h3 className={style.videoAdvantages__title}>
-          {data?.res[0]?.advantages_text}
-        </h3>
-        <div className={style.videoAdvantages__blocks}>
-          {videoAdvantagesData?.map(item => (
-            <NecessaryCard
-              key={item.id}
-              img={item.img}
-              alt={item.alt}
-              text={item.text}
-            />
-          ))}
-        </div>
-      </section>
-      <TargetBanner
-        title="Видео Аналитика для вашего бизнеса"
-        text="Подключите видео аналитику если вы ещё не отслеживаете безопасность и продажи в бизнесе!"
-        btn="Подключить"
-      />
 
       <RelatedServices
         section={style.relatedServices__section}
@@ -144,7 +147,11 @@ export const VideoAnalytics = () => {
 
       <RelatedServicesAdaptive />
 
-      <UsefulArticles useful={style.usefulArticles__section} />
-    </section>
-  );
-};
+            <UsefulArticles useful={style.usefulArticles__section} />
+
+            {isOpenModal && (
+                <DataModal setIsOpenModal={setIsOpenModal} item={bannerData?.ussd_code} />
+            )}
+        </section>
+    )
+}

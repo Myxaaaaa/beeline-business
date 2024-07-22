@@ -12,9 +12,14 @@ import {
 } from '../../../shared/ui/relatedServices/RelatedServices';
 import NecessaryCard from '../../../shared/ui/necessaryCard/NecessaryCard';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
+import { DataModal } from '../../../shared/ui/dataModal/DataModal';
+import { RegisterModal } from '../../../components/tariffs/tariffsPages/registerModal/RegisterModal';
 
 export const Skorring = () => {
   const { data, banner } = useLoaderData();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [dataModalOpen, setDataModalOpen] = useState(false)
 
   const breadcrumbs = [
     { pathname: '/', breadcrumb: 'Главная' },
@@ -51,7 +56,8 @@ export const Skorring = () => {
       text: 'Выбирайте гибкие тарифы, отвечающие потребностям вашего бизнеса',
     },
   ];
-
+  const handleOpenModal = () => setModalOpen(true)
+  const handleOpenDataModal = () => setDataModalOpen(true)
   return (
     <section className={styles.skorring}>
       <div className={styles.breadcrumb}>
@@ -67,6 +73,7 @@ export const Skorring = () => {
           alt={'Beetarget'}
           plug={'Подключить'}
           detailStyles={styles.btn_banner}
+          handleClickModal={handleOpenModal}
         />
       ))}
       {data?.map?.(item => (
@@ -102,6 +109,7 @@ export const Skorring = () => {
           'Уже сформировали критерии выбора ? Свяжитесь со специалистом по BeeTarget'
         }
         btn={'Получить консультацию'}
+        handleOpenModal={handleOpenDataModal}
       />
       <RelatedServices
         section={styles.relatedServices__section}
@@ -111,6 +119,12 @@ export const Skorring = () => {
       <div className={styles.use_full}>
         <UsefulArticles />
       </div>
+      {modalOpen && (
+        <DataModal setIsOpenModal={setModalOpen} item={banner && banner?.map(item => item.ussd_code)} />
+      )}
+      {dataModalOpen && (
+        <RegisterModal setIsRegisterModal={setDataModalOpen} />
+      )}
     </section>
   );
 };
