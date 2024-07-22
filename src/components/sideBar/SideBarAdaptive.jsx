@@ -82,7 +82,7 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
 
   useEffect(() => {
     const request = async () => {
-      if (searchQuery) {
+      if (searchQuery.length >= 3) {
         setIsLoading(true);
         try {
           const response = await axios.get(
@@ -135,7 +135,7 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
         <div className={styles.sideBar_title}>
           <Droptown
             droptownStyle={styles.drop__input}
-            options={['ky', 'ru', 'en']}  
+            options={['ky', 'ru', 'en']}
             setSelected={handleLanguageChange}
             blockStyle={styles.blockStyle}
             dropTownBtn={styles.dropTownBtn}
@@ -170,6 +170,17 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
         <div className={styles.searchContainer}>
           <div className={styles.SearchInp_container}>
             {isIconVisible && <img src={search} alt="search" />}
+            {searchModalOpen && (
+              <div className={styles.searchModal}>
+                <SearchResults
+                  results={data}
+                  query={searchQuery}
+                  isLoading={isLoading}
+                  error={error}
+                  isSearching={searchQuery.length < 3}
+                />
+              </div>
+            )}
             <Input
               type="text"
               id={styles.searchInp}
@@ -178,19 +189,9 @@ export const SideBarAdaptive = ({ toggleSideBar, isActive }) => {
               onBlur={handleBlur}
               onChange={handleInputChange}
               value={searchQuery}
+              maxLength="20"
             />
           </div>
-          {searchModalOpen && (
-            <div className={styles.searchModal}>
-              <SearchResults
-                results={data}
-                query={searchQuery}
-                isLoading={isLoading}
-                error={error}
-                isSearching={searchQuery === ''}
-              />
-            </div>
-          )}
         </div>
         <FooterNavigation
           filteredNavigationItems={filteredNavigationItems}

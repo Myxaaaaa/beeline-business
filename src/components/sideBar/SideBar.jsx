@@ -35,7 +35,7 @@ const SideBar = () => {
 
   useEffect(() => {
     const request = async () => {
-      if (searchQuery) {
+      if (searchQuery.length >= 3) {
         setIsLoading(true);
         try {
           const response = await axios.get(
@@ -54,7 +54,6 @@ const SideBar = () => {
           }
         } finally {
           setIsLoading(false);
-          error;
         }
       } else {
         setData([]);
@@ -135,6 +134,7 @@ const SideBar = () => {
               onBlur={handleBlur}
               onChange={handleInputChange}
               value={searchQuery}
+              maxLength="20"
             />
           </div>
           <ul className={style.navigation}>
